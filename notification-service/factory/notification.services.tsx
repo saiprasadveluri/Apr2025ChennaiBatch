@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { Emailnotification } from "../classes/emailnotification";
+import { Smsnotification } from "../classes/smsnotification";
+import { Whataapnotification } from "../classes/whataapnotification";
 
-import { NotificationService } from './notification.service';
-
-describe('NotificationService', () => {
-  let service: NotificationService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(NotificationService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+export function smsNotificationFactory(notifyType : string ) {
+    return notifyType == 'sms' ? new Smsnotification() : null;
+  }
+  
+  export function emailNotificationFactory(notifyType : string ) {
+    return notifyType == 'email' ? new Emailnotification() : null;
+  }
+  
+  export function whatsappNotificationFactory(notifyType : string ) {
+    return notifyType == 'whataap' ? new Whataapnotification() : null;
+  }
+  
