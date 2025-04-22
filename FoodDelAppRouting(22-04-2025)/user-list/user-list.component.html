@@ -1,0 +1,18 @@
+<h3>User List:</h3>
+<table class="table table-striped table-hover">
+    <thead>
+        <th>User Id</th>
+        <th>Display Name</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of userData">
+            <td>{{i.userId}}</td>
+            <td>{{i.displayName}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+    </tbody>
+    <button class="btn btn-primary" (click)="GotoAddUser()">GoBackToAddUser</button><br>
+    <hr>
+    <button class="btn btn-primary" (click)="GotoAddRest()">GotoAddRest</button>
+</table>
