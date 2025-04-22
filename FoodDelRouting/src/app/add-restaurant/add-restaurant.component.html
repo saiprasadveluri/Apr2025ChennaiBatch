@@ -1,0 +1,19 @@
+<h2>AddRestaurant</h2>
+<br>
+<button (click)="GoBackToUserList()">Back</button><br>
+<form [formGroup]="res" (ngSubmit)="AddNewRestaurant()">
+<input type="text"
+formControlName="RestId" 
+placeholder="Enter the Rest Id"/><br>
+<input type="text"
+formControlName="RestName" 
+placeholder="Enter the Rest Name"/><br>
+<input type="text"
+formControlName="Location" 
+placeholder="Enter the Location"/><br>
+<select formControlName="role">
+<option *ngFor ="let i of OwnerList" value="userId">{{i.displayName}}</option>
+</select>
+<br><br>
+<button type="submit">AddRestaurant</button>
+</form>

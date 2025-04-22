@@ -1,0 +1,31 @@
+<h2>UserList</h2>
+<button (click)="GotoAddUser()">ToAddUser</button>
+<table width="100%" border="1px">
+    <tr>
+        <th>UserId</th>
+        <th>DisplayName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+    </tr>
+    <tr *ngFor ="let i of userData">
+        <td>
+            {{i.userId}}
+        </td>
+        <td>
+            {{i.displayName}}
+        </td>
+        <td>
+            {{i.email}}
+        </td>
+        <td>
+            {{i.password}}
+        </td>
+        <td>
+            {{i.role}}
+        </td>
+    </tr>
+</table><br>
+<button (click)="GotoAddRestaurant()">ToAddRestaurant</button>
+
+

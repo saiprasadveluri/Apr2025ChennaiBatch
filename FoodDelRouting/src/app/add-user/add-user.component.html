@@ -1,0 +1,22 @@
+<h2>Add User</h2>
+<form [formGroup]="frm" (ngSubmit)="AddNewUser()">
+<input type="text"
+formControlName="userId" 
+placeholder="Enter the UserId"/><br>
+<input type="text"
+formControlName="displayName" 
+placeholder="Enter the displayName"/><br>
+<input type="email"
+formControlName="email" 
+placeholder="Enter the email"/><br>
+<input type="password"
+formControlName="password" 
+placeholder="Enter password"/><br>
+<select formControlName="role">
+    <option value="1">Admin</option>
+    <option value="2">User</option>
+    <option value="3">Owner</option>
+</select>
+<br><br>
+<button type="submit">AddUser</button>
+</form>
