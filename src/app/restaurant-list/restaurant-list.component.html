@@ -1,0 +1,15 @@
+<h2>Restaurant List</h2>
+<button (click)="GotoAddRestaurant()">Add New Restaurant</button>
+<table style="width: 100%; text-align: center" border="2px solid black">
+    <tr>
+        <th>Restaurant Name</th>
+        <th>Location</th>
+        <th>Role</th>
+        
+    </tr>
+    <tr *ngFor="let r of RestData">
+        <td>{{r.restName}}</td>
+        <td>{{r.restLoc}}</td>
+        <td>{{r.owner}}</td>
+    </tr>
+</table>
