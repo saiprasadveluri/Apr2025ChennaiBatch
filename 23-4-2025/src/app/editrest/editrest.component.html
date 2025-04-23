@@ -1,0 +1,28 @@
+<h2>Add New Restaurant</h2>
+<form [formGroup]="frm" (ngSubmit)="EditRest()">
+    <!-- <input type="text"
+    formControlName="id"
+    placeholder="User Id">
+    <br> -->
+    <input type="text"
+    formControlName="rName"
+    placeholder="DisplayName"/>
+    <br>
+    <select formControlName="rLoc">
+        <option value="HYD">Hyd</option>
+        <option value="CHN">chennai</option>
+        <option value="BEN">bengaluru</option>
+        <option value="PUNE">pune</option>
+    </select>
+    <br>
+    <!-- <input type="text"
+    formControlName="email"
+    placeholder="email"/> -->
+    <select formControlName="role">
+        <option value="User">User</option>
+        <option value="Owner">Owner</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <br>
+    <button type="submit">Edit User</button>
+</form>
