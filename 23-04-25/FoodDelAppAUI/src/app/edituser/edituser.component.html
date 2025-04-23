@@ -1,0 +1,35 @@
+<h2>Edit User</h2>
+ 
+<form   [formGroup]="frm" (ngSubmit)="EditUser()">
+<!-- <input type="text"
+formControlName="userId"
+placeholder="UserId">
+<br> -->
+<input type="text"
+formControlName="displayName"
+placeholder="Display Name">
+<br>
+<select formControlName="location">
+    <option value="HYD">HYDERABAD</option>
+    <option value="CHN">CHENNAI</option>
+    <option value="BNGLR">BENGULURU</option>
+</select>
+ 
+<!-- <input type="email"
+formControlName="email"
+placeholder="Email">
+<br> -->
+<input type="password"
+formControlName="password"
+placeholder="Password">
+<br>
+<select formControlName="role">
+    <option value="Admin">Admin</option>
+    <option value="User">User</option>
+    <option value="Owner">Owner</option>
+</select>
+<button type="submit">Edit User</button>
+ 
+</form>
+ 
+ 
