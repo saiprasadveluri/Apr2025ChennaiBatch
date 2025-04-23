@@ -1,0 +1,19 @@
+<h1>Edit User</h1>
+<form [formGroup]="form" (ngSubmit)="EditUser()">
+    <div class="form-group">
+        <input class="form-control" type="text" formControlName="name" placeholder="Name"/>
+         <select formControlName="role" id="role">
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+            <option value="Owner">Owner</option>
+         </select>
+         <select formControlName="location" id="location">
+            <option value="HYD">HYD</option>
+            <option value="MAA">MAA</option>
+            <option value="Madurai">Madurai</option>
+         </select>
+        <input class="form-control" type="password" formControlName="password" placeholder="Password"/>
+        <button class="btn btn-primary" type="submit">Edit User</button>
+    </div>
+
+</form>
