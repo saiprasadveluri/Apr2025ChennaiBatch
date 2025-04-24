@@ -1,0 +1,18 @@
+
+<h2>edit restaurant</h2>
+<form [formGroup]="frm" (ngSubmit)="EditRestaurant()">
+    <!-- <input type="text" formControlName="userid" placeholder="enter userid">
+    <br> -->
+    <input type="text" formControlName="name" placeholder="enter name">
+    <br>
+    <select formControlName="location">
+        <option value="hyd">hyd</option>
+        <option value="chennai">chennai</option>
+        <option value="blr">blr</option>
+
+    </select>
+    <br>
+   <input type="text" formControlName="owner" placeholder="enter owner name">
+    <br>
+    <button type="submit" >edit restaurant</button>
+</form>
