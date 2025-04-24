@@ -1,0 +1,21 @@
+<h2>Restaurant List</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Restaurant Id</th>
+            <th>Restaurant Name</th>
+            <th>Location</th>
+            <th>Owner</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of restaurantData">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.location}}</td>
+            <td>{{i.owner}}</td>
+            
+        </tr>
+    </tbody>
+</table>
