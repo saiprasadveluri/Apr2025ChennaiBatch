@@ -1,0 +1,39 @@
+<h2>Restaurant List</h2>
+<button (click)="GotoAddRestaurant()">Add Restaurant</button>
+<table class="table table-striped tablehover">
+    <tr>
+        <th>
+            restaurant id
+        </th>
+        <th>
+            restaurant name
+        </th>
+        <th>
+            restaurant location
+        </th>
+        <th>
+            restaurant owner
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    <tr *ngFor="let r of restdata ">
+        <td>
+            {{r.id}}
+        </td>
+        <td>
+            {{r.name}}
+        </td>
+        <td>
+            {{r.location}}
+        </td>
+        <td>
+            {{r.owner}}
+        </td>
+         <td>
+            <button (click)="DeleteRestaurant(r.id)">Delete</button>
+            <button (click)="EditRestaurant(r.id)">Edit</button>
+         </td>
+    </tr>
+</table>
