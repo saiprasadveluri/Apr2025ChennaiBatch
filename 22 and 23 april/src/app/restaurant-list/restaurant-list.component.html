@@ -1,0 +1,40 @@
+<h2>Restaurant List</h2>
+<button (click)="GotoAddRestaurants()">Go to Add Restaurant</button>
+<table>
+    <tr>
+        <th>
+            Restaurant Id
+        </th>
+        <th>
+            Restaurant Name
+        </th>
+        <th>
+            Location
+        </th>
+        <th>
+            Owner
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    <tr *ngFor="let r of restaurantData">
+        <td>
+            {{r.id}}
+        </td>
+        <td>
+            {{r.name}}
+        </td>
+        <td>
+            {{r.location}}
+        </td>
+        <td>
+            {{r.owner}}
+        </td>
+        <td>
+            <button (click)="DeleteRestaurant(r.id)">Delete</button>
+            <button (click)="EditRestaurant(r.id)">Edit</button>
+            
+        </td>
+    </tr>
+</table>
