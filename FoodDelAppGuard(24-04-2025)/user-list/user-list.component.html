@@ -1,0 +1,29 @@
+<h3>User List:</h3>
+<table class="table table-striped table-hover">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>role</th>
+        <th>location</th>
+        <th>Email</th>
+        <th>password</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of userDataNew">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.role}}</td>
+            <td>{{i.location}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.password}}</td>
+            <td>
+                <button (click)="DeleteUser(i.id)">DeleteUser</button>
+                <button (click)="EditUser(i.id)">EditUser</button>
+            </td>
+        </tr>
+    </tbody>
+    <button class="btn btn-primary" (click)="GotoAddUser()">GoBackToAddUser</button><br>
+    <hr>
+    <button class="btn btn-primary" (click)="GotoAddRest()">GotoAddRest</button>
+</table>
