@@ -1,0 +1,16 @@
+<h2>{{ isEditMode ? 'Edit User' : 'Add New User' }}</h2>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input id="name" type="text" formControlName="name" />
+  
+  <label for="email">Email:</label>
+  <input id="email" type="email" formControlName="email" />
+  
+  <label for="role">Role:</label>
+  <input id="role" type="text" formControlName="role" />
+  
+
+  <button type="submit" [disabled]="userForm.invalid">
+    {{ isEditMode ? 'Update User' : 'Add User' }}
+  </button>
+</form>

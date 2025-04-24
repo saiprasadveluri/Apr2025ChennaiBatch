@@ -1,0 +1,19 @@
+<h2> Add New Hotel : </h2>
+<form [formGroup] = "frm" (ngSubmit)="AddNewHotel()">
+    <input type="text" formControlName = "hotelId" placeholder="Hotel Id: ">
+    <br>
+    <input type="text" formControlName = "hotelname" placeholder=" Hotel Name">
+    <br>
+    <input type="text" formControlName = "email" placeholder="email">
+    <br>
+    <input type="password" formControlName = "password" placeholder="password">
+    <br>
+    <select name="" id="" formControlName = "type" placeholder="type Slelect">
+        <option value="1">VEG</option>
+        <option value="2">NON VEG</option>
+        <option value="3">MIX</option>
+    </select>
+    <br>
+
+    <button type="submit">Add New Hotel</button>
+</form >
