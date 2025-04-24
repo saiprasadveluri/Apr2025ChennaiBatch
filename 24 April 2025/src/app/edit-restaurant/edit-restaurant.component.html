@@ -1,0 +1,19 @@
+<h2>Edit Restaurant</h2>
+<form [formGroup]="frm" (ngSubmit)="EditRest()">
+    <input type="text" formControlName="name" placeholder="Enter the Name">
+    <br>
+    <select formControlName="location">
+        <option value="CHE">CHENNAI</option>
+        <option value="HYD">HYDERABAD</option>
+        <option value="BNGLR">BANGLORE</option>
+    </select>
+    <br>
+    <select formControlName="owner">
+        <option value="1">Owner1</option>
+        <option value="2">Owner2</option>
+        <option value="3">Owner3</option>
+    </select>
+    <br>
+    
+    <button type="submit">Edit Restaurant</button>
+</form>
