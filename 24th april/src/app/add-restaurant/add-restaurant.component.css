@@ -1,0 +1,6 @@
+form, input, select, button{
+    display: block;
+    height:30px;
+    width: 50%;
+
+}

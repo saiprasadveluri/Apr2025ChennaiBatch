@@ -1,0 +1,16 @@
+ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    align-items: center;
+    height:70px;
+}
+
+li{
+    list-style-type: none;
+
+}
+li a{
+    color:white;
+    font-weight: 800;
+}
