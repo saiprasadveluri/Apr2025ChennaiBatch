@@ -1,0 +1,30 @@
+<h2>add restaurant</h2>
+<form [formGroup]="frm" (ngSubmit)="AddNewRestaurant()">
+    <input type="text" formControlName="id" placeholder="enter restaurantid">
+    <br>
+    <input type="text" formControlName="name" placeholder="enter restaurantname">
+    <select formControlName="location">
+        <option value="HYD">HYD</option>
+        <option value="CHN">CHN</option>
+        <option value="BANG">BANG</option>
+    </select><br>
+    <!-- <input type="text" formControlName="location" placeholder="enter rlocation">
+    <br>
+    <input type="text" formControlName="owner" placeholder="enter restaurantowner">
+    <br> -->
+    <select  formControlName="owner"> 
+        <option *ngFor="let o of ownerlist" value="{{o.id}}" >{{o.name}}</option>
+    </select><br>
+    <button class="btn btn-primary" type="submit">Add New Restaurant</button><br>
+    <hr>
+  
+</form>
+              <!-- <option value="owner">owner</option>
+            <option value="admin">admin</option>
+            <option value="user">user</option> -->
+
+        <!-- </option> -->
+  
+    <!-- </select> -->
+    
+    
