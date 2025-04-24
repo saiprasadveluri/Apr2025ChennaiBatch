@@ -1,0 +1,22 @@
+<h1>Add New Restaurant</h1>
+<form [formGroup]="form" (ngSubmit)="addnewRest()">
+    <div class="form-group" style="width: 40%;">
+        <input class="form-control" type="text" formControlName="id" placeholder="Restaurant ID"/> <br>
+        <input class="form-control" type="text" formControlName="name" placeholder="Name Restaurant"/> <br>
+
+        <select class="form-select" formControlName="location">
+            <option value="" disabled selected>Select Location</option>
+            <option value="HYD">Hyderabad</option>
+            <option value="MAA">Chennai</option>
+            <option value="Madurai">Madurai</option>
+         </select> <br>
+         <select class="form-select" formControlName="owner" id="owner">
+            <option value="" disabled selected>Select Owner</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+         </select> <br>
+        <button class="btn btn-success" type="submit">Add New Restaurant</button>
+    </div>
+
+</form>
