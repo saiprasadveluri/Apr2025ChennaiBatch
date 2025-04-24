@@ -1,0 +1,24 @@
+<h2>EditUser</h2>
+<form [formGroup]="frm" (ngSubmit)="EditUser()">
+    <input type="text"
+    formControlName="name" 
+    placeholder="Enter the displayName"/><br>
+    <select formControlName="location">
+        <option value="Chennai" selected>Chennai</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Banglore">Banglore</option>
+    </select><br>
+    <!-- <input type="email"
+    formControlName="email" 
+    placeholder="Enter the email"/><br> -->
+    <!-- <input type="password"
+    formControlName="password" 
+    placeholder="Enter password"/><br> -->
+    <select formControlName="role">
+        <option value="Admin">Admin</option>
+        <option value="User">User</option>
+        <option value="Owner">Owner</option>
+    </select>
+    <br><br>
+    <button type="submit">Edit</button>
+    </form>
