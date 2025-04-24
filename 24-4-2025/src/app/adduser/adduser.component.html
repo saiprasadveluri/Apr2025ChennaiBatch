@@ -1,0 +1,38 @@
+<h2>Add New User</h2>
+<form style="width: 70%;" [formGroup]="frm" (ngSubmit)="AddNewUser()">
+    <!-- <input type="text"
+    formControlName="id"
+    placeholder="User Id">
+    <br> -->
+    <input type="text"
+    style="margin-bottom: 10px;width: 25%;"
+    formControlName="name"
+    placeholder="DisplayName"/>
+    <br>
+    <select formControlName="location"
+    style="margin-bottom: 10px;width: 25%;">
+        <option value="HYD">Hyd</option>
+        <option value="CHN">chennai</option>
+        <option value="BEN">bengaluru</option>
+        <option value="PUNE">pune</option>
+    </select>
+    <br>
+    <input type="text"
+    style="margin-bottom: 10px;width: 25%;"
+    formControlName="email"
+    placeholder="email"/>
+    <br>
+    <input type="text"
+    style="margin-bottom: 10px;width: 25%;"
+    formControlName="password"
+    placeholder="password"/>
+    <br>
+    <select formControlName="role"
+    style="margin-bottom: 10px;width: 25%;">
+        <option value="User">User</option>
+        <option value="Owner">Owner</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <br>
+    <button type="submit">Add New User</button>
+</form>

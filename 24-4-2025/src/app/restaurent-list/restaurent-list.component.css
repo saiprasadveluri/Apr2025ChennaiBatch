@@ -1,0 +1,12 @@
+table,td,tr,th{
+    margin-top: 10px;
+    border: 2px solid black;
+    }
+th{
+        background-color: beige;
+    }
+
+button{
+    padding: 5px;
+    margin: 5px;
+}
