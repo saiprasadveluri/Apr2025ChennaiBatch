@@ -1,0 +1,15 @@
+<h2>Edit Rest</h2>
+<form [formGroup]="frm" (ngSubmit)="EditRest()">
+    <input type="text" formControlName="name" placeholder="enter name"/><br>
+    <select formControlName="location">
+        <option value="HYD">HYD</option>
+        <option value="CHN">CHN</option>
+        <option value="BANG">BANG</option>
+    </select><br>
+    <select formControlName="OWNER">
+        <option value="1">USER</option>
+        <option value="2">ADMIN</option>
+        <option value="3">OWNER</option>
+    </select><br>
+    <button class="btn btn-primary" type="submit">Add New User</button>
+</form>
