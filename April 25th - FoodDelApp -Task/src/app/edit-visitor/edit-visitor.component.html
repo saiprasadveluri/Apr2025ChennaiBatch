@@ -1,0 +1,32 @@
+<h2>Add New Visitor</h2>
+<form [formGroup]="frm" (ngSubmit)="EditVisitor()">
+    
+    <input type="text" formControlName="name" placeholder="Name">
+    <br>
+    <select formControlName="location">
+        <option value="HYD">Hyderabad</option>
+        <option value="CHE">Chennai</option>
+        <option value="MUM">Mumbai</option>
+        <option value="BLR">Bangalore</option>
+    </select>
+    <br>
+    <select formControlName="parentCompany">
+        <option value="ABC">ABC Company</option>
+        <option value="GHI">GHI Company</option>
+        <option value="XYZ">XYZ Company</option>
+    </select>
+    <br>
+    <input type="text" formControlName="purpose" placeholder="Purpose">
+    <br>
+    <input type="number" formControlName="mobileNumber" placeholder="Mobile Number">
+    <br>
+    <input type="date" formControlName="visitingdate" >
+    <br>
+    <select formControlName="hostname">
+        <option value="Sukumar">Sukumar</option>
+        <option value="Vamsi">Vamsi</option>
+        <option value="Krishna">Krishna</option>
+    </select>
+    <br>
+    <button type="submit">Add New Visitor</button>
+</form>
