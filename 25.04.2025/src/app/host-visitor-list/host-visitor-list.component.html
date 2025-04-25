@@ -1,0 +1,38 @@
+
+
+
+
+    <h2>Visitor List for Host: {{ loggedInUserData?.name }}</h2>
+  
+    <table class="table table-striped" *ngIf="VisitorData.length > 0; else noData">
+      <thead>
+        <tr>
+          <th>Visitor ID</th>
+          <th>Name</th>
+          <th>Purpose</th>
+          <th>Visit Date</th>
+          <th>Host Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let visitor of VisitorData">
+          <td>{{ visitor.id }}</td>
+          <td>{{ visitor.name }}</td>
+          <td>{{ visitor.Purpose }}</td>
+          <td>{{ visitor.VisitingDate }}</td>
+          <td>{{ visitor.Hostname }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteVisitor(visitor.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noData>
+      <div class="alert alert-info mt-3">
+        No visitors found for this host.
+      </div>
+    </ng-template>
+  
+  

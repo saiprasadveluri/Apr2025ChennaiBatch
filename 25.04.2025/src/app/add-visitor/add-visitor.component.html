@@ -1,0 +1,15 @@
+<h2>Add New Visitor</h2>
+
+<form (ngSubmit)="addVisit()">
+    <input type="text" name="Vid" placeholder="VisitorId" [(ngModel)]="visit.id"><br>
+    <input type="text" name="Vname" placeholder="VisitorName" [(ngModel)]="visit.name"><br>
+    <input type="text" name="location" placeholder="Location" [(ngModel)]="visit.location"><br>
+    <input type="text" name="ParentComp" placeholder="ParentCompany" [(ngModel)]="visit.ParentComp"><br>
+    <input type="text" name="Purpose" placeholder="Purpose" [(ngModel)]="visit.Purpose"><br>
+    
+    <input type="text" name="MobileNumber" placeholder="MobileNumber" [(ngModel)]="visit.MobileNumber"><br>
+    <input type="text" name="VisitingDate" placeholder="VisitingDate" [(ngModel)]="visit.VisitingDate"><br>
+    <input type="text" name="Hostname" placeholder="Hostname" [(ngModel)]="visit.Hostname"><br>
+    <button type="submit">Add Visitor</button>
+
+</form>

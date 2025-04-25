@@ -1,0 +1,29 @@
+<h2>HostInfo List</h2>
+<table >
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Employee No</th>
+        <th>Department</th>
+        <th>Location</th>
+        <th>Contact Number</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of hostdata">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.employeeNum}}</td>
+            <td>{{i.department}}</td>
+            <td>{{i.location}}</td>
+            <td>{{i.contactNumber}}</td>
+            <td>
+                
+                <button (click)="DeleteHost(i.id)">Delete</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table><br>
+
+<button (click)="AddHost()">Add New Host</button> 

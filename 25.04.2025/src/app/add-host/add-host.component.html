@@ -1,0 +1,33 @@
+
+<h2>Add New Host</h2>
+
+<form (ngSubmit)="addHost()">
+    <input type="text" name="hid" placeholder="HostId" [(ngModel)]="host.id"><br>
+    <input type="text" name="hname" placeholder="HostName" [(ngModel)]="host.name"><br>
+    <input type="text" name="employeeNum" placeholder="EmployeeNumber" [(ngModel)]="host.employeeNum"><br>
+    <input type="text" name="department" placeholder="Department" [(ngModel)]="host.department"><br>
+    <input type="text" name="location" placeholder="Location" [(ngModel)]="host.location"><br>
+    <input type="text" name="contactNumber" placeholder="ContactNumber" [(ngModel)]="host.contactNumber"><br>
+    <button type="submit">Add Host</button>
+
+</form>
+
+
+
+
+
+
+<!-- <p>add-host works!</p>
+
+
+
+<h2>Add Host</h2>
+<form (ngSubmit)="addHost()">
+  <input type="text" name="name" placeholder="Name" [(ngModel)]="host.name"><br>
+  <input type="text" name="employeeNum" placeholder="Employee Number" [(ngModel)]="host.employeeNum"><br>
+  <input type="text" name="department" placeholder="Department" [(ngModel)]="host.department"><br>
+  <input type="text" name="location" placeholder="Location" [(ngModel)]="host.location"><br>
+  <input type="text" name="contactNumber" placeholder="Contact Number" [(ngModel)]="host.contactNumber"><br>
+  <button type="submit">Add Host</button>
+</form>
+ -->

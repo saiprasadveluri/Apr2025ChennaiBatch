@@ -1,0 +1,33 @@
+<h2>VisitorsInfo List</h2>
+<table >
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>ParentCompany</th>
+        <th>Purpose</th>
+        <th>MobileNumber</th>
+        <th>VisitingDate</th>
+        <th>HostName</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of visitdata">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.location}}</td>
+            <td>{{i.ParentComp}}</td>
+            <td>{{i.Purpose}}</td>
+            <td>{{i.MobileNumber}}</td>
+            <td>{{i.VisitingDate}}</td>
+            <td>{{i.Hostname}}</td>
+            <td>
+                
+                <button (click)="deleteVisitor(i.id)">Delete</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table><br>
+
+<button (click)="AddVisitor()">Add New Visitor</button> 

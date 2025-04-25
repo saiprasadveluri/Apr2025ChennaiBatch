@@ -1,0 +1,92 @@
+import { Component, OnInit } from '@angular/core';
+import { VisitorInfo } from '../visitor-info';
+import { VisitorService } from '../visitor.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-visitor',
+  templateUrl: './visitor.component.html',
+  styleUrls: ['./visitor.component.css']
+})
+export class VisitorComponent implements OnInit {
+
+  visitorData: VisitorInfo[] = [];
+
+  visitor: VisitorInfo = {
+    id: '',
+    name: '',
+    location: '',
+    parentCompany: '',
+    purpose: '',
+    mobileNumber: '',
+    visitingDate: '',
+    hostName: ''
+  };
+
+  constructor(private visitorService: VisitorService, private router: Router) { }
+
+  ngOnInit(): void {
+    this.getVisitors();
+  }
+
+  getVisitors(): void {
+    this.visitorService.getVisitors().subscribe(data => {
+      this.visitorData = data;
+    });
+  }
+
+  addVisitor(): void {
+    this.visitorService.addVisitor(this.visitor).subscribe(newVisitor => {
+      this.visitorData.push(newVisitor);
+      this.resetForm();
+    });
+  }
+
+  deleteVisitor(id: string): void {
+    this.visitorService.deleteVisitor(id).subscribe(() => {
+      this.visitorData = this.visitorData.filter(visitor => visitor.id !== id);
+    });
+  }
+
+  resetForm(): void {
+    this.visitor = {
+      id: '',
+      name: '',
+      location: '',
+      parentCompany: '',
+      purpose: '',
+      mobileNumber: '',
+      visitingDate: '',
+      hostName: ''
+    };
+  }
+}
+
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { VisitorInfo } from './visitor-info';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class VisitorService {
+
+  private apiUrl = 'http://your-api-url/visitors';
+
+  constructor(private http: HttpClient) { }
+
+  getVisitors(): Observable<VisitorInfo[]> {
+    return this.http.get<VisitorInfo[]>(this.apiUrl);
+  }
+
+  addVisitor(visitor: VisitorInfo): Observable<VisitorInfo> {
+    return this.http.post<VisitorInfo>(this.apiUrl, visitor);
+  }
+
+  deleteVisitor(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+}
+

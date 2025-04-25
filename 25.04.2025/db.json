@@ -1,0 +1,89 @@
+{
+  "VisitorsInfo": [
+    {
+      "id": "1",
+      "name": "hari",
+      "location": "Erode",
+      "ParentComp": "XXX",
+      "Purpose": "see",
+      "MobileNumber": "1234567890",
+      "VisitingDate": "22.04.2025",
+      "Hostname": "Shri"
+    },
+    {
+      "id": "2",
+      "name": "Shri",
+      "location": "Tirupur",
+      "ParentComp": "XXX",
+      "Purpose": "see",
+      "MobileNumber": "1234567890",
+      "VisitingDate": "23.04.2025",
+      "Hostname": "Hari"
+    },
+    {
+      "id": "3",
+      "name": "Sakthi",
+      "location": "Chengal",
+      "ParentComp": "YYY",
+      "Purpose": "Meeting",
+      "MobileNumber": "1234567890",
+      "VisitingDate": "24.05.2025",
+      "Hostname": "Hari"
+    }
+  ],
+  "HostInfo": [
+    {
+      "id": "1",
+      "name": "Charpitha",
+      "employeeNum": "123",
+      "department": "eee",
+      "location": "Andhra",
+      
+      "contactNumber": "1234567890"
+    },
+    {
+      "id": "2",
+      "name": "Harivarsha",
+      "employeeNum": "456",
+      "department": "eee",
+      "location": "Tirupur",
+      "contactNumber": "1234567890"
+    },
+    {
+      "id": "3",
+      "name": "Shrinidhi",
+      "employeeNum": "789",
+      "department": "eee",
+      "location": "Tirupur",
+      "contactNumber": "1234567890"
+    },
+    {
+      "id": "4",
+      "name": "Sahi",
+      "employeeNum": "100",
+      "department": "eee",
+      "location": "andhra",
+      "contactNumber": "12345678"
+    }
+  ],
+  "UserInfo": [
+    {
+      "id": "1",
+      "username": "Hari",
+      "password": "12345",
+      "role": "Host"
+    },
+    {
+      "id": "2",
+      "username": "Shri",
+      "password": "12345",
+      "role": "manager"
+    },
+    {
+      "id": "3",
+      "username": "Charpitha",
+      "password": "12345",
+      "role": "Host"
+    }
+  ]
+}
