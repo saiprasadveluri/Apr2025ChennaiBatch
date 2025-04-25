@@ -1,0 +1,9 @@
+<div style="text-align: center ">
+    <h3 style=>Login</h3>
+    <form frm="ngForm" (ngSubmit)="Login()"> 
+    <input type="email" name="uemail" [(ngModel)]="userEmail" placeholder="Email"/><br>
+    <input type="password" name="upassword" [(ngModel)]="userPassword" placeholder="password"/><br>
+    <button type="submit">Login</button>
+    </form>
+</div>
+<router-outlet></router-outlet>

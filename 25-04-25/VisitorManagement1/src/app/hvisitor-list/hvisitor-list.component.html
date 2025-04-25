@@ -1,0 +1,27 @@
+<h2>Host's Visitor List</h2>
+<table >
+    <thead>
+        <tr>
+            <th>Visitor Id</th>
+            <th>Visitor Name</th>
+            <th>Location</th>
+            <th>Parent Company</th>
+            <th>Purpose</th>
+            <th>Mobile No</th>
+            <th>Date</th>
+            <th>Host Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of visitorData">
+            <td>{{r.id}}</td>
+            <td>{{r.name}}</td>
+            <td>{{r.location}}</td>
+            <td>{{r.parentCompany}}</td>
+            <td>{{r.purpose}}</td>
+            <td>{{r.mobileNo}}</td>
+            <td>{{r.date}}</td>
+            <td>{{r.hostname}}</td>
+        </tr>
+    </tbody>
+</table>

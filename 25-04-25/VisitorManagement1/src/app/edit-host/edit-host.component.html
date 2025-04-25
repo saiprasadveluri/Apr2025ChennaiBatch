@@ -1,0 +1,15 @@
+<h2>Edit Host</h2>
+<form [formGroup]="frm" (ngSubmit)="EditHost()"> 
+    
+    <input type="text" formControlName="hname" placeholder="Host Name"/><br>
+    <input type="text" formControlName="employeeNo" placeholder="Employee No"/><br>
+    <input type="text" formControlName="dept" placeholder="Department"/><br>
+    <input type="text" formControlName="CNo" placeholder="Contact No"/><br>
+    <input type="text" formControlName="email" placeholder="Email"/><br>
+    <input type="text" formControlName="password" placeholder="Password"/><br>
+    <select formControlName="role">
+        <option value="Manager">Manager</option> 
+        <option value="Host">Host</option> 
+    </select><br>
+    <button type="submit">Edit Host</button>
+</form>
