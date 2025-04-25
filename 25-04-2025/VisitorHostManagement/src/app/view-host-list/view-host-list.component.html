@@ -1,0 +1,35 @@
+<h2>HostList</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <th>HostId</th>
+        <th>HostName</th>
+        <th>Location</th>
+        <th>Email</th>
+        <th>Password</th>
+       <th>Actions</th>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let i of HostData">
+        <td>
+            {{i.id}}
+        </td>
+        <td>
+            {{i.hname}}
+        </td>
+        <td>
+            {{i.loc}}
+        </td>
+        <td>
+            {{i.email}}
+        </td>
+        <td>
+            {{i.password}}
+        </td>
+        <td>
+           <button (click)="DeleteHost(i.id)">Delete</button>
+           <!-- <button (click)="EditVisitor(i.id)">Edit</button>  -->
+        </td>
+    </tr>
+</tbody>
+</table><br>
+<button (click)="GotoAddHost()">AddHost</button>

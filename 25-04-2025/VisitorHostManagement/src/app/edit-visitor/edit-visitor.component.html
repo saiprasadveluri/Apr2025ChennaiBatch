@@ -1,0 +1,20 @@
+<h2>EditVisitor</h2>
+<form [formGroup]="frm" (ngSubmit)="EditVisitor()">
+    <input type="text"
+    formControlName="vname" 
+    placeholder="Enter the VName"/><br>
+    <select formControlName="vloc">
+        <option value="Chennai">Chennai</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Banglore">Banglore</option>
+    </select><br>
+    <input type="text"
+    formControlName="hname" 
+    placeholder="Enter the HostName"/><br>
+    <input type="date"
+    formControlName="vdate" 
+    placeholder="Enter the Date"/><br><br>
+    <button type="submit">EditVisitor</button>
+</form>
+
+

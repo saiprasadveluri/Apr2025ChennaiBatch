@@ -1,0 +1,31 @@
+<h2>VisitorList</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <th>VisitorId</th>
+        <th>VisitorName</th>
+        <th>Location</th>
+        <th>HostName</th>
+        <th>Visiting Date</th>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let i of VisitorData">
+        <td>
+            {{i.id}}
+        </td>
+        <td>
+            {{i.vname}}
+        </td>
+        <td>
+            {{i.vloc}}
+        </td>
+        <td>
+            {{i.hname}}
+        </td>
+        <td>
+            {{i.vdate|date:'dd-MM-yyyy'}}
+        </td>
+    </tr>
+</tbody>
+</table><br>
+
+

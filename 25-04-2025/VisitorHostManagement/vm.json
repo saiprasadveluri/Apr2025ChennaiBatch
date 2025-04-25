@@ -1,0 +1,113 @@
+{
+  "visitor": [
+    {
+      "id": "1",
+      "vname": "charpitha",
+      "vloc": "hyderabad",
+      "parent": "Acompany",
+      "purpose": "training",
+      "phone": "9034567823",
+      "vdate": "12-04-2025",
+      "hname": "ram"
+    },
+    {
+      "id": "f6db",
+      "vname": "sweety",
+      "vloc": "Hyderabad",
+      "hname": "varun",
+      "vdate": "2025-04-16"
+    },
+    {
+      "id": "2842",
+      "vname": "gowri",
+      "vloc": "Banglore",
+      "hname": "sai",
+      "vdate": "2025-04-03"
+    },
+    {
+      "id": "71a7",
+      "vname": "Sai Durga",
+      "vloc": "Hyderabad",
+      "hname": "Mary",
+      "vdate": "2025-04-29"
+    },
+    {
+      "id": "a528",
+      "vname": "saru",
+      "vloc": "Hyderabad",
+      "hname": "swathi",
+      "vdate": "2025-04-12"
+    },
+    {
+      "id": "d5c5",
+      "vname": "Durga",
+      "vloc": "Chennai",
+      "hname": "ram",
+      "vdate": "2025-04-26"
+    }
+  ],
+  "host": [
+    {
+      "id": "123",
+      "hname": "lilly",
+      "empno": "456",
+      "dep": "abc",
+      "loc": "chennai",
+      "email": "lilly@g.com",
+      "password": "123456",
+      "phone": "7349026303",
+      "role": "Manager"
+    },
+    {
+      "id": "456",
+      "hname": "ram",
+      "empno": "789",
+      "dep": "xyz",
+      "loc": "hyderabad",
+      "email": "ram@g.com",
+      "password": "1234567",
+      "phone": "7349026467",
+      "role": "Host"
+    },
+    {
+      "id": "7d15",
+      "hname": "ravi",
+      "loc": "Hyderabad",
+      "email": "ravi12@r.com",
+      "password": "1234567",
+      "role": "Host"
+    },
+    {
+      "id": "0a05",
+      "hname": "hari",
+      "loc": "Hyderabad",
+      "email": "abc@gmail.com",
+      "password": "987654",
+      "role": "Host"
+    },
+    {
+      "id": "5512",
+      "hname": "siri",
+      "loc": "Chennai",
+      "email": "xyz213@.com",
+      "password": "234567",
+      "role": "Host"
+    },
+    {
+      "id": "cdb9",
+      "hname": "rishi",
+      "loc": "Banglore",
+      "email": "rishi@w.com",
+      "password": "46893",
+      "role": "Host"
+    }
+  ],
+  "manager": [
+    {
+      "id": "123",
+      "name": "faru",
+      "email": "faru@h.com",
+      "password": "654321"
+    }
+  ]
+}

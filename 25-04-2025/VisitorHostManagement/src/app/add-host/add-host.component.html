@@ -1,0 +1,21 @@
+<h2>Add Visitor</h2>
+<form [formGroup]="frm" (ngSubmit)="AddNewHost()">
+<!-- <input type="text"
+formControlName="id" 
+placeholder="Enter the Id"/><br> -->
+<input type="text"
+formControlName="hname" 
+placeholder="Enter the HostName"/><br>
+<select formControlName="loc">
+    <option value="Chennai">Chennai</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Banglore">Banglore</option>
+</select><br>
+<input type="email"
+formControlName="email" 
+placeholder="Enter the Email"/><br>
+<input type="password"
+formControlName="password" 
+placeholder="Enter the password"/><br>
+<button type="submit">AddVisitor</button>
+</form>
