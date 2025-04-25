@@ -1,0 +1,26 @@
+<p>edit-host works!</p>
+<form [formGroup]="frm" (ngSubmit)="EditHost()">
+
+    
+    <input type="text" formControlName="name">
+    <br>
+    <input type="text" formControlName="employeenumber">
+<br>
+<input type="text" formControlName="department">
+<br>
+<select formControlName="location">
+    <option value="Hyd">HYD</option>
+</select>
+<br>
+
+<input type="text" formControlName="contactnumber">
+<br>
+<input type="text" formControlName="email">
+<br>
+<input type="text" formControlName="password">
+<br>
+<input type="text" formControlName="role">
+<br>
+
+<button type="submit">edit user</button>
+</form>

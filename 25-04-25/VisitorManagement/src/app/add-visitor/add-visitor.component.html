@@ -1,0 +1,25 @@
+<p>add-visitor works!</p>
+
+<form [formGroup]="frm" (ngSubmit)="AddNewVisitor()">
+    <input type="text" formControlName="id">
+    <br>
+    <input type="text" formControlName="name">
+    <br>
+<select formControlName="location">
+    <option value="Hyd">HYD</option>
+</select>
+<br>
+
+<input type="text" formControlName="parentcompany">
+<br>
+<input type="text" formControlName="purpose">
+<br>
+<input type="text" formControlName="mobilenumber">
+<br>
+<input type="text" formControlName="visitingdata">
+<br>
+<input type="text" formControlName="hostname">
+<br>
+
+<button type="submit">add new user</button>
+</form>

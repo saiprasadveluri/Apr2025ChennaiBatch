@@ -1,0 +1,40 @@
+<button (click)="GotoAddHost()">Add new user</button>
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>name</th>
+       
+        <th>employee number</th>
+        <th>department</th>
+        <th>location</th>
+        <th>contactnumber</th>
+        <th>email</th>
+        <th>password</th>
+        <th>role</th>
+
+        
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let r of hostData">
+        <td>{{r.id}}</td>
+        <td>{{r.name}}</td>
+        <td>{{r.employeenumber}}</td>
+        <td>{{r.department}}</td>
+        <td>{{r.location}}</td>
+        <td>{{r.contactnumber}}</td>
+        <td>{{r.email}}</td>
+        <td>{{r.password}}</td>
+        <td>{{r.role}}</td>
+        <td>
+            <button class="btn btn-primary" (click)="DeleteHost(r.id)">delete</button>
+            <button class="btn btn-primary" (click)="EditHost(r.id)">edit</button>
+
+        </td>
+        
+    </tr>
+</tbody>
+</table>
+
+

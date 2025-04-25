@@ -1,0 +1,13 @@
+<div>
+    <form class="container mt-4 p-4 border rounded bg-light" frm="ngForm" (ngSubmit)="Login()" style="align-items: center;">
+        <input type="email" name="uemail"[(ngModel)]="userEmail"/>
+        <br>
+        <input type="password" name="upassword" [(ngModel)]="userPassword"/>
+        <br>
+        <button type="submit">Login</button>
+    
+    </form>
+   
+</div>
+<router-outlet></router-outlet>
+
