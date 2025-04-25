@@ -1,0 +1,26 @@
+<table width="100%"> 
+    <thead>
+        <th>Host Name</th>
+        <th>Host Id</th>
+        <th>Emp.No</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>User Type</th>
+        <th>Host Role</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of hdata">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.employee}}</td>
+            <td>{{c.depart}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.password}}</td>
+            <td>{{c.User}}</td>
+            <td>{{c.hostrole}}</td>
+            <td><button type="submit" class="btn btn-secondary" (click)="DeleteHost(c.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

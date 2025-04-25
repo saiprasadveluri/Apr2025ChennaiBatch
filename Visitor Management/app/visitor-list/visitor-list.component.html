@@ -1,0 +1,24 @@
+<table width="100%" class="table"> 
+    <thead>
+        <th>Visitor Name</th>
+        <th>Visitor Id</th>
+        <th>Location</th>
+        <th>Company</th>
+        <th>Phone No.</th>
+        <th>Date</th>
+        <th>Host Role</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of vdata">
+            <td>{{c.name}}</td>
+            <td>{{c.id}}</td>
+            <td>{{c.location}}</td>
+            <td>{{c.comapny}}</td>
+            <td>{{c.phone}}</td>
+            <td>{{c.date}}</td>
+            <td>{{c.hostrole}}</td>
+            <td><button type="submit" class="btn btn-secondary" (click)="DeleteUser(c.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
