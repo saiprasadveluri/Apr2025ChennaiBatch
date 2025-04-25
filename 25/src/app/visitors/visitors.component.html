@@ -1,0 +1,65 @@
+<div class="container mt-4">
+    <h3 class="mb-3">All Visitors</h3>
+
+    <table class="table table-borderd table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Visitor ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Company</th>
+                <th>Purpose</th>
+                <th>Mobile</th>
+                <th>Date</th>
+                <th>Host</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of visitors">
+                <td>{{v.id}}</td>
+                <td>{{v.name}}</td>
+                <td>{{v.location}}</td>
+                <td>{{v.parentCompany}}</td>
+                <td>{{v.purpose}}</td>
+                <td>{{v.mobile}}</td>
+                <td>{{v.visitingDate}}</td>
+                <td>{{v.hostId}}</td>
+                <td><button class="btn btn-sm btn-warning" (click) = "edit(v)">Edit</button></td>
+                <td><button class="btn btn-sm btn-danger ms-1" (click) = "deleteVisitor(v.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr style="margin-top: 20px;">
+
+
+    <h4>{{updateMode ? 'Update' : 'Add'}} Visitor</h4>
+
+    <form (ngSubmit) = "submit()">
+        <div class="row">
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "visitor.name" name="name" placeholder="name" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="number" class="form-control" [(ngModel)] = "visitor.parentCompany" name="Company" placeholder="Company Name" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "visitor.purpose" name="purpose" placeholder="purpose" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "visitor.location" name="location" placeholder="location" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="number" class="form-control" [(ngModel)] = "visitor.mobile" name="mobile" placeholder="mobile" required min="1">
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "visitor.visitingDate" name="visitingDate" placeholder="visiting Date" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "visitor.hostId" name="hostId" placeholder="host Id" required>
+            </div>
+            <button type="submit" class="btn btn-sucess" style="margin-top: 10px;">{{updateMode ? 'Update' : 'Add'}}</button>
+            <button type="submit" class="btn btn-secondary mt-2" style="margin-top: 10px;" *ngIf="updateMode" (click)="cancel()">Cancel</button>
+        </div>
+    </form>
+</div>

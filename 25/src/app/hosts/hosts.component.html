@@ -1,0 +1,57 @@
+<div class="container mt-4">
+    <h3 class="mb-3">All Hosts</h3>
+
+    <table class="table table-borderd table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Host ID</th>
+                <th>Name</th>
+                <th>Emp No</th>
+                <th>Department</th>
+                <th>Location</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let h of hosts">
+                <td>{{h.id}}</td>
+                <td>{{h.name}}</td>
+                <td>{{h.employeeNumber}}</td>
+                <td>{{h.department}}</td>
+                <td>{{h.location}}</td>
+                <td>{{h.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr style="margin-top: 20px;">
+
+
+    <h4>Add New Host</h4>
+
+    <form (ngSubmit) = "addHost()">
+        <div class="row">
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "host.name" name="name" placeholder="name" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="number" class="form-control" [(ngModel)] = "host.employeeNumber" name="employeeNumber" placeholder="employee Number" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "host.department" name="department" placeholder="Department" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "host.location" name="location" placeholder="location" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="number" class="form-control" [(ngModel)] = "host.contact" name="contact" placeholder="contact" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="text" class="form-control" [(ngModel)] = "host.username" name="username" placeholder="username" required>
+            </div>
+            <div class="col-md-4 md-2">
+                <input type="password" class="form-control" [(ngModel)] = "host.password" name="password" placeholder="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 20px;">ADD NEW</button>
+        </div>
+    </form>
+</div>
