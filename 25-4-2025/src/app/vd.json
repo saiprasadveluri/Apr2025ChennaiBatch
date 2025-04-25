@@ -1,0 +1,153 @@
+{
+  "VisitorInfo": [
+    {
+      "id": "44f3",
+      "vname": "ttt",
+      "parentcomp": "vvv",
+      "purpose": "llll",
+      "location": "bbbb",
+      "mobileno": "mmmm",
+      "visitdate": "ffff",
+      "hostname": "trinay"
+    },
+    {
+      "id": "7d40",
+      "vname": "sdfsd",
+      "parentcomp": "sadfsdf",
+      "purpose": "sdf",
+      "location": "sdfsadf",
+      "mobileno": "sdfsadf",
+      "visitdate": "sdafsadf",
+      "hostname": "shakti"
+    },
+    {
+      "id": "de38",
+      "vname": "sdfa",
+      "parentcomp": "sdfsdfs",
+      "purpose": "dfasdfsadf",
+      "location": "fsadfsf",
+      "mobileno": "sdfsdfsd",
+      "visitdate": "sdfsafsdf",
+      "hostname": "shakti"
+    },
+    {
+      "id": "2a44",
+      "vname": "sdfsadf",
+      "parentcomp": "fasdfsdfsdf",
+      "purpose": "sadfsdf",
+      "location": "zcZXc",
+      "mobileno": "zxczxcZxc",
+      "visitdate": "dsfas",
+      "hostname": "shakti"
+    },
+    {
+      "id": "0012",
+      "vname": "dfg",
+      "parentcomp": "dsfgdf",
+      "purpose": "gsdfgfd",
+      "location": "sdfdfgsdf",
+      "mobileno": "gafgdf",
+      "visitdate": "gsdfgsdfgdfg",
+      "hostname": "shakti"
+    }
+  ],
+  "HostInfo": [
+    {
+      "id": "1",
+      "hostname": "trinay",
+      "empNum": "101",
+      "dept": "POSH",
+      "location": "chennai",
+      "email": "trinay@mail.com",
+      "password": "Harsha",
+      "mobileno": "9900887766",
+      "role": "manager"
+    },
+    {
+      "id": "2",
+      "hostname": "Mayuri",
+      "empNum": "102",
+      "dept": "POSH",
+      "location": "chennai",
+      "email": "user@mail.com",
+      "password": "user",
+      "mobileno": "9900887766",
+      "role": "host"
+    },
+    {
+      "id": "3",
+      "hostname": "HighwayInn",
+      "empNum": "103",
+      "dept": "POSH",
+      "location": "chennai",
+      "email": "user@mail.com",
+      "password": "user",
+      "mobileno": "9900887766",
+      "role": "host"
+    },
+    {
+      "id": "4",
+      "hostname": "RR",
+      "empNum": "104",
+      "dept": "POSH",
+      "location": "chennai",
+      "email": "user@mail.com",
+      "password": "user",
+      "mobileno": "9900887766",
+      "role": "host"
+    },
+    {
+      "id": "06fc",
+      "hostname": "dsfgdsfg",
+      "empNum": "12",
+      "dept": "dfgdfg",
+      "location": "HYD",
+      "email": "john@john.com",
+      "mobileno": "7337258433",
+      "password": "dfgsdfgdfg",
+      "role": "Host"
+    },
+    {
+      "id": "6017",
+      "hostname": "weqr",
+      "empNum": "13",
+      "dept": "fdsgsdfg",
+      "location": "HYD",
+      "email": "dfgdfg",
+      "mobileno": "dfgdfgasg",
+      "password": "dfsgsdfg",
+      "role": "Host"
+    },
+    {
+      "id": "a128",
+      "hostname": "shakti",
+      "empNum": "13",
+      "dept": "POSH",
+      "location": "HYD",
+      "email": "sadf@g.com",
+      "mobileno": "sdfsadf",
+      "password": "safd",
+      "role": "Host"
+    }
+  ],
+  "managerInfo": [
+    {
+      "uName": "Trinay",
+      "uId": "Trinay@gmail.com",
+      "password": "netflix",
+      "role": "manager"
+    },
+    {
+      "uName": "Shamshuddin",
+      "uId": "Prime@gmail.com",
+      "password": "Prime",
+      "role": "manager"
+    },
+    {
+      "uName": "Prem",
+      "uId": "Hotstar@gmail.com",
+      "password": "Prem",
+      "role": "manager"
+    }
+  ]
+}

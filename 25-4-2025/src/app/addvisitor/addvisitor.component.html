@@ -1,0 +1,37 @@
+<h2>Add New Visitor</h2>
+<form [formGroup]="frm1" (ngSubmit)="AddNewVisitor()">
+    <!-- <input type="text"
+    formControlName="rid"
+    placeholder="Restaurent ID"/> -->
+    <input type="text"
+    formControlName="vname"
+    placeholder="Visitor Name"/>
+    <br>
+    <input type="text"
+    formControlName="parentcomp"
+    placeholder="Parent Company"/>
+    <br>
+    <input type="text"
+    formControlName="purpose"
+    placeholder="what is the purpose"/>
+    <br>
+    <input type="text"
+    formControlName="mobileno"
+    placeholder="Mobile Number"/>
+    <br>
+    <input type="text"
+    formControlName="location"
+    placeholder="Location"/>
+    <br>
+    <input type="text"
+    formControlName="visitdate"
+    placeholder="Visit Date"/>
+    <br>
+    <select formControlName="hostname">
+        <option value="trinay">Trinay</option>
+        <option value="shakti">Shakti</option>
+        <option value="prem">Prem</option>
+    </select>
+    <br>
+    <button type="submit">Add Visitor</button>
+</form>
