@@ -1,0 +1,10 @@
+<div>
+    <form #frm="ngForm" (ngSubmit)="Login()">
+        <input type="email" name="userId" [(ngModel)]="userId" placeholder=" User Id">
+        <br>
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Enter password">
+        <br>
+        <button class="btn btn-danger" type="submit">Login</button>
+    </form>
+</div>
+<router-outlet></router-outlet>

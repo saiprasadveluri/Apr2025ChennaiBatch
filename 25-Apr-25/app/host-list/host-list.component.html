@@ -1,0 +1,35 @@
+<h2>Host List</h2>
+ <button class="btn btn-danger" (click)="GotoAddHost()">Add New Host</button>
+ <table class ="table table-stripped">
+     <thead>
+         <tr>
+             <th>Host Id</th>
+             <th>Host Name</th>
+             <th>Employee No</th>
+             <th>Department</th>
+             <th>Location</th>
+             <th>Mobile No</th>
+             <th>User Id</th>
+             <th>Password</th>
+             <th>Role</th>
+             <th>Actions</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor="let r of hostData">
+             <td>{{r.id}}</td>
+             <td>{{r.hostName}}</td>
+             <td>{{r.employeeNumber}}</td>
+             <td>{{r.department}}</td>
+             <td>{{r.location}}</td>
+             <td>{{r.mobileNo}}</td>
+             <td>{{r.userId}}</td>
+             <td>{{r.password}}</td>
+             <td>{{r.role}}</td>
+             <td>
+                 <button  (click)="DeleteHost(r.id)">Delete</button>
+                 <button (click)="EditHost(r.id)">Edit</button>
+             </td>
+         </tr>
+     </tbody>
+ </table>
