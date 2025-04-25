@@ -1,0 +1,60 @@
+<h2>VisiorList</h2>
+<button (click)="GotoAddUser()">Back to Add New User</button>
+    <table style="width: 100px;" class= "table-table-stripped table-hover">
+        <thead>
+            <tr>
+            <th>
+                visitot Id
+            </th>
+            <th>
+                visitot Name
+            </th>
+            <th>
+                visitor Location
+            </th>
+            <th>
+                parent Company
+            </th>
+            <th>
+                purpose
+            </th>
+            <th>
+                mobile Number
+            </th>
+            <th>
+                Host Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let v of visitordata">
+            <td>
+                {{v.Id}}
+            </td>
+            <td>
+                {{v.name}}
+            </td>
+            <td>
+                {{v.Location}}
+            </td>
+            <td>
+                {{v.parentCompany}}
+            </td>
+            <td>
+                {{v.purpose}}
+                <td>
+                    {{v.number}}
+                </td> 
+                <td>
+                    {{v.hostName}}
+                </td>
+               
+    </tr>
+    <td>
+        <button (click)="DeleteVisitor">DeleteVisitor</button></td>
+        <td>
+            <button (click)="EditVisitor">EditVisitor</button></td>
+        
+    </tbody>
+    </table>
