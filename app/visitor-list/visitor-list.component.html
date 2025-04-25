@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Visitor List</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Locations</th>
+                <th>Company</th>
+                <th>Purpose</th>
+                <th>Date</th>
+                <th>Host</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let visitor of visitors">
+                <td>{{visitor.name}}</td>
+                <td>{{visitor.location}}</td>
+                <td>{{visitor.parentCompany}}</td>
+                <td>{{visitor.purpose}}</td>
+                <td>{{visitor.visitingDate}}</td>
+                <td>{{visitor.hostName}}</td>
+
+                <td>
+                    <button class="btn btn-danger" (click)="deleteVisitor(visitor.visitorId)"[disabled]="visitor.readOnly">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

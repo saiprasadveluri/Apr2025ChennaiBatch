@@ -1,1 +1,24 @@
-<app-app-home></app-app-home>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Visitor Management</a>
+    <div>
+        <ul class="navbar-nav">
+            <!-- <li class="nav-item">
+                <a class="nav-link" (click)="login()">LogIn</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['home/visitors']">Visitors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['home/hosts']">Hosts</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['home/visitor-form']">Add Visitors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['home/host-form']">Host Form</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Add Host</h2>
+    <form (ngSubmit)="addHost()">
+        <div class="form-group">
+            <label>Host Name</label>
+            <input type="text"  class="form-control"  [(ngModel)]="host.hostName" name="hostName" required/>
+        </div>
+        <div class="form-group">
+            <label >Employee Number</label>
+            <input type="text"  class="form-control" [(ngModel)]="host.employeeNumber" name="employeeNumber" required/>
+        </div>
+        <div class="form-group">
+            <label>Department</label>
+            <input type="text" class="form-control" [(ngModel)]="host.department" name="department" required/>
+        </div>
+        <div class="/form-group">
+            <label>Location</label>
+            <input type="text" class="form-control" [(ngModel)]="host.location" name="location" required/>
+        </div>
+        <div class="form-group">
+            <label for="phoneNo">Phone No</label>
+            <input type="text"class="form-control" [(ngModel)]="host.phoneNo" name="phoneNo" required/>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Host</button>
+    </form>
+</div>

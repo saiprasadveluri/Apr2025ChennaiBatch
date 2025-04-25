@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'routing_app';
+  router: any;
+login() :void{
+  localStorage.removeItem('userRole');
+this.router.navigate(['/']);
+}
+  title = 'VisitorManagement';
+visitorList: any;
 }

@@ -1,199 +1,93 @@
 {
-  "userInfo": [
+  "users": [
     {
-      "id": "1",
-      "name": "Sai",
-      "role": "Admin",
-      "location": "HYD",
-      "email": "admin@admin.com",
-      "password": "admin"
+      "username": "host1",
+      "password": "1234",
+      "role":"host",
+      "id": "9f1a"
     },
     {
-      "id": "2",
-      "name": "Ravi",
-      "role": "Owner",
-      "location": "HYD",
-      "email": "ravi@ravi.com",
-      "password": "123456"
+      "username": "manager",
+      "password": "12345",
+      "role":"manager",
+      "id": "425c"
     },
     {
-      "id": "3",
-      "name": "John",
-      "role": "Owner",
-      "location": "HYD",
-      "email": "john@john.com",
-      "password": "123456"
-    },
-    {
-      "id": "4",
-      "name": "Ram",
-      "role": "Owner",
-      "location": "CHN",
-      "email": "ram@ram.com",
-      "password": "123456"
-    },
-    {
-      "id": "5",
-      "name": "Mary",
-      "role": "User",
-      "location": "HYD",
-      "email": "mary@mary.com",
-      "password": "123456"
+      "username": "guest",
+      "password": "123456",
+      "role":"guest"
     }
   ],
-  "restaurantInfo": [
+  "visitors": [
     {
-      "id": "1",
-      "name": "A2B",
-      "location": "CHN",
-      "owner": 2
+      "visitorId": 1,
+      "name": "Rajeev",
+      "location": "Tadipatri",
+      "parentCompany": "ABC",
+      "purpose": "Training",
+      "phoneNo.": "123456789",
+      "visitingDate": "25.04.2025",
+      "hostName": "Pranav",
+      "readOnly":true,
+      "id": "7886"
+      
     },
     {
-      "id": "2",
-      "name": "Mayuri",
-      "location": "HYD",
-      "owner": 2
+      "visitorId": 2,
+      "name": "Bobby",
+      "location": "BNGLR",
+      "parentCompany": "HEXA",
+      "purpose": "Trainer",
+      "phoneNo.": "1234567890",
+      "visitingDate": "26.04.2025",
+      "hostName": "Shamsheed",
+      "readOnly":true,
+      "id": "8b88"
     },
     {
-      "id": "68b8",
-      "name": "HighwayInn",
-      "location": "CHN",
-      "owner": 1
-    },
-    {
-      "id": "be06",
-      "name": "RR",
-      "location": "BLR",
-      "owner": 2
-    },
-    {
-      "id": "7ed4",
-      "name": "RRR",
-      "location": "CHENNAI",
-      "owner": 1
+      "visitorId": 3,
+      "name": "Chinnu",
+      "location": "RJP",
+      "parentCompany": "AITS",
+      "purpose": "Meeting",
+      "phoneNo": "1234567049",
+      "visitingDate": "24.04.2025",
+      "hostName": "Harshi",
+      "readOnly":true,
+      "id": "ef9c"
     }
+    
   ],
-  "menu": [
+  "hosts": [
     {
-      "id": "1",
-      "rid": "1",
-      "dishname": "Dosa",
-      "dishtype": "VEG",
-      "price": 75.45
+      "hostId": 1,
+      "hostName": "Pranav",
+      "employeeNumber": "001",
+      "department": ".NET",
+      "location": "Tadipatri",
+      "phoneNo": "7894556123",
+      "readOnly":true,
+      "id": "038d"
     },
     {
-      "id": "2",
-      "rid": "1",
-      "dishname": "Idli",
-      "dishtype": "VEG",
-      "price": 25
+      "hostId": 2,
+      "hostName": "Shamsheed",
+      "employeeNumber": "002",
+      "department": "java",
+      "location": "Bnglr",
+      "phoneNo": "78947846123",
+      "readOnly":true,
+      "id": "586e"
     },
     {
-      "id": "3",
-      "rid": "1",
-      "dishname": "Fried Rice",
-      "dishtype": "NON-VEG",
-      "price": 145.25
-    },
-    {
-      "id": "4",
-      "rid": "2",
-      "dishname": "Masla Dosa",
-      "dishtype": "VEG",
-      "price": 100.45
-    },
-    {
-      "id": "5",
-      "rid": "2",
-      "dishname": "Podi Idli",
-      "dishtype": "VEG",
-      "price": 75
-    },
-    {
-      "id": "6",
-      "rid": "2",
-      "dishname": "Biriyani",
-      "dishtype": "NON-VEG",
-      "price": 175
-    },
-    {
-      "id": "07fb",
-      "dishname": "Dahi Vada",
-      "dishtype": "VEG",
-      "price": 76,
-      "rid": "1"
-    },
-    {
-      "id": "ab6f",
-      "dishname": "SN Thali",
-      "dishtype": "JAIN",
-      "price": 225.5,
-      "rid": "1"
-    },
-    {
-      "id": "d7a4",
-      "dishname": "GChk",
-      "dishtype": "NON-VEG",
-      "price": 189.75,
-      "rid": "1"
-    },
-    {
-      "id": "0ad6",
-      "dishname": "Plain Dosa",
-      "dishtype": "VEG",
-      "price": 27,
-      "rid": "2"
-    },
-    {
-      "id": "45db",
-      "dishname": "Curd Rice",
-      "dishtype": "VEG",
-      "price": 120,
-      "rid": "1"
-    }
-  ],
-  "orders": [
-    {
-      "id": "1",
-      "uid": "5",
-      "rid": "1"
-    },
-    {
-      "id": "2",
-      "uid": "6",
-      "rid": "2"
-    }
-  ],
-  "orderline": [
-    {
-      "id": "1",
-      "oid": "1",
-      "mid": "1",
-      "qty": 4
-    },
-    {
-      "id": "2",
-      "oid": "1",
-      "mid": "2",
-      "qty": 2
-    },
-    {
-      "id": "3",
-      "oid": "1",
-      "mid": "3",
-      "qty": 1
-    },
-    {
-      "id": "1",
-      "oid": "2",
-      "mid": "1",
-      "qty": 2
-    },
-    {
-      "id": "2",
-      "oid": "1",
-      "mid": "2",
-      "qty": 3
+      "hostId": 3,
+      "hostName": "Harshi",
+      "employeeNumber": "003",
+      "department": "H&S",
+      "location": "RJP",
+      "phoneNo": "9848632324",
+      "readOnly":true,
+      "id": "d279"
     }
   ]
 }

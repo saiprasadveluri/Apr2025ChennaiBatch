@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Add Visitor</h2>
+    <form (ngSubmit)="addVisitor()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control"  [(ngModel)]="visitor.name" name="name" required/>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" class="form-control" [(ngModel)]="visitor.location" name="location" required/>
+        </div>
+        <div class="form-group">
+            <label for="parentCompany">Parent Company</label>
+            <input type="text" id="parentCompany" class="form-control" [(ngModel)]="visitor.parentCompany" name="parentCompany" required/>
+        </div>
+        <div class="/form-group">
+            <label for="purpose">Purpose</label>
+            <input type="text" id="purpose" class="form-control" [(ngModel)]="visitor.purpose" name="purpose" required/>
+        </div>
+        <div class="form-group">
+            <label for="phoneNo">Phone No</label>
+            <input type="text" id="phoneNo" class="form-control" [(ngModel)]="visitor.phoneNo" name="phoneNo" required/>
+        </div>
+        <div class="form-group">
+            <label for="visitingDate">Visiting Date</label>
+            <input type="date" id="visitingDate" class="form-control" [(ngModel)]="visitor.visitingDate" name="visitingDate" required/>
+        </div>
+        <div class="form-group">
+            <label for="hostname">Host Name</label>
+            <input type="text" id="hostname" class="form-control" [(ngModel)]="visitor.hostName" name="hostname" required/>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Visitor</button>
+    </form>
+</div>

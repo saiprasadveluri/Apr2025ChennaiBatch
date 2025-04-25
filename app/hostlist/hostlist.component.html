@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Host List</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Host Name</th>
+                <th>Employee Number</th>
+                <th>Department</th>
+                <th>Location</th>
+                <th>PhoneNo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let host of hosts">
+                <td>{{host.hostId}}</td>
+                <td>{{host.hostName}}</td>
+                <td>{{host.employeeNumber}}</td>
+                <td>{{host.department}}</td>
+                <td>{{host.location}}</td>     
+                <td>{{host.phone}}</td>
+        </tbody>
+    </table>
+</div>
