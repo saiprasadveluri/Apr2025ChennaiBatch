@@ -1,0 +1,22 @@
+<h2>Filtered Rest List</h2>
+<table style="width:100%;border:2px solid black;">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>location</th>
+        <th>owner</th>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of restaurantData">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.location}}</td>
+            <td>{{u.owner}}</td>
+            <!-- <td><button (click)="DeleteRest(u.id)">DeleteRest</button>   
+                <button (click)="EditRest(u.id)">EditRest</button>
+            </td> -->
+        </tr> 
+    </tbody> 
+    <!-- <button (click)="GoBacktoAddRest()">Go Back To AddRest</button>   -->
+    </table>
+

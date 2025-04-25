@@ -1,0 +1,9 @@
+<div>
+    <h1>Login Form</h1>
+    <form #frm="ngForm" (ngSubmit)="Login()">
+        <input type="text" name="uemail" [(ngModel)]="uemail"/><br>
+        <input type="password" name="upassword" [(ngModel)]="upassword"/><br>
+        <button (click)="Login()">Login</button>
+    </form>
+</div>
+<router-outlet></router-outlet>
