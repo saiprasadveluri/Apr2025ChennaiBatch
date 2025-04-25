@@ -1,0 +1,46 @@
+<div class="container mt-4">
+    <h3>Add New Host</h3>
+    <form (ngSubmit)="addnewhost()">
+      <div class="form-group mb-3">
+        <label>Host ID</label>
+        <input type="text" class="form-control" [(ngModel)]="host.id" name="hostId" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label>Host Name</label>
+        <input type="text" class="form-control" [(ngModel)]="host.name" name="name" required>
+      </div>
+   
+      <div class="form-group mb-3">
+        <label>Employee Number</label>
+        <input type="text" class="form-control" [(ngModel)]="host.employeeNumber" name="employeeNumber" required>
+      </div>
+   
+      <div class="form-group mb-3">
+        <label>Department</label>
+        <input type="text" class="form-control" [(ngModel)]="host.department" name="department" required>
+      </div>
+   
+      <div class="form-group mb-3">
+        <label>Location</label>
+        <input type="text" class="form-control" [(ngModel)]="host.location" name="location" required>
+      </div>
+   
+      <div class="form-group mb-3">
+        <label>Contact Number</label>
+        <input type="text" class="form-control" [(ngModel)]="host.contactNumber" name="contactNumber" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label>UserName</label>
+        <input type="text" class="form-control" [(ngModel)]="host.userName" name="userNmae" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label>Password</label>
+        <input type="text" class="form-control" [(ngModel)]="host.password" name="password" required>
+      </div>
+   
+      <button type="submit" class="btn btn-primary">Add Host</button>
+    </form>
+  </div>

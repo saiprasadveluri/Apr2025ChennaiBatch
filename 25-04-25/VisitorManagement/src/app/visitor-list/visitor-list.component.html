@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h2>All Visitors</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Parent Company</th>
+          <th>Purpose</th>
+          <th>Mobile Number</th>
+          <th>Visiting Date</th>
+          <th>Host Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let visitor of visitors">
+          <td>{{visitor.id}}</td>
+          <td>{{visitor.name}}</td>
+          <td>{{visitor.location}}</td>
+          <td>{{visitor.parentCompany}}</td>
+          <td>{{visitor.purpose}}</td>
+          <td>{{visitor.contactNumber}}</td>
+          <td>{{visitor.dov}}</td>
+          <td>{{visitor.hostName}}</td>
+          <td>
+  <button class="btn btn-danger btn-sm" (click)="deleteVisitor(visitor.id)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
