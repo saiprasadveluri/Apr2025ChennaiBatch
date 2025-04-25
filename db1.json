@@ -1,0 +1,102 @@
+{
+    "visitorInfo": [
+      {
+        "id": "1",
+        "name": "Sai",
+        "location": "HYD",
+        "parentcompany": "B2B",
+        "purpose": "personal",
+        "mobilenumber": "9748937463",
+        "visitingdata": "23-04-35",
+        "hostname": "Mark"
+      },
+      {
+        "id": "2",
+        "name": "Ravi",
+        "location": "HYD",
+        "parentcompany": "B2B",
+        "purpose": "business",
+        "mobilenumber": "9748937463",
+        "visitingdata": "23-04-35",
+        "hostname": "Mark"
+      },
+      {
+        "id": "3",
+        "name": "John",
+        "location": "HYD",
+        "parentcompany": "B2B",
+        "purpose": "personal",
+        "mobilenumber": "9748937463",
+        "visitingdata": "23-04-35",
+        "hostname": "Mark"
+      }
+     
+    ],
+    "hostInfo": [
+      {
+        "id": "1",
+        "name": "Mark",
+        "employeenumber": "235857892",
+        "department": "business",
+        "location":"CHN",
+        "contactnumber":"8349892348",
+         "email":"Mark@email.com",
+        "password":"12345678"
+
+      },
+      {
+        "id": "2",
+        "name": "Sam",
+        "employeenumber": "235857892",
+        "department": "personal",
+        "location": "HYD",
+        "contactnumber":"8349892348",
+         "email":"Sam@email.com",
+        "password":"12345678"
+      },
+      {
+        "id": "3",
+        "name": "John",
+        "employeenumber": "235857892",
+        "department": "personal",
+        "location": "CHN",
+       "contactnumber":"8349892348",
+        "email":"John@email.com",
+        "password":"12345678"
+      }
+     
+    ],
+    "ManagerInfo": [
+      {
+        "id": "1",
+        "name": "Zayn",
+        "location": "CHN",
+        "email":"Zayn@email.com",
+        "password":"12345678"
+        
+      },
+      {
+        "id": "2",
+        "name": "Styles",
+        "location": "HYD",
+        "email":"Styles@email.com",
+        "password":"12345678"
+        
+       
+      },
+      {
+        "id": "3",
+        "name": "Louis",
+        "location": "CHN",
+        "email":"Louis@email.com",
+        "password":"12345678"
+        
+       
+      }
+      
+    ]
+   
+    
+   
+    
+  }
