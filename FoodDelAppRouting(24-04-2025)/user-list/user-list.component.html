@@ -1,0 +1,26 @@
+<h2>User List</h2>
+<table style="width:100%;border:2px solid black;">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>role</th>
+        <th>location</th>
+        <th>email</th>
+        <th>password</th>
+        <th>Actions</th>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of userDataNew">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.role}}</td>
+            <td>{{u.location}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.password}}</td>
+            <td><button (click)="DeleteUser(u.id)">DeleteUser</button>
+                <button (click)="EditUser(u.id)">EditUser</button>
+            </td>
+        </tr> 
+    </tbody> 
+    <button (click)="GotoAddUser()">Go Back To AddUser</button> 
+</table>
