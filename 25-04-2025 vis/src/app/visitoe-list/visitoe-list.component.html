@@ -1,0 +1,29 @@
+<h2>Visitor List</h2>
+<table style="width:100%;border:2px solid black;">
+    <thead>
+        <th>id</th>
+        <th>Name</th>
+        <th>location</th>
+        <th>Parentcompany</th>
+        <th>Purpose</th>    
+        <th>MobileNumber</th> 
+        <th>VistingDate</th> 
+        <th>HostName</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of visitorData">
+            <td>{{u.id}}</td>
+            <td>{{u.Name}}</td>
+            <td>{{u.location}}</td>
+            <td>{{u.Parentcompany}}</td>
+            <td>{{u.Purpose}}</td>
+            <td>{{u.MobileNumber}}</td>
+            <td>{{u.VistingDate}}</td>
+            <td>{{u.HostName}}</td>
+            <td><button (click)="deletevisitor(u.id)">Delete</button>   
+                <td><button (click)="EditVisitor(u.id)">Edit</button> 
+            </td> 
+        </tr> 
+    </tbody> 
+    </table>

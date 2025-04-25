@@ -1,0 +1,121 @@
+{
+  "VisitorInfo": [
+    {
+      "id":"001",
+      "Name": "Sai",
+      "location": "HYD",
+      "Parentcompany":"TCS",
+      "Purpose":"Training",
+      "MobileNumber" :"7782456924",
+      "VistingDate" :"25Apr2025",
+       "HostName" :"Aravind"
+    },
+    {
+       "id":"002",
+       "Name": "Eswar",
+      "location": "Chennai",
+      "Parentcompany":"Hexaware",
+      "Purpose":"Training",
+      "MobileNumber" :"81062558964",
+      "VistingDate" :"18Apr2025",
+       "HostName" :"SaiGowtham"
+    },
+    {
+       "id":"003",
+      "Name": "Murali",
+      "location": "Bangalore",
+      "Parentcompany":"Wipro",
+      "Purpose":"meeting",
+      "MobileNumber" :"77958016950",
+      "VistingDate" :"11Apr2025",
+       "HostName" :"Gowtham"
+    },
+    {
+      "id":"004",
+      "Name": "Raju",
+      "location": "Pune",
+      "Parentcompany":"HCL",
+      "Purpose":"Training",
+      "MobileNumber" :"81062553964",
+      "VistingDate" :"13Apr2025",
+       "HostName" :"Rajesh"
+    }
+    
+  ],
+  "HostInfo": [
+    {
+      "id": "1",
+      "name": "MLA",
+      "location": "CHN",
+      "Employeenumber":"236658",
+      "contactnumber":7780245627,
+      "Department":".Net",
+      "password" :"123456",
+      "Email" : "abcd@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Emerald",
+      "location": "Bangalore",
+      "Employeenumber":"333589",
+      "contactnumber":7780895624,
+       "Department":"java",
+       "password" :"654987",
+      "Email" : "nasng@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Orchid",
+      "location": "pune",
+      "Employeenumber":"255989",
+      "contactnumber":7896245627,
+       "Department":"phyton",
+       "password" :"329845",
+      "Email" : "raja@gmail.com"
+    },
+    { "id": "4",
+      "name": "mercury",
+      "location": "HYD",
+      "Employeenumber":"234989",
+      "contactnumber":7859845627,
+       "Department":"Tetsing",
+       "password" :"258963",
+      "Email" : "eswar@gmail.com"
+    }
+    
+  ],
+  "managerInfo": [
+    {
+      "id": "1",
+      "Name": "chaitu",
+      "contactnumber": "7789265634",
+      "Email": "raju@gmail.com",
+      "password":"526398",
+      "Employeeid" : "23459"
+    },
+    {
+     "id": "2",
+      "Name": "Harsha",
+      "contactnumber": "8568571894",
+      "Email": "nikhil@gmail.com",
+      "password":"489845",
+      "Employeeid" : "24598"
+    },
+    {
+      "id": "3",
+      "Name": "Aruna",
+      "contactnumber": "8568455948",
+      "Email": "dinu@gmail.com",
+      "password":"448955",
+      "Employeeid" : "22645"
+    },
+    {
+       "id": "4",
+      "Name": "Dinesh",
+      "contactnumber": "9502366338",
+      "Email": "dinesh@gmail.com",
+      "password":"89745",
+      "Employeeid" : "24895"
+    }
+    ]
+}
