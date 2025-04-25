@@ -1,0 +1,82 @@
+<p>manager works!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <form [formGroup]="frm"> - -->
+<form [formGroup]="frm" (ngSubmit)=" AddNewUser(frm.value)">>
+
+    <input type="text"
+    formControlName="id"
+    placeholder="UserId"/>
+    <br>
+    <input type="text"
+    formControlName="name"
+    placeholder="displayName"/>
+    <br>
+
+    <input type="text"
+    formControlName="location"
+    placeholder="location"/>
+    <br>
+
+
+    <input type="text"
+    formControlName="company"
+    placeholder="company"/>
+    <br>
+
+
+    <input type="text"
+    formControlName="purpose"
+    placeholder="purpose"/>
+    <br>
+
+    <input type="text"
+    formControlName="mobile"
+    placeholder="mobile"/>
+    <br>
+
+   <input type="text"
+    formControlName="visitorDate"
+    placeholder="date"/>
+    <br>
+
+
+    <button type="submit">Add User</button>
+    </form> 
+    
+    
+    <h2>hi</h2>
+    
+     @for(user of userArryList ;track user.id){
+        <ul>
+           
+            <li>{{user.id}}</li>
+            <li>{{user.name}}</li>
+
+            <li>{{user.location}}</li>
+            <li>{{user.company}}</li>
+            <li>{{user.purpose}}</li>
+            <li>{{user.mobile}}</li>
+            <li>{{user.visitorDate}}</li>
+        </ul>
+        <button (click)="UserDelete(user)">Delete</button>
+        <button (click)=" userSelected(user)">Update</button>
+    } 

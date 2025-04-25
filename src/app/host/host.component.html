@@ -1,0 +1,36 @@
+<h2>
+    Host portal
+</h2>
+
+<table>
+    <tr>
+        <th> Id</th>
+        <th>Name</th>
+        <th>location</th>
+        <th>company</th>
+        <th>purpose</th>
+        <th>mobile</th>
+        <th>Visitor date</th>
+        
+    </tr>
+
+
+    <tr>
+       
+
+
+
+
+        @for( visi of visitorlis;track visi){
+
+            <tr>
+                <td>{{visi.id}}</td>
+                <td>{{visi.rid}}</td>
+                <td>{{visi.dishname}}</td>
+                <td>{{visi.dishtype}}</td>
+                <td>{{visi.price}}</td>
+               
+            </tr>
+            }
+    </tr>
+</table>
