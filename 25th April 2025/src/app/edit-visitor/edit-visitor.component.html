@@ -1,0 +1,17 @@
+<h2>Edit Visitor</h2>
+<form action="" [formGroup]="vstfrm" (ngSubmit)="EditVisitor()">
+    <input type="text" formControlName="visitorName" placeholder="Visitor Name">
+    <br>
+    <input type="text" formControlName="visitorCompany" placeholder="Visitor Parent Company">
+    <br>
+    <input type="text" formControlName="visitorPurpose" placeholder="Visitor Purpose">
+    <br>
+    <input type="text" formControlName="visitorMobile" placeholder="Visitor Mobile">
+    <br>
+    <input type="text" formControlName="visitorDate" placeholder="Visitor Date">
+    <br>
+    <input type="text" formControlName="hostName" placeholder="Host Name">
+    <br>
+    <button type="submit">Edit Visitor</button>
+ 
+</form>

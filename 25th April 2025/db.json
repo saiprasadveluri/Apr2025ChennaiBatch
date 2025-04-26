@@ -1,0 +1,43 @@
+{
+  "visitorInfo": [
+    {
+      "id": "101",
+      "visitorName": "shakthi",
+      "visitorCompany": "google",
+      "visitorMobile": "74123590",
+      "visitorDate": "01-01-2026",
+      "hostName": "Prem",
+      "visitorPurpose": "meeting"
+    },
+    {
+      "id": "105",
+      "visitorName": "sukumar",
+      "visitorCompany": "microsoft",
+      "visitorMobile": "7412589630",
+      "visitorDate": "01-05-2026",
+      "hostName": "Prem",
+      "visitorPurpose": "board meeting"
+    }
+  ],
+  "hostInfo": [
+    {
+      "id": "2",
+      "hostName": "Nandha",
+      "empNo": "202",
+      "dept": "CYBERSECURITY",
+      "location": "CHENNAI",
+      "contactNo": "7894168235",
+      "email": "host1@host.com",
+      "password": "host12345",
+      "role": "manager"
+    }
+  ],
+  "managerInfo": [
+    {
+      "email": "manager@manager.com",
+      "password": "man1234",
+      "role": "manager",
+      "id": "7971"
+    }
+  ]
+}
