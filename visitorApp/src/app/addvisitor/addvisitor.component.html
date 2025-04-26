@@ -1,0 +1,28 @@
+<h2>Add new visitor</h2>
+<form [formGroup] ="frm" (ngSubmit)="AddNewVisitor()"> 
+<!-- <input type="text"
+formControlName="Visitor id"
+placeholder="enter Visitor id"/>
+<br> -->
+<input type="text" formControlName="HostName" placeholder="enter HostName"/>
+<br>
+<select formControlName="location">
+<option value="HYD">HYD</option>
+<option value="CHN">CHN</option>
+<option value="BLR">BLR<option>
+</select>
+<br>
+<input type="text" formControlName="parentcompany" placeholder="enter parent company"/>
+<br>
+<input type="text" formControlName="purpose" placeholder="purpose"/>
+<br>
+<input type="text" formControlName="mobilenumber" placeholder="enter mobile number"/>
+<br>
+<input type="text" formControlName="visitingdate" placeholder="enter visiting date"/>
+<br>
+<input type="text" formControlName="Hostname" placeholder="enter Host name"/>
+<br>
+
+<button type="submit">Add new visitor</button>
+
+</form>
