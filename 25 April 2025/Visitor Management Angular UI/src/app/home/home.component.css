@@ -1,0 +1,12 @@
+ul{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(55, 0, 255, 0.973);
+    height:80px;
+}
+
+li a{
+    color:white;
+    font-weight: 750;
+}

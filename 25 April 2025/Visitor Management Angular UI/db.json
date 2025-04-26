@@ -1,0 +1,37 @@
+{
+    "managerInfo": [
+        {
+            "email": "admin@admin.com",
+            "password": "admin",
+            "role": "Manager"
+        }
+    ],
+
+    "visitorInfo": [
+        {
+            "visitorId": "001",
+            "visitorName": "Nandhakumar",
+            "visitorCompany": "Google",
+            "visitorPurpose": "Business",
+            "visitorMobile": "1234567890",
+            "visitingDate": "25-04-2025",
+            "hostName": "Murugan"
+        }
+    ],
+
+    "hostInfo":[
+        {
+            "hostId": "001",
+            "hostName": "Murugan",
+            "empNo": "4757",
+            "dept": "HR",
+            "location": "Chennai",
+            "contactNo": "9876543210",
+            "email": "murugan@mail.com",
+            "password": "murugan123",
+            "role": "host"
+        }
+    ]
+
+}
+
