@@ -1,0 +1,11 @@
+<h2>Add Host</h2>
+<form [formGroup]="frm" (ngSubmit)="AddHost()">
+    <input type="text" formControlName="hname" placeholder="enter hostname"/><br>
+    <input type="text" formControlName="hemail" placeholder="enter hemail"/><br>
+    <input type="text" formControlName="hpswd" placeholder="enter hpswd"/><br>
+    <select formControlName="hloc">
+        <option value="HYD">HYD</option>
+        <option value="CHN">CHN</option>
+    </select><br>
+    <button type="submit">Add Host</button>
+</form>

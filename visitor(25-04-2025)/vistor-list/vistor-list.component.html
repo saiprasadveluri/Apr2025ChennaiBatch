@@ -1,0 +1,25 @@
+<h2>Vistor List</h2>
+<table style="width:100%;border:2px solid black;">
+    <thead>
+        <th>id</th>
+        <th>vname</th>
+        <th>vloc</th>
+        <th>hostname</th>
+        <th>vdate</th>
+        <th>Actions</th>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of vistData">
+            <td>{{v.id}}</td>
+            <td>{{v.vname}}</td>
+            <td>{{v.vloc}}</td>
+            <td>{{v.hostname}}</td>
+            <td>{{v.vdate}}</td>
+            <td><button (click)="DeleteVist(v.id)">DeleteUser</button>
+                <button (click)="EditVist(v.id)">EditUser</button>
+            </td>
+        </tr> 
+    </tbody> 
+</table>
+<button (click)="GotoAddNewVist()">GoBack To AddNewVistor</button>
+
