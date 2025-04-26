@@ -1,0 +1,29 @@
+<h2>Add new host</h2>
+<form [formGroup] ="frm" (ngSubmit)="AddNewhost()"> 
+<!-- <input type="text"
+formControlName="Visitor id"
+placeholder="enter Visitor id"/>
+<br> -->
+<input type="text" formControlName="Name" placeholder="enter Name"/>
+<br>
+<select formControlName="location">
+<option value="Charlotee">Charlotee</option>
+<option value="nlg">nlg</option>
+<option value="paris">paris<option>
+<option value="texas">texas</option>
+</select>
+<br>
+<input type="text" formControlName="employeenumber" placeholder="enter employeenumber"/>
+<br>
+<input type="text" formControlName="department" placeholder="enter department"/>
+<br>
+<input type="text" formControlName="contactnumber" placeholder="enter contactnumber"/>
+<br>
+<input type="text" formControlName="role" placeholder="enter role"/>
+<br>
+
+
+<button type="submit">Add new host</button>
+
+</form>
+

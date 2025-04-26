@@ -1,0 +1,36 @@
+<h2>Visitorlist</h2>
+<button (click)="GotoAddvisitor()">add visitor</button>
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>location</th>
+    <th>parentcompany</th>
+    <th>purpose</th>
+    <th>mobilenumber</th>
+    <th>visitingdate</th>
+    <th>Hostname</th>
+    <th>actions</th>
+   
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let v of  visitorlist">
+    <td>{{v.id}}</td>
+    <td>{{v.Name}}</td>
+    <td>{{v.location}}</td>
+    <td>{{v.parentcompany}}</td>
+    <td>{{v.purpose}}</td>
+    <td>{{v.mobilenumber}}</td>
+    <td>{{v.visitingdate}}</td>
+    <td>{{v.Hostname}}</td>
+  
+    <td>
+        <button (click)="deletevisitor(v.id)">Delete</button>
+        <button (click)="Editvisitor(v.id)">edit</button>
+    </td>    
+
+</tr>
+</tbody>
+</table>
