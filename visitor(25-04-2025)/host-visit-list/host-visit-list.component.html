@@ -1,0 +1,20 @@
+<h2>Host Filtered Visitors List</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <th>visit id</th>
+        <th>visit name</th>
+        <th>visit date</th>
+        <th>visit loc</th>
+        <th>hostname</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of visitData">
+            <td>{{i.id}}</td>
+            <td>{{i.vname}}</td>
+            <td>{{i.vdate}}</td>
+            <td>{{i.vloc}}</td>
+            <td>{{i.hostname}}</td>
+        </tr>
+    </tbody>
+    <!-- <button (click)="GoBacktoAddVisit()">GoBacktoAddVisit</button> -->
+</table>
