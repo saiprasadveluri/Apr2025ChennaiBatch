@@ -1,0 +1,39 @@
+<h2>Host Visitor List</h2>
+<table class="table table-stripped table-hover">
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            name
+        </th>
+        <th>
+            location
+        </th>
+        <th>
+            parentCompany
+        </th>
+        <th>
+            purpose
+        </th>
+        <th>
+            mobileNumber
+        </th>
+        <th>
+            visitingDate
+        </th>
+        <th>
+            HostName
+        </th>
+    </tr>
+    <tr *ngFor="let v of Visitor">
+        <td>{{v.id}}</td>
+        <td>{{v.name}}</td>
+        <td>{{v.location}}</td>
+        <td>{{v.parentCompany}}</td>
+        <td>{{v.purpose}}</td>
+        <td>{{v.mobileNumber}}</td>
+        <td>{{v.visitingDate}}</td>
+        <td>{{v.HostName}}</td>
+    </tr>
+</table>
