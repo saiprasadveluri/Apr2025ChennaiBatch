@@ -1,0 +1,16 @@
+User Story for FDA
+
+As a-->User,Admin,Owner
+
+I Want to-->1)Login to the app
+	    2)Admin add the new restaurants
+	    3)Restaurant Owner manage the menu by adding the new menu items
+	    4)User can search the restaurants based on their location
+	    5)User can filter the menu items based on their preferences
+	    6)User place an order for their selected menu items from their particular restaurants
+	    7)Track the order until it is delivered and see the order status until its deleivered 
+
+So that-->1)User can order the food based upon their preferences of their convenient menu From the partiular restaurants.
+          2)Restaurant should maintain the upto date menu without fail
+	  3)Admin can maintain the restaurant list upto date
+	  4)Tracking can be transparent and it helps to track the food delivery status
