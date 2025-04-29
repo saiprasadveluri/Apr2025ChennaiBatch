@@ -1,0 +1,50 @@
+Create database VisitorDb
+
+use VisitorDb
+
+Create Table Visitor(
+VId bigint Not Null Primary Key,
+VName nvarchar(30) Not Null,
+Pcompany nvarchar(15) Not Null,
+Purpose nvarchar(25) Not Null,
+VDate Date Not Null,
+HId bigint Not Null, 
+LId bigint Not Null
+)
+
+Alter table Visitor Add Constraint
+Visitor_LId_FK Foreign Key(LId)
+References Location(LId)
+
+Create Table Host(
+HId bigint Not Null Primary Key,
+HName nvarchar(30) Not Null,
+EmpNo bigint  Not Null,
+Dept nvarchar(25) Not Null,
+LId bigint Not Null
+)
+Alter table Host Add Constraint
+Host_HId_FK Foreign Key(LId)
+References Location(LId)
+
+Create Table Location(
+LId bigint Not Null Primary Key,
+LocName nvarchar(30) Not Null,
+)
+
+Create Table MobileNo(
+MId bigint Not Null Primary Key,
+MobileNo bigint Not Null,
+VId bigint Not Null Foreign Key References Visitor(VId)
+)
+
+
+Insert Into Location(LId,LocName) 
+Values(3,'Bangalore')
+
+Insert Into MobileNo(MId,MobileNo,VId) 
+Values(12,'9874563211',102)
+
+Insert Into Visitor(VId,VName,Pcompany,Purpose,VDate,HId,LId) 
+Values(102,'Rajan','B2B','Business','07-05-2025',201,3)
+
