@@ -1,0 +1,79 @@
+CREATE DATABASE VisitorManagement;
+USE VisitorManagement;
+SHOW DATABASES;
+
+CREATE TABLE Location (
+    LocationID INT  PRIMARY KEY,
+    LocationName VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Location
+VALUES 
+(1,'New York Office'),
+(2,'San Francisco HQ'),
+(3,'London Branch');
+
+UPDATE Location 
+SET LocationID=5
+WHERE LocationID=1;
+
+SELECT * FROM Location;
+
+CREATE TABLE Host (
+    HostID INT AUTO_INCREMENT PRIMARY KEY,
+    HostName VARCHAR(100) NOT NULL,
+    EmployeeNumber VARCHAR(50) UNIQUE NOT NULL,
+    Department VARCHAR(100),
+    LocationID INT,
+    ContactNumber VARCHAR(20),
+    FOREIGN KEY (LocationID)
+        REFERENCES Location(LocationID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+
+INSERT INTO Host (HostID,HostName, EmployeeNumber, Department, LocationID, ContactNumber)
+VALUES 
+(10,'Alice Johnson', 'EMP001', 'IT', 1, '123-456-7890'),
+(20,'Bob Smith', 'EMP002', 'HR', 2, '987-654-3210'),
+(30,'Charlie Lee', 'EMP003', 'Finance', 3, '456-789-1234');
+
+
+SELECT * FROM Host;
+
+
+
+CREATE TABLE Visitor (
+    VisitorID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    LocationID INT,
+    ParentCompany VARCHAR(100),
+    Purpose VARCHAR(255),
+    MobileNumber VARCHAR(20),
+    VisitingDate DATE,
+    HostID INT,
+    FOREIGN KEY (HostID)
+        REFERENCES Host(HostID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (LocationID)
+        REFERENCES Location(LocationID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+INSERT INTO Visitor (Name, LocationID, ParentCompany, Purpose, MobileNumber, VisitingDate, HostID)
+VALUES 
+('David Miller', 3, 'Globex Corp', 'Project Discussion', '111-222-3333', '2025-04-29', 10),
+('Emma Wilson', 2, 'Innotech', 'Training', '222-333-4444', '2025-04-29', 20),
+('Frank Thomas', 1, 'Cyberdyne', 'Business Proposal', '333-444-5555', '2025-04-28', 30);
+
+
+
+SELECT * FROM Visitor;
+
+DELETE FROM Location WHERE LocationID = 5;
+
