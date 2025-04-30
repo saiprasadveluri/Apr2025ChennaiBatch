@@ -1,0 +1,231 @@
+--create table visitors(
+--visitorid bigint primary key,
+--visitorname varchar(40) not null,
+--parentcompany varchar(100) not null,
+--purpose varchar(100) not null,
+--visitingdate date not null,
+--hostid bigint not null,
+--locationsid bigint not null,
+--)
+--create table locations(
+--locationsid bigint primary key,
+--locationsname varchar(50) not null
+--)
+--create table Host(
+--hostid bigint primary key,
+--hostname varchar(50) not null,
+--employeenumber bigint not null,
+--department varchar(50) not null,
+--locationsid bigint not null,
+--contactnumber bigint not null
+--)
+--create table mobileno(
+--mid bigint,
+--number bigint not null,
+--visitorid bigint not null foreign key references visitors(visitorid)
+--)
+--alter table visitors add constraint 
+--LVisitor_Location Foreign Key (locationsid)
+--references locations(locationsid)
+--alter table visitors add constraint 
+--LHost_Id Foreign Key (hostid)
+--references Host(hostid)
+--alter table Host add constraint
+--LHost_Location Foreign key (locationsid)
+--references locations(locationsid)
+
+
+-----01 adding data in to the tables ------
+---- Locations
+--INSERT INTO locations (locationsid, locationsname) VALUES
+--(1, 'HYD'), (2, 'BLR'), (3, 'CHN'),
+--(4, 'PUNE'), (5, 'NOIDA'), (6, 'MUM'),
+--(7, 'KDP'), (8, 'RJP'), (9, 'TDP'),
+--(10, 'ATP');
+ 
+---- Hosts
+--INSERT INTO host (hostid, hostname, employeenumber, department, locationsid, contactnumber) VALUES
+--(1, 'RAJEEV', 1001, 'IT', 10, 5551001), (2, 'CHINNU', 1002, 'HR', 9, 5551002),
+--(3, 'HARSHI', 1003, 'Security', 8, 5551003), (4, 'AMEENA', 1004, 'Facilities', 7, 5551004),
+--(5, 'SALVA', 1005, 'Research', 5, 5551005), (6, 'SAI', 1006, 'Executive', 4, 5551006),
+--(7, 'PARVEEN', 1007, 'Operations', 3, 5551007), (8, 'KHALEEL', 1008, 'Marketing', 2, 5551008),
+--(9, 'ANU', 1009, 'Finance', 1, 5551009), (10, 'BALU', 1010, 'Customer Service', 1, 5551010);
+ 
+-- Visitors
+--INSERT INTO visitors (visitorid, visitorname, parentCompany, purpose, visitingdate, hostid, locationsid) VALUES
+--(1, 'SHAMSHEED', 'ABC Corp', 'Meeting', '2023-05-10', 1, 10),
+--(2, 'TRINAY', 'XYZ Inc', 'Interview', '2023-05-10', 2, 9),
+--(3, 'PREM KUMAR', 'Tech Solutions', 'Delivery', '2023-05-11', 3, 8),
+--(4, 'PRANAV', 'Global Partners', 'Client Meeting', '2023-05-11', 4, 7),
+--(5, 'HAFRIZ', 'Innovate LLC', 'Training', '2023-05-12', 5, 5),
+--(6, 'SAI VIGNESH', 'Data Systems', 'Consultation', '2023-05-12', 6, 4),
+--(7, 'LOKESH', 'Cloud Services', 'Maintenance', '2023-05-15', 7, 3),
+--(8, 'RAMESH', 'Network Solutions', 'Sales Pitch', '2023-05-15', 8, 2),
+--(9, 'RAJESH', 'Software Inc', 'Product Demo', '2023-05-16', 9, 1),
+--(10, 'RAMACHANDRA', 'Hardware Co', 'Warranty Service', '2023-05-16', 10, 1),
+--(11, 'PANDU', 'Security Systems', 'Installation', '2023-05-17', 1, 10),
+--(12, 'NEHA', 'Tech Support', 'Emergency Repair', '2023-05-17', 2, 9),
+--(13, 'TEJA', 'Consulting Group', 'Strategy Session', '2023-05-18', 3, 8),
+--(14, 'BABA', 'Financial Services', 'Audit', '2023-05-18', 4, 7),
+--(15, 'SAMREEN', 'Legal Associates', 'Contract Review', '2023-05-19', 5, 5);
+ 
+---- Mobile numbers (assuming mobileno table stores visitor phone numbers)
+--INSERT INTO mobileno (mid, number, visitorid) VALUES
+--(1, 1234567890, 1), (2, 2345678901, 2), (3, 3456789012, 3),
+--(4, 4567890123, 4), (5, 5678901234, 5), (6, 6789012345, 6),
+--(7, 7890123456, 7), (8, 8901234567, 8), (9, 9012345678, 9),
+--(10, 1234509876, 10);
+
+
+--INSERT INTO visitors (visitorid, visitorname, parentCompany, purpose, visitingdate, hostid, locationsid) VALUES
+--(1, 'SHAMSHEED', 'ABC Corp', 'Meeting', '2023-05-10', 1, 10),
+--(2, 'TRINAY', 'XYZ Inc', 'Interview', '2023-05-10', 2, 9),
+--(3, 'PREM KUMAR', 'Tech Solutions', 'Delivery', '2023-05-11', 3, 8),
+--(4, 'PRANAV', 'Global Partners', 'Client Meeting', '2023-05-11', 4, 7),
+--(5, 'HAFRIZ', 'Innovate LLC', 'Training', '2023-05-12', 5, 5),
+--(6, 'SAI VIGNESH', 'Data Systems', 'Consultation', '2023-05-12', 6, 4),
+--(7, 'LOKESH', 'Cloud Services', 'Maintenance', '2023-05-15', 7, 3),
+--(8, 'RAMESH', 'Network Solutions', 'Sales Pitch', '2023-05-15', 8, 2),
+--(9, 'RAJESH', 'Software Inc', 'Product Demo', '2023-05-16', 9, 1),
+--(10, 'RAMACHANDRA', 'Hardware Co', 'Warranty Service', '2023-05-16', 10, 1),
+--(11, 'PANDU', 'Security Systems', 'Installation', '2023-05-17', 1, 10),
+--(12, 'NEHA', 'Tech Support', 'Emergency Repair', '2023-05-17', 2, 9),
+--(13, 'TEJA', 'Consulting Group', 'Strategy Session', '2023-05-18', 3, 8),
+--(14, 'BABA', 'Financial Services', 'Audit', '2023-05-18', 4, 7),
+--(15, 'SAMREEN', 'Legal Associates', 'Contract Review', '2023-05-19', 5, 5);
+
+---02 -list all locations in the system
+--SELECT locationsid,locationsname
+--from Locations
+--order by locationsname;
+
+--03 list  locations names with visitors
+--SELECT DISTINCT l.locationsid, l.locationsname
+--FROM locations l
+--JOIN visitors v ON l.locationsid = v.locationsid
+--ORDER BY l.locationsid, l.locationsname;
+
+---04--list location names that start with given string
+--SELECT locationsid, locationsname
+--FROM locations
+--WHERE locationsname LIKE 'tdp%'
+--ORDER BY locationsname;
+
+--05---get number of hosts in the system
+--SELECT COUNT(*) AS TOTALHOSTS FROM HOST
+
+--06---GET NUMBER OF HOSTS IN A GIVEN LOCATION ID
+--SELECT COUNT(*) AS HOSTSINLOCATION
+--FROM HOST
+--WHERE locationsid = 1;
+
+--07----LIST ALL VISITOR DETAILS FOR A GIVEN HOST
+--SELECT V.*
+--FROM visitors V
+--WHERE V.hostid = 1
+--ORDER BY V.visitingdate DESC;
+ 
+-- -08 -LIST ALL VISITOR INFORMATION ON A GIVEN DATE
+-- SELECT *
+--FROM visitors
+--WHERE visitingdate = '2023-05-11'
+--ORDER BY visitingdate DESC;
+
+---09--LIST THE VISITORS SORTED BASED ON VISITNG DATE,LATEST DATE FIRST
+--SELECT V.*
+--FROM visitors V
+--ORDER BY V.visitingdate DESC, V.visitorname
+
+---10--LIST OF VISITORS WITH NO HOST ASSIGNED
+--SELECT V.*
+--FROM VISITORS V
+--WHERE V.hostid IS NULL;
+
+---11 -LIST OF VISITORS FOR A GIVEN HOST NAME
+--SELECT V.*
+--FROM visitors V
+--JOIN HOST H ON V.hostid = H.hostid
+--WHERE H.HOSTNAME = 'RAJEEV'
+--ORDER BY V.visitingdate DESC;
+
+
+---12 LIST OF VISITORS FOR A GIVEN DEPARTMENT
+--SELECT V.*
+--FROM visitors V
+--JOIN HOST H ON V.hostid = H.hostid
+--WHERE H.DEPARTMENT = 'IT'
+--ORDER BY V.visitingdate DESC;
+
+--13 GET AVG NUMBER OF VISITORS FOR A GIVEN HOST ID FOR A GIVEN DATE
+--SELECT COUNT(*) AS VISITORCOUNT
+--FROM visitors
+--WHERE hostid = 5 AND visitingdate = '2023-05-12';
+
+---14 GET AVG VISITORS FOR A LOCATIONS ON A GIVEN DATE
+--SELECT COUNT(*) AS VISITORCOUNT
+--FROM visitors
+--WHERE locationsid = 10 AND visitingdate = '2023-05-10';
+
+--15 LIST OF VISITORS INFO WHO HAS VISITED A HOST WITH MAX N0.OF VISITORS
+--SELECT v.*
+--FROM visitors v
+--JOIN (
+--    SELECT hostid, COUNT(*) AS visitor_count
+--    FROM visitors
+--    GROUP BY hostid
+--) hvc ON v.hostid = hvc.hostid
+--WHERE hvc.visitor_count = (
+--    SELECT MAX(visitor_count)
+--    FROM (
+--        SELECT hostid, COUNT(*) AS visitor_count
+--        FROM visitors
+--        GROUP BY hostid
+--    ) AS subquery
+--)
+--ORDER BY v.visitingdate DESC;
+
+----16 list the hosts with min no.of visitors
+--SELECT h.*
+--FROM HOST h
+--JOIN (
+--    SELECT hostid, COUNT(*) AS visitor_count
+--    FROM visitors
+--    GROUP BY hostid
+--) hvc ON h.hostid = hvc.hostid
+--WHERE hvc.visitor_count = (
+--    SELECT MIN(visitor_count)
+--    FROM (
+--        SELECT hostid, COUNT(*) AS visitor_count
+--        FROM visitors
+--        GROUP BY hostid
+--    ) AS subquery
+--)
+--ORDER BY h.hostid;
+
+---17 list the hosts with no visitors
+--SELECT h.*
+--FROM host h
+--LEFT JOIN visitors v ON h.hostid = v.hostid
+--WHERE v.hostid IS NULL
+--ORDER BY h.hostname;
+
+--18 get the count of visitors and visiting date for all available dates
+--select visitingdate,count(*) as visitor_Count
+--from visitors group by visitingdate order by visitingdate
+
+---19 get visitors details for a given host those are visited between given dates
+--select * from visitors where hostid=1 and visitingdate between '2023-05-10' and '2023-05-15' order by visitingdate
+
+---- 20 get the list of users who are not managers
+--select *
+--from host 
+--where department!= 'manager' 
+--order by hostname
+
+--21 get list of visitors without phone number
+
+--SELECT v.*
+--FROM visitors v
+--LEFT JOIN mobileno m ON v.visitorid = m.visitorid
+--WHERE m.mid IS NULL
+--ORDER BY v.visitorname;
