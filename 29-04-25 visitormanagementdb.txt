@@ -1,0 +1,43 @@
+--create database visitormanagementdb
+--use visitormanagementdb
+
+--create table location(
+--locationid bigint not null primary key,
+--locationname nvarchar(20)
+--)
+--alter table location add constraint
+--loc_name_unique  unique(locationname)
+
+--create table userinfo(
+--userid bigint not null primary key,
+--username nvarchar(30) not null,
+--userrole nvarchar(10) not null,
+--email nvarchar(40) not null,
+--userpassword nvarchar(10) not null,
+--userlocation bigint not null,
+--hostid bigint not null
+
+--)
+ 
+  --alter table userinfo add constraint
+  --userinfo_location_FK FOREIGN KEY (userlocation)
+  --REFERENCES location(locationid) 
+
+  --alter table  userinfo add constraint 
+  --userinfo_check check(userrole in ('host','manager'))
+
+--  create table visitorinfo(
+--visitorid bigint not null primary key,
+--visitorname nvarchar(30) not null,
+--visitorlocation bigint not null,
+--mobilenumber bigint not null,
+--parentcompany nvarchar(20) not null,
+--purpose nvarchar(30) not null,
+--)
+
+ -- alter table visitorinfo add constraint 
+ -- visitor_visitorname_unique unique(visitorname,visitorlocation)
+
+ -- alter table visitorinfo add constraint 
+ --visitorinfo_userinfo_fk foreign key (visitorid)
+ -- references userinfo(userid)
