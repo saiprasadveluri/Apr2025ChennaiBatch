@@ -1,0 +1,64 @@
+
+create table HOST (
+hostid int NOT NULL PRIMARY Key,
+Employeenumber int NOT Null ,
+Department varchar(30) NOT Null,
+location varchar(30) NOT Null,
+contact varchar(30) NOT Null
+);
+insert INTO HOST (hostid, Employeenumber,Department,location,contact) values(001,263387,'sales','chee','2345');
+insert INTO HOST (hostid, Employeenumber,Department,location,contact) values(002,263487,'market','tamil','4563');
+
+SELECT * From HOST;
+GO
+
+create table USERINFO(
+userid  int NOT NULL PRIMARY KEY,
+username varchar(30) NOT NULL,
+password varchar(30) NOT NULL,
+hostid int  NOT NULL,
+-- role  varchar(30) NOT NULL default 'VISITOR',
+role ENUM('VISITOR','HOST') NOT NULL DEFAULT 'VISITOR',
+-- role ENUM( 'HOST','VISITOR') NOT NULL,
+
+-- CONSTRAINT USERINFO_role check(role in ('VISITOR','HOST')),
+CONSTRAINT FK_host FOREIGN KEY (hostid) REFERENCES HOST(hostid)
+
+
+);
+
+insert INTO  USERINFO (userid ,username,password,hostid) values(1,'sak','pass-123', 001);
+insert INTO  USERINFO (userid ,username,password,hostid) values(2,'nis','pass-234', 002);
+SELECT * FROM  USERINFO;
+GO
+
+create table VISI(
+visiId int NOT NULL PRIMARY Key,
+name varchar(30) NOT Null ,
+location varchar(30) NOT Null,
+ParentCompany varchar(30) NOT Null,
+Purpose varchar(30) NOT Null,
+MobileNumber varchar(30) NOT Null,
+visitDating int  NOT Null
+);
+
+
+
+
+CREATE TABLE VISI (
+    visiId INT NOT NULL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    location VARCHAR(30) NOT NULL,
+    ParentCompany VARCHAR(30) NOT NULL,
+    Purpose VARCHAR(30) NOT NULL,
+    MobileNumber VARCHAR(30) NOT NULL,
+    visitDating DATE NOT NULL
+);
+
+INSERT INTO VISI (visiId, name, location, ParentCompany, Purpose, MobileNumber, visitDating)
+VALUES (1, 'John Doe', 'New York', 'Acme Corp', 'Business Visit', '123-456-7890', '2025-04-30');
+
+
+SELECT * FROM VISI;
+GO
+

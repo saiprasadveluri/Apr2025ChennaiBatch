@@ -1,0 +1,37 @@
+1 visitors:
+
+visitor id : [ forign value]
+name:[single value]
+Location:[Composite value ]
+parent Comapny:[single value ]
+Purpose:[single value ]
+Mobile Number:[multi value]
+visiting date:[single value ]
+host name:[single value  ]
+
+
+2 host :
+
+visitor id :[primary value]
+hostname : [single value]
+employeeNumber :[unique]
+department :[single value ]
+location:[]
+contact Number:[mult value]
+hostid:[foreign value ]
+
+3 user :
+
+userid : [single  value]
+usrname :[single value ]
+password:[single value]  not Location
+role:[single value ]
+host id :[primary key]
+
+
+
+
+
+
+
+
