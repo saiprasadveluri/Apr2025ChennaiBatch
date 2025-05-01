@@ -1,0 +1,124 @@
+--1
+--select *from location;
+--2
+--SELECT  v.visitorname, l.locationname
+--FROM visitorinfo v
+--JOIN location l ON v.visitorlocation = l.locationid;
+--3
+--SELECT locationname
+--FROM location
+--WHERE locationname LIKE 'c%';
+--4
+--SELECT COUNT(*) AS hostcount
+--FROM userinfo
+--WHERE userrole = 'host';
+--5
+--SELECT COUNT(*) AS hostcount
+--FROM userinfo
+--WHERE userrole = 'host' AND userlocation = 1;
+--6
+--SELECT visitorname
+--FROM visitorinfo
+--WHERE hostvisitorid = 11;
+--7
+--SELECT *
+--FROM visitorinfo
+--WHERE vdate = '2025-04-30';
+--8
+--SELECT *
+--FROM visitorinfo
+--ORDER BY vdate DESC;
+--9
+--SELECT *
+--FROM visitorinfo
+--WHERE hostvisitorid IS NULL;
+--10
+--SELECT v.*
+--FROM visitorinfo v, userinfo u
+--WHERE v.hostvisitorid = u.userid
+--AND u.username = 'manu';
+
+--11
+--SELECT v.visitorname
+--FROM visitorinfo v, userinfo u
+--WHERE v.hostvisitorid = u.userid
+--AND u.department = 'sales';
+
+--12
+--SELECT COUNT(visitorid) AS visitorcount
+--FROM visitorinfo 
+--WHERE hostvisitorid = 10
+--GROUP BY hostvisitorid
+--13
+--SELECT COUNT(visitorid) AS visitorcount
+--FROM visitorinfo 
+--WHERE visitorlocation = 2
+--AND vdate = '2025-04-30'
+--GROUP BY visitorlocation, vdate
+--14
+--SELECT * 
+--FROM visitorinfo 
+--WHERE hostvisitorid = (
+--SELECT TOP 1 hostvisitorid FROM visitorinfo
+--WHERE hostvisitorid IS NOT NULL GROUP BY hostvisitorid 
+--  ORDER BY COUNT(*) DESC
+--)
+--15
+--SELECT h.*
+--FROM hostinfo h
+--WHERE h.hostid = (
+--  SELECT TOP 1 v.hostid
+--  FROM visitorinfo v
+--  WHERE v.hostid IS NOT NULL
+--  GROUP BY v.hostid
+--  ORDER BY COUNT(*) ASC
+--);
+--16
+--SELECT h.*
+--FROM hostinfo h
+--LEFT JOIN visitorinfo v ON h.hostid = v.hostid
+--WHERE v.hostid IS NULL;
+--17
+--SELECT v.vdate, COUNT(*) AS visitorcount
+--FROM visitorinfo v
+--GROUP BY v.vdate
+--ORDER BY v.vdate;
+--18
+--SELECT *
+--FROM visitorinfo
+--WHERE hostvisitorid = 10
+--  AND vdate BETWEEN '2025-04-01' AND '2025-04-30';
+--19
+--SELECT *
+--FROM userinfo
+--WHERE userrole NOT IN ('manager') ;
+--20
+--SELECT *
+--FROM visitorinfo
+--WHERE mobilenumber IS NULL;
+
+
+--insert into location
+--values(5,'delhi'),
+--(4,'pune')
+
+
+--insert into userinfo
+--values(13,'abhi','manager','abhi@gmail.com','abhi123',3),
+--   (14,'anu','host','anu@gmail.com','anu23',4),
+--(15,'bubby','manager','bubby@gmail.com','buby1223',5),
+--(16,'srav','host','srav@gmail.com','srav123',2),
+--(17,'sagarika','host','sag@gmail.com','sag23',4),
+--(18,'sowmi','manager','sowmi@gmail.com','sowmi12',3)
+
+--  insert into visitorinfo
+--values(304,'manu',3,13,'2025-07-30','bubby',79333167,'conference'),
+--(305,'anu',4,14,'2025-12-30','sai',9879333167,'meeting'),
+--(306,'abhi',5,15,'2025-05-23','arun',8789333167,'interview'),
+--(307,'shailu',6,16,'2025-04-30','abhai',979333167,'meeting')
+
+
+
+
+
+
