@@ -1,0 +1,174 @@
+--create database visitormanagement
+--use visitormanagement
+
+--create table location(
+--locationid bigint not null primary key,
+--locationname nvarchar(20)
+--)
+--alter table location add constraint
+--loc_name_unique  unique(locationname)
+
+--create table userinfo(
+--userid bigint not null primary key,
+--username nvarchar(30) not null,
+--userrole nvarchar(10) not null,
+--Department nvarchar(30) not null,
+--email nvarchar(40) not null,
+--userpassword nvarchar(10) not null,
+--userlocation bigint not null,
+--hostid bigint not null
+
+--)
+ 
+  --alter table userinfo add constraint
+  --userinfo_location_FK FOREIGN KEY (userlocation)
+  --REFERENCES location(locationid) 
+
+  --alter table  userinfo add constraint 
+  --userinfo_check check(userrole in ('host','manager'))
+
+--  create table visitorinfo(
+--visitorid bigint not null primary key,
+--visitorname nvarchar(30) not null,
+--visitorlocation bigint not null,
+--visitingdate not null,
+--mobilenumber bigint not null,
+--parentcompany nvarchar(20) not null,
+--purpose nvarchar(30) not null,
+--hosted bigint not null
+--)
+
+ -- alter table visitorinfo add constraint 
+ -- visitor_visitorname_unique unique(visitorname,visitorlocation)
+
+ -- alter table visitorinfo add constraint 
+ --visitorinfo_userinfo_fk foreign key (visitorid)
+ -- references userinfo(userid)
+
+
+   ---- value insertion ----
+
+
+--1.
+--INSERT INTO LOCATION VALUES(1,'HYDERABAD'),(2,'BENGALURU'),(3,'CHENNAI'),(4,'PUNE'),(5,'MUMBAI'),(6,'mlg'),(7,'srpt'),(8,'paris'),(9,'goa'),(10,'texas')
+
+
+--INSERT INTO VISITORINFO VALUES(101,'SRAVS',1,'9856734512','GOOGLE','PROJECT',201),
+--	(102,'CHITTI',1,'9845623123','MPHASIS','MEETING',202),
+--	(103,'NIVAS',1,'8978733452','WIPRO','MEETING',202),
+--	(104,'MANU',2,'8934578231','CAPGEMINI','BUSINESS',203),
+--	(105,'AADHYA',2,'9542249814','QUALCOMM','MEETING',201),
+--	(106,'ANAISHA',3,'7856239843','MPHASIS','PROJECT',204)
+
+--INSERT INTO USERINFO VALUES(201,'SRAVS','CEO','SRAV@SRAV.COM','123456',1),
+--(202,'CHITTI','POSH','CHIT@CHI.COM','67856',2),
+--(203,'MANU','TECHTEAM', 'MANU@MANU.COM','MANUSS',3)
+
+
+--2.
+--select * from location
+
+--3.
+--SELECT visitorname,LOCNAME FROM VISITORINFO V
+--INNER JOIN LOCATION LOC ON V.VLOC=LOC.LOCID
+
+--4.
+--SELECT LOCATIONNAME FROM LOCATION 
+--WHERE LOCATIONNAME LIKE  'M%'
+
+--5.
+--SELECT COUNT(USERNAME) FROM USERINFO 
+--WHERE USERROLE='HOST'
+
+
+--6.
+--SELECT COUNT(USERNAME) FROM USERINFO 
+--WHERE USERROLE='HOST' AND USERLOCATION=1
+
+--7.
+--SELECT HOSTID,VISITORNAME FROM VISITORINFO
+--WHERE HOSTID=201 
+
+
+--8.
+--SELECT * FROM VISITORINFO
+--WHERE VISITDATE='2025-05-12'
+
+--9.
+--SELECT * FROM VISITORINFO
+--ORDER BY VISITDATE DESC
+
+
+--10.
+--SELECT V.*
+--FROM VISITORINFO V
+--JOIN USERINFO U ON V.HOSTID = U.USERID
+--WHERE U.USERROLE <> 'HOST'
+
+--11.
+--SELECT VISITORNAME  FROM VISITORINFO V
+--INNER JOIN USERINFO U ON U.USERID = V.HOSTID
+--WHERE U.DEPTARTMENT='HR'
+
+--12.
+--SELECT V.*
+--FROM VISITORINFO V
+--JOIN USERINFO U ON V.HOSTID = U.USERID
+--WHERE U.USERNAME = 'TRINAY';
+
+
+--13.
+--SELECT * FROM VISITORINFO
+--WHERE HOSTID = 201 AND VISITINGDATE='2025-05-12'
+
+--14.
+--SELECT * FROM VISITORINFO
+--WHERE HOSTID = 201 AND VISITINGDATE='2000-10-27'
+
+
+--15.
+--SELECT h.*
+--FROM hostinfo h
+--WHERE h.hostid = (
+--  SELECT TOP 1 v.hostid
+--  FROM visitorinfo v
+--  WHERE v.hostid IS NOT NULL
+--  GROUP BY v.hostid
+--  ORDER BY COUNT(*) ASC
+--);
+
+
+--16.
+--SELECT h.*
+--FROM hostinfo h
+--LEFT JOIN visitorinfo v ON h.hostid = v.hostid
+--WHERE v.hostid IS NULL;
+
+
+--17.
+--SELECT V.VISITINGDATE, COUNT(*) AS VISITORCOUNT
+--FROM VISITORINFO V
+--GROUP BY V.VISITINGDATE
+--ORDER BY V.VISITINGDATE;
+
+--18.
+--SELECT VISITINGDATE, COUNT(*) AS VISITOR
+--FROM VISITOR
+--GROUP BY VISITINGDATE
+--ORDER BY VISITINGDATE;
+
+
+--19.
+--SELECT *
+--FROM VISITOR
+--WHERE HOSTId = 1 AND VISITINGDATE BETWEEN '2025-12-05' AND '2000-10-27';  
+
+--20.
+--SELECT *
+--FROM Host
+--WHERE DEPTARTMENT!= 'Manager';
+
+--21.
+--SELECT *
+--FROM VISITOR
+--INNER JOIN MOBILENUMBER M ON M.VID = VISITOR.VID
