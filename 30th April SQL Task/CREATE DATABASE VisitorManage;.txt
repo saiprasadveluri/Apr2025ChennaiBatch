@@ -1,0 +1,239 @@
+CREATE DATABASE VisitorManage;
+USE VisitorManage;
+
+CREATE TABLE LOCATION (
+    LOCATIONID INT  PRIMARY KEY,
+     LOCATIONName VARCHAR(100) NOT NULL
+);
+
+INSERT INTO LOCATION VALUES
+(1,'Delhi'),
+(2,'Araku'),
+(3,'Manali'),
+(4,'chennai'),
+(5,'Hyderabad'),
+(6,'bangalore'),
+(7,'Paris'),
+(8,'Pune'),
+(9,'Punjab'),
+(10,'Nagar');
+
+SELECT * FROM LOCATION;
+
+
+
+CREATE TABLE HOST (
+    HostID INT AUTO_INCREMENT PRIMARY KEY,
+    HostName VARCHAR(100) NOT NULL,
+    EmployeeNumber VARCHAR(50) UNIQUE NOT NULL,
+    Department VARCHAR(100),
+    LocationID INT,
+    ContactNumber VARCHAR(20),
+    FOREIGN KEY (LocationID)
+        REFERENCES Location(LocationID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+  INSERT INTO Host VALUES
+  (10,'Venkat',001,'IT',1,'1234'),
+  (20,'Sai',002,'NON-IT',2,'2343'),
+  (30,'Sukumar',003,'IT',3,'6543'),
+  (40,'Vamsi',004,'HR',10,'1333'),
+  (50,'Varun',005,'FINANCE',4,'7764'),
+  (60,'Kaushik',006,'FINANCE',6,'8077'),
+  (70,'raidu',007,'SUPPORT',5,'6493'),
+  (80,'Nanda',008,'HR',7,'6524'),
+  (90,'Aditya',009,'IT',8,'1987'),
+  (100,'Shakti',010,'IT',9,'6793');
+  
+  SELECT * FROM Host;
+  
+  
+  CREATE TABLE Visitor (
+    VisitorID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    LocationID INT,
+    ParentCompany VARCHAR(100),
+    Purpose VARCHAR(255),
+    MobileNumber VARCHAR(20),
+    VisitingDate DATE,
+    HostID INT,
+    FOREIGN KEY (HostID)
+        REFERENCES Host(HostID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (LocationID)
+        REFERENCES Location(LocationID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+    INSERT INTO Visitor VALUES
+	(101,'Stark',2,'Grok','Meeting',4561,'2024-04-21',10),
+	(102,'Thor',3,'Idp','Training',3333,'2024-06-05',20),
+	(103,'Strange',5,'Barclay','Technical',111,'2024-04-06',30),
+	(104,'Hulk',6,'Boeing','Training',2222,'2024-05-07',40),
+	(105,'Vanda',7,'Foodhub','Audit',5555,'2024-05-09',50),
+	(106,'Panther',9,'Mphasis','Interview',6666,'2024-03-09',60),
+	(107,'Thala',10,'Accenture','Audit',7777,'2024-07-07',70),
+	(108,'Thalapathy',1,'Codeiox','ProjectPlan',8888,'2024-01-04',80),
+	(109,'Vijay',5,'Mitsogo','Interview',9999,'2024-02-05',90),
+	(110,'Sanjoy',6,'CorroHealth','Discussion',4444,'2024-04-05',100);
+    
+    SELECT * FROM Visitor;
+    
+    
+   SELECT LOCATIONName FROM LOCATION;
+   
+   
+   SELECT 
+    Location.LocationName,
+    Visitor.Name AS VisitorName,
+    Visitor.VisitingDate
+FROM 
+    Visitor
+INNER JOIN 
+    Location ON Visitor.LocationID = Location.LocationID
+ORDER BY 
+    Location.LocationName;
+
+
+
+SELECT LocationName
+FROM Location
+WHERE LocationName LIKE '%bad';
+
+
+
+SELECT COUNT(*) AS TotalHosts
+FROM Host;
+
+
+
+SELECT COUNT(*) AS NumberOfHosts
+FROM Host
+WHERE LocationID = 6;
+
+
+
+SELECT v.*
+FROM Visitor V
+JOIN Host H ON V.HostID = H.HostID
+WHERE H.HostName = 'Sukumar';
+
+
+
+SELECT *
+FROM Visitor
+WHERE VisitingDate = '2024-04-06';
+
+
+
+
+
+SELECT *
+FROM Visitor
+WHERE HostID IS NULL;
+
+
+SELECT V.*
+FROM Visitor V
+JOIN Host H ON V.HostID = H.HostID
+WHERE H.Department = 'IT';
+
+
+
+SELECT HostID, AVG(VisitorCount) AS AverageVisitors
+FROM (
+    SELECT HostID, COUNT(*) AS VisitorCount
+    FROM Visitor
+    WHERE HostID = 5 AND VisitingDate = '2024-04-06'
+    GROUP BY HostID, VisitingDate
+) AS SubQuery
+GROUP BY HostID;
+
+
+
+SELECT LocationID, AVG(VisitorCount) AS AverageVisitors
+FROM (
+    SELECT LocationID, COUNT(*) AS VisitorCount
+    FROM Visitor
+    WHERE LocationID = 5 AND VisitingDate = '2024-04-06'
+    GROUP BY LocationID, VisitingDate
+) AS SubQuery
+GROUP BY LocationID;
+
+
+
+
+SELECT V.*
+FROM Visitor V
+WHERE V.HostID = (
+    SELECT HostID
+    FROM Visitor
+    GROUP BY HostID
+    ORDER BY COUNT(*) DESC
+    LIMIT 1
+    );
+
+
+
+SELECT H.*
+FROM Host H
+WHERE H.HostID = (
+    SELECT HostID
+    FROM Visitor
+    GROUP BY HostID
+    ORDER BY COUNT(*) ASC
+    LIMIT 1
+);
+
+
+
+SELECT H.*
+FROM Host H
+LEFT JOIN Visitor V ON H.HostID = V.HostID
+WHERE V.HostID IS NULL;
+
+
+
+
+SELECT VisitingDate, COUNT(*) AS VisitorCount
+FROM Visitor
+GROUP BY VisitingDate
+ORDER BY VisitingDate;
+
+
+
+SELECT V.*
+FROM Visitor V
+WHERE V.HostID = 6 AND V.VisitingDate BETWEEN '2024-04-06' AND '2024-05-07';
+
+
+
+SELECT *
+FROM Host
+WHERE Role != 'Manager' OR Role IS NULL;
+
+
+
+
+
+SELECT *
+FROM Visitor
+WHERE MobileNumber IS  NULL OR MobileNumber = '';
+
+
+
+
+
+
+   
+   
+   
+   
+  
+   
