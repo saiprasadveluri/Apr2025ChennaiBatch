@@ -1,0 +1,113 @@
+CREATE TABLE VISITOR (
+    visiId INT NOT NULL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    location VARCHAR(30) NOT NULL,
+    ParentCompany VARCHAR(30) NOT NULL,
+    Purpose VARCHAR(30) NOT NULL,
+    MobileNumber VARCHAR(30) NOT NULL,
+    visitDating DATE NOT NULL
+);
+
+INSERT INTO VISITOR (visiId, name, location, ParentCompany, Purpose, MobileNumber, visitDating)
+VALUES 
+(1, 'sak', 'chee', 'google', 'se', '8765', '2025-07-23'),
+(2, 'vik', 'pune', 'go', 'se', '8765', '2025-07-25'),
+(3, 'nil', 'chee', 'google', 'se', '8765', '2025-07-23'),
+(4, 'kiks', 'pune', 'go', 'se', '8765', '2025-07-25'),
+(5, 'amit', 'mumbai', 'tcs', 'interview', '9988776655', '2025-08-01'),
+(6, 'riya', 'noida', 'hcl', 'business', '9123456780', '2025-08-02'),
+(7, 'jay', 'bangalore', 'wipro', 'demo', '9876501234', '2025-08-03'),
+(8, 'tara', 'hydrabad', 'amazon', 'visit', '7654321980', '2025-08-04'),
+(9, 'arun', 'chennai', 'accenture', 'audit', '8546213700', '2025-08-05'),
+(10, 'raj', 'delhi', 'infosys', 'meeting', '9876543210', '2025-08-01');
+
+
+SELECT COUNT(DISTINCT name) FROM VISITOR;
+SELECT COUNT(DISTINCT location) FROM VISITOR;
+SELECT DISTINCT visiId from VISITOR;
+SELECT DISTINCT visitDating from VISITOR;
+SELECT * from VISITOR where visiId= 2;
+
+SELECT * FROM VISITOR;
+GO
+
+
+CREATE TABLE HOST (
+    hostid INT NOT NULL PRIMARY KEY,
+    Employeenumber INT NOT NULL,
+    Department VARCHAR(30) NOT NULL,
+    location VARCHAR(30) NOT NULL,
+    contact VARCHAR(30) NOT NULL,
+    visiId INT NOT NULL,
+    CONSTRAINT FK_VISI FOREIGN KEY (visiId) REFERENCES VISITOR(visiId)
+);
+
+INSERT INTO HOST (hostid, Employeenumber, Department, location, contact, visiId)
+VALUES (1, 263387, 'sales', 'chee', '2345', 1);
+INSERT INTO HOST (hostid, Employeenumber, Department, location, contact, visiId)
+VALUES (2, 263487, 'market', 'tamil', '4563', 2);
+
+SELECT * FROM HOST;
+GO
+
+CREATE TABLE USERINFO (
+    userid INT NOT NULL PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(30) NOT NULL,
+    hostid INT NOT NULL,
+    role VARCHAR(30) NOT NULL DEFAULT 'VISITOR',
+    CONSTRAINT chk_role CHECK (role IN ('VISITOR', 'HOST')),
+    CONSTRAINT FK_host FOREIGN KEY (hostid) REFERENCES HOST(hostid)
+);
+
+INSERT INTO USERINFO (userid, username, password, hostid, role)
+VALUES (1,  'sak', 'pass-123', 1, 'VISITOR');
+INSERT INTO USERINFO (userid, username, password, hostid, role)
+VALUES(2,  'nis', 'pass-234', 2, 'HOST');
+
+SELECT * FROM USERINFO;
+GO
+//////////////////////////////////////////////////////////////////////home work
+
+SELECT DISTINCT location FROM VISITOR;
+
+SELECT location, COUNT(*) AS NumberOfVisitors FROM VISITOR GROUP BY location;
+
+
+SELECT DISTINCT location FROM VISITOR WHERE location LIKE 'c%';
+
+SELECT COUNT(*) AS TotalHosts FROM HOST;
+
+
+SELECT COUNT(*) AS HostsInLocation FROM HOST WHERE location = 'chee';
+
+
+SELECT V.* FROM VISITOR V
+JOIN HOST H ON V.visiId = H.visiId
+WHERE H.hostid = 1;
+SELECT * FROM VISITOR WHERE visitDating = '2025-08-01';
+
+SELECT * FROM VISITOR ORDER BY visitDating DESC;
+SELECT * FROM VISITOR WHERE visiId NOT IN (SELECT visiId FROM HOST);
+
+
+
+SELECT V.* FROM VISITOR V
+JOIN HOST H ON V.visiId = H.visiId
+WHERE H.Department = 'sales';
+
+
+SELECT * FROM HOST WHERE visiId NOT IN (SELECT visiId FROM VISITOR);
+
+SELECT visitDating, COUNT(*) AS TotalVisitors FROM VISITOR GROUP BY visitDating;
+
+SELECT V.* FROM VISITOR V
+JOIN HOST H ON V.visiId = H.visiId
+WHERE H.hostid = 1 AND V.visitDating BETWEEN '2025-07-23' AND '2025-08-01';
+
+
+SELECT * FROM USERINFO WHERE role <> 'HOST';
+
+
+SELECT * FROM VISITOR WHERE MobileNumber IS NULL OR MobileNumber = '';
+
