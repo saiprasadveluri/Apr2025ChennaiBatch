@@ -1,0 +1,79 @@
+1.	List all locations in the system
+------------------------------------------------
+
+SELECT * FROM LOCATIONS
+
+2.	List locations with visitors.
+-------------------------------------------------
+SELECT * FROM VISITORINFO
+
+3.	List the location names that starts with given string.
+--------------------------------------------------
+SELECT * FROM LOCATIONS WHERE LOCATION_NAME LIKE 'C%'
+
+4.	Get number of Hosts in the system
+--------------------------------------------------
+SELECT COUNT(*) AS COUNT_OF_HOST FROM USERINFO WHERE USERROLE='HOST'
+
+5.	Get number of hosts in a given location id.
+----------------------------------------------------
+SELECT COUNT(*) AS COUNT_OF_HOST FROM USERINFO WHERE USERLOCATION=2 AND USERROLE='HOST'
+
+6.	List all visitor names for a given host
+----------------------------------------------------
+SELECT VISITORNAME FROM VISITORINFO WHERE HOSTID=202
+
+7.	List all visitor information on a given date
+---------------------------------------------------------
+SELECT * FROM VISITORINFO WHERE VISITINGDATE='2025-05-09'
+
+8.	List the visitors sorted based on visiting date, latest date first.
+----------------------------------------------------------
+SELECT * FROM VISITORINFO ORDER BY VISITINGDATE  DESC
+
+9.	List of visitors with no host assigned.
+------------------------------------------------------
+SELECT * FROM VISITORINFO WHERE HOSTID=NULL
+
+10.	List of visitors for a given host name
+--------------------------------------------------------
+SELECT *
+FROM VISITORINFO V
+JOIN USERINFO U ON V.HOSTID = U.USERID
+WHERE U.USERNAME = 'NIKILA';
+
+11.	List of visitors for a given department
+----------------------------------------------------------
+SELECT *
+FROM VISITORINFO V
+JOIN USERINFO U ON V.HOSTID = U.USERID
+WHERE U.DEPTARTMENT = 'ACCOUNT';
+
+12.	Get average number of visitors for a given host id
+------------------------------------------------------------
+SELECT AVG(VisitorCount) AS AvgVisitorsPerHost
+FROM (
+  SELECT HOSTID, COUNT(*) AS VisitorCount
+  FROM VISITORINFO
+WHERE HOSTID=202
+) 
+
+
+13.	Get average visitors for a location on a given date.
+-------------------------------------------------------------
+SELECT AVG(VisitorCount) AS AvgVisitorsPerHost
+FROM (
+  SELECT VISITORLOCATION, COUNT(*) AS VisitorCount
+  FROM VISITORINFO
+WHERE VISITINGDATE='2025-05-19'
+) 
+
+14.	List of visitors’ information who has visited a host with maximum number of visitors. 
+
+
+15.	List the hosts with minimum number of visitors
+16.	List the hosts with no visitors
+17.	Get the count of visitors and visiting date for all available dates.
+18.	Get Visitor details for a given host those are visited between given dates.
+19.	Get the list of users who are not managers.
+20.	Get list of visitors with out Phone number
