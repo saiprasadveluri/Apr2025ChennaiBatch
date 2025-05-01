@@ -1,0 +1,233 @@
+-- Location Table
+CREATE TABLE Location (
+    location_id INT PRIMARY KEY,
+    location_name VARCHAR(100)
+);
+
+-- User Table (without FK constraint initially)
+CREATE TABLE [User] (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(100),
+    user_location INT,
+    role VARCHAR(20) CHECK (role IN ('host', 'manager'))
+);
+
+-- Visitor Table (without FK constraint initially)
+CREATE TABLE Visitor (
+    visitor_id INT PRIMARY KEY,
+    visitor_name VARCHAR(100),
+    host_visitor_id INT,
+    visitor_location INT,
+    visit_date DATE,
+    phone_number VARCHAR(15)
+);
+
+-- Add foreign key constraints separately
+
+-- User.user_location → Location.location_id
+ALTER TABLE [User]
+ADD CONSTRAINT FK_User_Location
+FOREIGN KEY (user_location) REFERENCES Location(location_id);
+
+-- Visitor.host_visitor_id → User.user_id
+ALTER TABLE Visitor
+ADD CONSTRAINT FK_Visitor_Host
+FOREIGN KEY (host_visitor_id) REFERENCES [User](user_id);
+
+-- Visitor.visitor_location → Location.location_id
+ALTER TABLE Visitor
+ADD CONSTRAINT FK_Visitor_Location
+FOREIGN KEY (visitor_location) REFERENCES Location(location_id);
+
+-- To add column to the existing table
+ALTER TABLE Visitor
+ADD department VARCHAR(100);
+
+
+-- Insert into Location
+INSERT INTO Location (location_id, location_name) VALUES
+(1, 'Andhra Pradesh'),
+(2, 'Telangana'),
+(3, 'Karnataka'),
+(4, 'Tamil Nadu'),
+(5, 'Kerala'),
+(6, 'Odisha'),
+(7, 'Maharashtra'),
+(8, 'Chhattisgarh'),
+(9, 'Delhi'),
+(10, 'West Bengal');
+
+-- Insert into [User]
+INSERT INTO [User] (user_id, username, user_location, role) VALUES
+(1, 'Ravi', 1, 'host'),
+(2, 'Sita', 2, 'host'),
+(3, 'Kiran', 1, 'host'),
+(4, 'Anjali', 3, 'manager'),
+(5, 'Venkatesh', 2, 'manager'),
+(6, 'Harsha', 3, 'host'),
+(7, 'Lalitha', 4, 'host'),
+(8, 'Ramya', 1, 'manager'),
+(9, 'Surya', 5, 'host'),
+(10, 'Meghana', 1, 'host'),
+(11, 'Ramesh', 6, 'host'),
+(12, 'Divya', 7, 'manager'),
+(13, 'Teja', 8, 'host'),
+(14, 'Deepthi', 9, 'host'),
+(15, 'Chaitanya', 10, 'manager');
+
+--Insert into visitor table
+INSERT INTO Visitor (visitor_id, visitor_name, host_visitor_id, visitor_location, visit_date, phone_number, department) VALUES
+(1, 'Krishna', 1, 1, '2025-04-01', '9876543210', 'Development'),
+(2, 'Radha', 2, 2, '2025-04-02', NULL, 'QA'),
+(3, 'Lakshmi', 3, 1, '2025-04-03', '9123456789', 'Development'),
+(4, 'Mohan', 1, 1, '2025-04-04', '9988776655', 'Development'),
+(5, 'Bhavani', 6, 3, '2025-04-01', NULL, 'QA'),
+(6, 'Rajesh', 7, 4, '2025-04-03', '9090909090', 'Support'),
+(7, 'Padma', 1, 1, '2025-04-01', '9876501234', 'Development'),
+(8, 'Srikanth', 3, 1, '2025-04-02', '7894561230', 'Development'),
+(9, 'Sunitha', NULL, 1, '2025-04-02', NULL, 'HR'),
+(10, 'Naveen', 2, 2, '2025-04-03', '9012345678', 'QA'),
+(11, 'Manju', 1, 1, '2025-04-04', NULL, 'Development'),
+(12, 'Rekha', 9, 5, '2025-04-01', '8888888888', 'Support'),
+(13, 'Venkat', 3, 1, '2025-04-01', NULL, 'Development'),
+(14, 'Kavya', 6, 3, '2025-04-01', '7777777777', 'QA'),
+(15, 'Gopi', 1, 1, '2025-04-05', NULL, 'Development');
+
+select *from Location
+
+select *from [User]
+
+select *from Visitor
+
+--1. List all locations
+SELECT * FROM Location;
+SELECT location_name FROM Location
+
+--2. List location names with visitors
+SELECT DISTINCT L.location_name
+FROM Visitor V
+JOIN Location L ON V.visitor_location = L.location_id;
+
+--3. Location names that start with a given string (e.g., 'Branch')
+SELECT location_name
+FROM Location
+WHERE location_name LIKE 'T%';
+
+--4. Number of Hosts in the system
+SELECT COUNT(*) AS HostCount
+FROM [User]
+WHERE role = 'host';
+
+--5. Number of hosts in a given location (e.g., location_id = 1)
+SELECT COUNT(*) AS HostsInLocation
+FROM [User]
+WHERE role = 'host' AND user_location = 1;
+
+--6. All visitor details for a given host (e.g., user_id = 1)
+SELECT *
+FROM Visitor
+WHERE host_visitor_id = 1;
+
+--7. All visitor information on a given date (e.g., '2025-04-01')
+SELECT *
+FROM Visitor
+WHERE visit_date = '2025-04-01';
+
+--8. Visitors sorted by visit date (latest first)
+SELECT *
+FROM Visitor
+ORDER BY visit_date DESC;
+
+--9. Visitors with no host assigned
+SELECT *
+FROM Visitor
+WHERE host_visitor_id IS NULL;
+
+--10. Visitors for a given host name
+SELECT v.*
+FROM Visitor v
+JOIN [User] u ON v.host_visitor_id = u.user_id
+WHERE u.username = 'Ravi';
+
+--11. Visitors for a Given Department
+SELECT *
+FROM Visitor
+WHERE department = 'QA';
+
+--12. Average number of visitors for a host on a given date
+SELECT AVG(visitor_count) AS AvgVisitors
+FROM (
+    SELECT COUNT(*) AS visitor_count
+    FROM Visitor
+    WHERE host_visitor_id = 1 AND visit_date = '2025-04-01'
+) AS Sub;
+
+--13. Average visitors for a location on a given date
+SELECT AVG(visitor_count) AS AvgVisitors
+FROM (
+    SELECT host_visitor_id, COUNT(*) AS visitor_count
+    FROM Visitor
+    WHERE visitor_location = 1 AND visit_date = '2025-04-01'
+    GROUP BY host_visitor_id
+) AS Sub;
+
+--14. Visitors who visited host with max number of visitors
+WITH HostCounts AS (
+    SELECT host_visitor_id, COUNT(*) AS cnt
+    FROM Visitor
+    GROUP BY host_visitor_id
+),
+MaxHost AS (
+    SELECT TOP 1 host_visitor_id
+    FROM HostCounts
+    ORDER BY cnt DESC
+)
+SELECT *
+FROM Visitor
+WHERE host_visitor_id = (SELECT host_visitor_id FROM MaxHost);
+
+--15. Hosts with minimum number of visitors
+WITH HostCounts AS (
+    SELECT host_visitor_id, COUNT(*) AS cnt
+    FROM Visitor
+    WHERE host_visitor_id IS NOT NULL
+    GROUP BY host_visitor_id
+),
+MinHost AS (
+    SELECT MIN(cnt) AS min_count FROM HostCounts
+)
+SELECT U.*
+FROM [User] U
+JOIN HostCounts H ON U.user_id = H.host_visitor_id
+WHERE H.cnt = (SELECT min_count FROM MinHost);
+
+--16. Hosts with no visitors
+SELECT *
+FROM [User]
+WHERE role = 'host' AND user_id NOT IN (
+    SELECT DISTINCT host_visitor_id FROM Visitor WHERE host_visitor_id IS NOT NULL
+);
+
+--17. Count of visitors per date
+SELECT visit_date, COUNT(*) AS visitor_count
+FROM Visitor
+GROUP BY visit_date
+ORDER BY visit_date;
+
+--18. Visitor details for a host between dates
+SELECT *
+FROM Visitor
+WHERE host_visitor_id = 1
+AND visit_date BETWEEN '2025-04-01' AND '2025-04-04';
+
+--19. Users who are not managers
+SELECT *
+FROM [User]
+WHERE role != 'manager';
+
+--20. Visitors without phone number
+SELECT *
+FROM Visitor
+WHERE phone_number IS NULL;
+
+
