@@ -1,0 +1,120 @@
+--create table locationinfo(
+  --locationid int PRIMARY KEY,
+  --locationname nvarchar(20));
+  
+ -- CREATE table userinfo(
+      --userid int PRIMARY KEY,
+      --username nvarchar(50) not NULL,
+      --empnumber nvarchar(50) not null,
+      --department nvarchar(50) not null,
+      --ulocation int not NULL,
+      --contactnumber bigint not NULL,
+      --userrole nvarchar(50) NOT NULL check( userrole IN('host','manager')),
+      --FOREIGN KEY (ulocation) REFERENCES locationinfo(locationid)
+      --);
+      
+  --create TABLE visitorinfo(
+    --visitorid int PRIMARY KEY,
+    --visitorname nvarchar(50) NOT NULL,
+    --vlocation int NOT NULL,
+    --parentcompany nvarchar(50) NOT NULL,
+    --purpose nvarchar(50) NOT NULL,
+    --contactnumber bigint NOT NULL,
+    --visitingdate date NOT null,
+    --hostid int NOT NULL,
+    --FOREIGN key (vlocation) REFERENCES locationinfo(locationid),
+    --FOREIGN key (hostid) REFERENCES userinfo(userid)
+  --);
+  
+  --insert INTO locationinfo VALUES
+  --(1,'COIMBATOR')
+  --(2, 'CHENNAI'),
+  --(3,'BANGLORE'),
+  --(4,'MUMBAI'),
+  --(5,'PUNE');
+--SELECT * from locationinfo  
+
+--INSERT INTO visitorinfo VALUES
+--(101,'SAHITHI',2,'TCS','PROJECT',8220998765,'2025-05-29',202),
+--(102, 'SHRI', 1, 'TCS', 'TRAINING',0987654321, '2025-05-29', 203),
+--(103, 'NIDHI', 3, 'IOPEX', 'PROJECT',0987654321, '2025-05-26', 201),
+--(104, 'HARI', 1, 'GOOGLE', 'INTERN',0987654321, '2025-05-19', 201),
+--(105, 'VARSHA', 1, 'LTIMINDTREE', 'PROJECT',0987654321, '2025-05-09', 202);
+--SELECT * from visitorinfo
+
+--INSERT into userinfo VALUES
+--(201, 'CHARPITHA', 2666338, 'MYLEARN', 1, 1234567890, 'host'),
+--(202, 'SOWMYA', 2666338, 'CEO', 1, 1234567890, 'host'),
+--(203, 'SWETHA', 2666778, 'HR', 2, 1234567890, 'host'),
+--(204, 'SHAKTHI', 2666232, 'MYLEARN', 3, 1234567890, 'manager'),
+--(205, 'NANDHA', 2006888, 'CEO', 1, 1234567890, 'manager');
+--SELECT * from userinfo
+
+--1.	List all locations in the system
+ --SELECT DISTINCT(locationname) from locationinfo
+
+--2.	List locations with visitors.
+ --SELECT visitorname, locationname from visitorinfo v INNER JOIN locationinfo l on v.vlocation = l.locationid
+ 
+ --3.	List the location names that starts with given string.
+ --SELECT locationname FROM locationinfo where locationname LIKE 'C%'
+ 
+--4.	Get number of Hosts in the system
+ --SELECT COUNT(*) as no_of_host FROM userinfo WHERE userrole = 'host'
+ 
+ --5.	Get number of hosts in a given location id.
+ --SELECT COUNT(userrole) from userinfo WHERE ulocation=1 AND userrole='host'
+ 
+ --6.	List all visitor names for a given host
+ --SELECT visitorname FROM visitorinfo WHERE hostid='202'
+ 
+ --7.	List all visitor information on a given date
+ --SELECT * FROM visitorinfo WHERE visitingdate='2025-05-29'
+  
+-- 8.	List the visitors sorted based on visiting date, latest date first
+ --SELECT * FROM visitorinfo ORDER BY visitingdate DESC
+ 
+ --9.	List of visitors with no host assigned.
+ --SELECT * from visitorinfo WHERE hostid is NULL
+ 
+ --10.	List of visitors for a given host name
+ --SELECT COUNT(visitorname) as no_of_visitor from visitorinfo v INNER JOIN userinfo u WHERE v.hostid=u.userid AND u.username ='CHARPITHA' 
+ 
+ --11.	List of visitors for a given department
+ --SELECT visitorname from visitorinfo v INNER JOIN userinfo u  WHERE v.hostid=u.userid AND u.department='CEO'
+ 
+ --12.	Get average number of visitors for a given host id
+ --SELECT avg(visitors
+ 
+-- 13.	Get average visitors for a location on a given date.
+ --SELECT AVG(VISITORS) FROM VISITORINFO
+--WHERE VISITORS = (SELECT COUNT(VISITORNAME) FROM VISITORINFO WHERE HOSTID=1 AND VISITING DATE = '2025-05-29')
+
+--14.	List of visitors’ information who has visited a host with maximum number of visitors. 
+ --SELECT AVG(VISITORS) FROM VISITORNFO
+--WHERE VISITORS = (SELECT COUNT(VISITORNAME) FROM VISITORINFO WHERE VLOCATION=1 AND VISITINGDATE = '2025-05-29')
+
+--15
+--SELECT * FROM VISITORINFO
+--WHERE HOSTID=(SELECT HOSTID FROM VISITORINFO GROUP BY HOSTID ORDERBY COUNT(*) DESC LIMIT 1)
+
+--16
+--SELECT U.* FROM USERINFO U
+--JOIN(SELECT HOSTID, COUNT(*) AS VISITORCOUNT FROM VISITORINFO GROUP BY HOSTID ORDER BY VISITORCOUNT ASC LIMIT 1) V ON U.USERID = V.HOSTID
+
+--SELECT * FROM USERINFO 
+--WHERE HOSTID NOT IN (SELECT DIISTINT HOSTID FROM VISITORINFO WHERE HOSTID IS NOT NULL)
+ 
+ --17.	Get the count of visitors and visiting date for all available dates.
+ --SELECT COUNT(visitorname),visitingdate FROM visitorinfo WHERE visitingdate ='2025-05-29'
+ 
+--18.	Get Visitor details for a given host those are visited between given dates.
+--SELECT * FROM visitorinfo WHERE visitingdate BETWEEN '2025-05-20' AND '2025-05-30'
+
+--19.	Get the list of users who are not managers.
+--SELECT username FROM userinfo WHERE userrole != 'manager'
+
+--20.	Get list of visitors with out Phone number
+--SELECT *  FROM visitorinfo WHERE contactnumber IS NULL
+    
+   
