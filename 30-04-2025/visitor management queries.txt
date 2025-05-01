@@ -1,0 +1,149 @@
+--1. INSERT VALUES
+--INSERT INTO [LOCATION] VALUES (7,'Gurgaon'),(8,'Patna'),(9,'Hajipur'),(10,'Kanpur'),(11,'Pune'),(12,'Coinbatore')
+--INSERT INTO [LOCATION] VALUES (6,'Kolkata')
+ 
+--INSERT INTO Host VALUES (103,'Alex',786215,'IT',3,7896254369)
+--INSERT INTO Host VALUES (104,'Alex',456876,'IT',5,8965475623),
+--(105,'Alex',965783,'IT',7,9875698896),
+--(106,'Mandy',512369,'Admin',8,6598789562),
+--(107,'Sonu',789543,'Business',6,8961478563),
+--(108,'Monu',973541,'Marketing',3,8897564589),
+--(109,'Chintu',456879,'Marketing',5,8254789654),
+--(110,'Xavier',125487,'Business',3,7898723156),
+--(111,'Bablu',114477,'HR',1,6987512301),
+--(112,'Tillu',225588,'Management',2,3601204580),
+--(113,'Maria',336699,'Business',1,8940003215)
+ 
+--INSERT INTO Visitor VALUES (1002,'Prince',7,'TCS','Meeting',5698745630,'2025-05-05',102),
+--(1003,'Raju',5,'TCS','Meeting',2365447896,'2025-05-30',108),
+--(1004,'Rastogi',7,'Mpsasis','Business',9632580012,'2025-05-23',104),
+--(1005,'Seenu',9,'Oracle','Meeting',9865412055,'2025-05-29',104),
+--(1006,'Prem',3,'Virtusa','Business',8569863254,'2025-05-12',107),
+--(1007,'Amartya',1,'Accenture','Meeting',4789546235,'2025-05-05',107),
+--(1008,'Aman',4,'TCS','Business',8796523105,'2025-05-03',101),
+--(1009,'Sameer',9,'Mphasis','Business',4236558974,'2025-06-08',104),
+--(1010,'Nikhil',3,'Cognizant','Meeting',5569878965,'2025-06-23',105),
+--(1011,'Aryan',4,'Oracle','Business',8965898745,'2025-05-13',107),
+--(1012,'Abhi',11,'Tcs','Meeting',5669778965,'2025-05-21',101),
+--(1013,'Raj',6,'Mphasis','Business',8987569545,'2025-05-26',102),
+--(1014,'Sarvesh',7,'Mphasis','Meeting',9632587895,'2025-06-11',102)
+ 
+--2. List all location
+--SELECT * FROM LOCATION
+ 
+--3. LIST LOCATION NAME WITH VISITORS
+--SELECT DISTINCT l.LocationName
+--FROM location l
+--JOIN visitor v ON l.LocationId = v.LocationId;
+ 
+--4. List the location names that start with a given string 
+--SELECT LocationName
+--FROM location
+--WHERE LocationName LIKE 'Che%';  
+ 
+--5. Get number of Hosts in the system
+--SELECT COUNT(*) AS TotalHosts FROM host;
+ 
+--6. Get number of hosts in a given location id
+--SELECT COUNT(*) AS HostsInLocation
+--FROM host
+--WHERE LocationId = 1;
+ 
+--7. List all visitor details for a given host
+--SELECT *
+--FROM visitor
+--WHERE HostId = 102;
+ 
+--8. List all visitor information on a given date
+--SELECT *
+--FROM visitor
+--WHERE VisitingDate = '2025-05-05';
+ 
+--9. List the visitors sorted based on visiting date, latest date first
+--SELECT *
+--FROM visitor
+--ORDER BY VisitingDate DESC;
+
+ 
+
+--10. List of visitors with no host assigned
+--SELECT *
+--FROM visitor
+--WHERE HostId IS NULL;
+ 
+--11. List of visitors for a given host name
+--SELECT v.*
+--FROM visitor v
+--JOIN host h ON v.HostId = h.HostId
+--WHERE h.HostName = 'Sonu'; 
+
+ 
+
+--12. List of visitors for a given department
+--SELECT v.*
+--FROM visitor v
+--JOIN host h ON v.HostId = h.HostId
+--WHERE h.Dept = 'IT';  
+ 
+--13. Get average number of visitors for a given host id for a given date
+--SELECT COUNT(*) AS VisitorCount
+--FROM visitor
+--WHERE HostId = 106 AND VisitingDate = '2025-05-05';
+ 
+--14. Get average visitors for a location on a given date
+--SELECT COUNT(*) AS VisitorCount
+--FROM visitor
+--WHERE LocationId = 5 AND VisitingDate = '2025-05-05';
+ 
+--15. List of visitors’ information who visited a host with the maximum number of visitors
+--WITH HostVisitCounts AS (
+--    SELECT HostId, COUNT(*) AS VisitCount
+--    FROM visitor
+--    GROUP BY HostId
+--),
+--MaxHost AS (
+--    SELECT TOP 1 HostId
+--    FROM HostVisitCounts
+--    ORDER BY VisitCount DESC
+--)
+--SELECT *
+--FROM visitor
+--WHERE HostId IN (SELECT HostId FROM MaxHost);
+ 
+--16. List the hosts with minimum number of visitors
+--WITH HostVisitCounts AS (
+--    SELECT HostId, COUNT(*) AS VisitCount
+--    FROM visitor
+--    GROUP BY HostId
+--),
+--MinHost AS (
+--    SELECT TOP 1 HostId
+--    FROM HostVisitCounts
+--    ORDER BY VisitCount ASC
+--)
+--SELECT *
+--FROM host
+--WHERE HostId IN (SELECT HostId FROM MinHost);
+ 
+--17. List the hosts with no visitors
+--SELECT *
+--FROM host
+--WHERE HostId NOT IN (SELECT DISTINCT HostId FROM visitor WHERE HostId IS NOT NULL);
+ 
+--18. Get the count of visitors and visiting date for all available dates
+--SELECT VisitingDate, COUNT(*) AS VisitorCount
+--FROM visitor
+--GROUP BY VisitingDate
+--ORDER BY VisitingDate;
+ 
+--19. Get visitor details for a given host who visited between given dates
+--SELECT *
+--FROM visitor
+--WHERE HostId = 105 AND VisitingDate BETWEEN '2025-05-05' AND '2025-05-15';
+ 
+--20. Get the list of users who are not managers
+ 
+--21. Get list of visitors without phone number
+--SELECT *
+--FROM visitor
+--WHERE MobileNo IS NULL;
