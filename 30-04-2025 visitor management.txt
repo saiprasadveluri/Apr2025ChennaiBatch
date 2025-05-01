@@ -1,0 +1,173 @@
+--create database visitormanagement;
+--use visitormanagement;
+--create table location(
+--locationid bigint not null primary key,
+--locationname nvarchar(20) not null);
+--select * from location;
+--insert into location values(
+--1, 'Hyderabad
+--insert into location(locationid,locationname)values
+--(2,'chennai'),
+--(3,' banglore'),
+--(4,'pune');
+
+--create table visitorinformation(
+--vid bigint not null primary key,
+--vname nvarchar(20) not null,
+--vlocation bigint not null,
+--parentcompany nvarchar(20) not null,
+--purpose nvarchar(20) not null,
+--mobilenumber bigint not null,
+--visitingdate date not null,
+--hostid bigint not null);
+
+--select * from visitorinformation;
+
+-- alter table visitorinformation add constraint
+--visitorinformation_loc_fk foreign key(vlocation)
+--references location(locationid);
+
+--select * from  visitorinformation;
+ 
+ --create table userinformation(
+ --userid bigint not null primary key,
+ --username nvarchar(20) not null,
+ --employeenumber bigint not null,
+ --department nvarchar(20) not null,
+ --userlocation bigint not null,
+ --usermail nvarchar(20) not null,
+ --userpassword nvarchar(20) not null,
+ --userrole nvarchar(20) not null);
+ --select * from userinformation;
+ --alter table userinformation add constraint
+ --userinformation_location_fk foreign key(userlocation)
+ --references location(locationid);
+
+ --alter table userinformation add constraint
+ --userinformation_check check (userrole in('host','manager'));
+
+ --1.
+ --insert into location values
+ --(5,'goa'),
+ --(6,'shadnagar'),
+ --(7 ,'medak'),
+ --(8,'nalgonda'),
+ --(9, 'kerala'),
+ --(10,'jammu');
+ --select * from location;
+ --select * from visitorinformation;
+ 
+ --insert into visitorinformation values
+ ----(101,'sowmika',1,'mphasis','interview',12345,'1-05-2025',201),
+ --(102,'sagarika',2,'cognizant','interview',12348,'1-05-2025',201),
+ --(103,'sravani',3,'accenture','interview',123457,'1-05-2025',202),
+
+ --(104,'Akanksha',4,'TCS','interview',123456,'1-05-2025',202),
+
+ --(105,'sowmya',5,'HCL','interview',123459,'1-05-2025',203),
+
+ --(106,'nikhila',6,'mphasis','meeting',123450,'1-05-2025',203),
+
+ --(107,'manogna',7,'coginzant','meeting',123453,'1-05-2025',204),
+
+ --(108,'sanju',8,'TCS','interview',123452,'1-05-2025',205),
+
+ --(109,'supritha',1,'','interview',12345,'1-05-2025',206);
+
+ --update visitorinformation set parentcompany='mphasis' where vid=109;
+ --update visitorinformation set visitingdate='31-04-205'where vid=203;
+
+ --select * from visitorinformation;
+ 
+ --insert into userinformation values
+ --(201,'swetha',283286,'HR','1','swetha@swetha',12345,'host'),
+ --(202,'shruthi',283287,'HR','2','chinni@chinni',12348,'host'),
+ --(203,'yashu',283288,'H','3','yasu@yashu',12348,'manager'),
+ --(204,'rakesh',283289,'HR','4','rakesh@rakesh',12348,'manager'),
+ --(205,'ricky',283280,'HR','5','ricky@ricky',12348,'host')
+
+
+ --2. 
+ --select * from location;
+
+ --3.
+  --select vname,vlocation from visitorinformation v
+  --inner join location l on v.vlocation=l.locationid
+
+
+  --4.
+
+  --select locationname from location where locationname like 'ch%';
+
+ --5
+  --  select count(username) from userinformation
+  --  where userrole='host';
+
+ --6
+   --select count(username)from userinformation 
+   --where userrole='host' and userlocation=2;
+
+ --7.
+  --select hostid,vname from visitorinformation 
+  --where hostid=203;
+
+  --8
+  --select * from visitorinformation 
+ --where visitingdate='2025-01-05';
+
+  --9.
+  --Select * from visitorinformation
+ --ORDER BY visitingdate DESC;
+ 
+ --10--
+ --select v.*
+ --from visitorinformation v
+ --join userinformation u ON v.hostid = u.userid
+ --where u.userrole <> 'Host';
+ 
+ --11--
+ --select v.* from visitorinformation v
+ --join userinformation u ON v.hostid = u.userid
+ --where u.username = 'sowmika';
+ 
+ --12--
+ --select vname from visitorinformation v
+ --inner join userinformation u ON u.userid = v.hostid
+ --where u.department='HR'
+ 
+ --13--
+ --Select * from visitorinformation
+ --where hostid= 202 AND visitingdate='2025-01-05'
+ 
+ 
+ --14--
+ --select count(*) from visitorinformation
+ --where vlocation= 1 AND visitingdate='2025-01-05';
+ 
+ --15--
+ --select * from visitorinformation where hostid=(select top 1 hostid from visitorinformation GROUP BY hostid ORDER BY count(*) DESC);
+ 
+ --16--
+ --select * from userinformation where userid=(select top 1 hostid from visitorinformation GROUP BY hostid ORDER BY count(*) ASC);
+ 
+ --17
+ --select * from userinformation
+ --Where userid Not in (Select Distinct hostid from visitorinformation where hostid is not null);
+ 
+ 
+ --18--
+ --select visitingdate,count(*) As visits from visitorinformation
+ --GROUP BY visitingdate
+ --ORDER BY visitingdate ASC;
+ 
+ --19--
+ --select * from visiterinformation
+ --where hostid= 202 AND visitingdate BETWEEN '2025-01-05' AND '2025-11-01';
+ 
+ --20--
+ --select username from userinformation
+ --where userrole != 'Manager';
+ 
+ --21--
+ --select vname from visitorinformation
+ --where mobilenumber is null;
