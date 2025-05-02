@@ -41,21 +41,21 @@ INSERT INTO Locations VALUES
 
 
 INSERT INTO Hosts VALUES 
-(1, 'Ravi Kumar', 'HR', 1),
-(2, 'Priya Sharma', 'IT', 1),
-(3, 'Arjun Mehta', 'Sales', 2),
-(4, 'Lavanya Reddy', 'Marketing', 3),
-(5, 'Durga Rao', 'Admin', 2),
-(6, 'Sneha Rani', 'Finance', 4),
-(7, 'Vikram Joshi', 'Operations', 5),
-(8, 'Ananya Rao', 'Support', 6),
-(9, 'Suresh Babu', 'IT', 7),
-(10, 'Pavani Das', 'Admin', 8),
-(11, 'Tarun Verma', 'Marketing', 9),
-(12, 'Meena Iyer', 'HR', 10),
-(13, 'Sameer Khan', 'Sales', 11),
-(14, 'Bhavna Shah', 'Finance', 12),
-(15, 'Aditya Menon', 'Support', 13);
+(1, 'Ravi Kumar', 'host', 1),
+(2, 'Priya Sharma', 'manager', 1),
+(3, 'Arjun Mehta', 'host', 2),
+(4, 'Lavanya Reddy', 'manager', 3),
+(5, 'Durga Rao', 'manager', 2),
+(6, 'Sneha Rani', 'host', 4),
+(7, 'Vikram Joshi', 'host', 5),
+(8, 'Ananya Rao', 'host', 6),
+(9, 'Suresh Babu', 'manager', 7),
+(10, 'Pavani Das', 'host', 8),
+(11, 'Tarun Verma', 'host', 9),
+(12, 'Meena Iyer', 'host', 10),
+(13, 'Sameer Khan', 'host', 11),
+(14, 'Bhavna Shah', 'manager', 12),
+(15, 'Aditya Menon', 'host', 13);
 
 
 INSERT INTO Visitors VALUES
