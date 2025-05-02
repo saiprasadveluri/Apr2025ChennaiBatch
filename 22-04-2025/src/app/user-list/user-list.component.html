@@ -1,0 +1,39 @@
+<h2>UserList:</h2>
+<button (click)="GotoAddUser()">Back to Add New User</button>
+<table style="width:100%; border-style: double;">
+    
+    <tr>
+        <th>
+            UserId
+        </th>
+        <th>
+            Display Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            password
+        </th>
+        <th>
+            role
+        </th>
+    </tr>
+    <tr *ngFor="let r of userData">
+        <td>
+            {{r.userId}}
+        </td>
+        <td>
+            {{r.displayName}}
+        </td>
+        <td>
+            {{r.email}}
+        </td>
+        <td>
+            {{r.password}}
+        </td>
+        <td>
+            {{r.role}}
+        </td>
+    </tr>
+</table>
