@@ -1,0 +1,117 @@
+create database TakManager
+ use TakManager
+
+
+ 
+ --1. UserInfo Table
+ CREATE TABLE UserInfo (
+     UserId INT PRIMARY KEY IDENTITY(1,1),
+     UserName VARCHAR(100) NOT NULL,
+     RoleId INT NOT NULL FOREIGN KEY REFERENCES Roles(RoleId),
+     Email VARCHAR(100) NOT NULL UNIQUE,
+     Password VARCHAR(10) NOT NULL,
+     Phone VARCHAR(15) NOT NULL
+ );
+ --2. Project Table
+ CREATE TABLE Project (
+     ProjId INT PRIMARY KEY IDENTITY(1,1),
+     Title VARCHAR(100) NOT NULL UNIQUE,
+     Description TEXT NULL,
+     StartDate DATE NOT NULL,
+     EndDate DATE NULL
+ );
+ --3. Roles Table
+ CREATE TABLE Roles (
+     RoleId INT PRIMARY KEY IDENTITY(1,1),
+     RoleName VARCHAR(50) NOT NULL UNIQUE CHECK (RoleName IN ('Site Admin', 'Project Manager', 'Developer', 'QA'))
+ );
+ 
+ --4. ProjectMember Bridge Table
+ CREATE TABLE ProjectMember (
+     MemberId INT PRIMARY KEY IDENTITY(1,1),
+     UserId INT NOT NULL FOREIGN KEY REFERENCES UserInfo(UserId),
+     ProjId INT NOT NULL FOREIGN KEY REFERENCES Project(ProjId),
+     CONSTRAINT UQ_User_Project UNIQUE (UserId, ProjId)
+ );
+ 
+ 
+ --5. Task Table
+ CREATE TABLE Task (
+     TaskId INT PRIMARY KEY IDENTITY(1,1),
+     TaskTitle VARCHAR(100) NOT NULL,
+     Description TEXT NULL,
+     AssignedTo INT NOT NULL FOREIGN KEY REFERENCES ProjectMember(MemberId),
+     TaskType VARCHAR(20) NOT NULL CHECK (TaskType IN ('Bug', 'New Feature')),
+     StartDate DATE NULL,
+     EndDate DATE NULL,
+     TaskStatusId INT NOT NULL FOREIGN KEY REFERENCES TaskTypeMaster(TaskTypeId)
+ );
+ 
+ --6. TaskTypeMaster Table
+ CREATE TABLE TaskTypeMaster (
+     TaskTypeId INT PRIMARY KEY IDENTITY(1,1),
+     TaskTypeName VARCHAR(50) NOT NULL UNIQUE CHECK (TaskTypeName IN ('open', 'Inprogress', 'Resolved', 'Closed'))
+ );
+ --7. Comment Table
+ CREATE TABLE Comment (
+     CommentId INT PRIMARY KEY IDENTITY(1,1),
+     Title VARCHAR(200) NOT NULL,
+     ParentTaskId INT NOT NULL FOREIGN KEY REFERENCES Task(TaskId),
+     TaskDescription TEXT NULL,
+     CommentBy INT NOT NULL FOREIGN KEY REFERENCES ProjectMember(MemberId),
+     CommentDate DATETIME NOT NULL DEFAULT GETDATE()
+ );
+
+ INSERT INTO Roles (RoleName) VALUES 
+ ('Site Admin'),
+ ('Project Manager'),
+ ('Developer'),
+ ('QA');
+ 
+ select *from Roles
+
+
+ INSERT INTO UserInfo (UserName, RoleId, Email, Password, Phone) VALUES
+ ('Reddy', 1, 'reddy@55.com', 'pass34', '95576749810'),  
+ ('prasad', 2, 'prasad@545.com', 'prasad3524', '9866743211'), 
+ ('Guna', 3, 'Guna@486.com', 'guna454', '98765444412'), 
+ ('reddaiah', 4, 'reddaiah.com', 'redd@3453', '9876543213'), 
+ ('vamsi', 3, 'vamsi@465.com', 'vamsi@56', '9876543214'), 
+ ('Suku', 4, 'suku@45.com', 'suku@4356', '9657654315'); 
+ 
+ select *from UserInfo
+
+ INSERT INTO Project (Title, Description, StartDate, EndDate) VALUES
+ ('TaskManager', 'Projmangert Tool for Developers and QA', '2023-04-02', NULL);
+ 
+ select *from Project
+
+ INSERT INTO ProjectMember (UserId, ProjId) VALUES
+ (2, 1), 
+ (3, 1), 
+ (4, 1), 
+ (5, 1), 
+ (6, 1); 
+ 
+ select *from ProjectMember
+ 
+ INSERT INTO TaskTypeMaster (TaskTypeName) VALUES
+ ('open'),
+ ('Inprogress'),
+ ('Resolved'),
+ ('Closed');
+ 
+ select *from TaskTypeMaster
+
+ INSERT INTO Task (TaskTitle, Description, AssignedTo, TaskType, StartDate, EndDate, TaskStatusId) VALUES
+ ('Login Issue', 'Login fails ', 3, 'Bug', '2025-04-05', NULL, 1),
+ ('Add  Feature', 'Imp notification alerts', 5, 'New Feature', '2023-04-02', NULL, 1);
+ 
+ select *from Task
+
+ INSERT INTO Comment (Title, ParentTaskId, TaskDescription, CommentBy, CommentDate) VALUES
+ ('comment1', 1, 'Checking the login service', 3, '2025-04-24'),
+ ('comment2', 2, 'Setting up notification UI', 5, '2025-04-24'),
+ ('comment3', 1, 'needs more logs', 4, '2025-04-24');
+ 
+ select *from Comment
