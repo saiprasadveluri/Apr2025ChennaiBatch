@@ -1,0 +1,109 @@
+--create database taskmanager
+--use taskmanager
+
+CREATE TABLE Roles (
+    RoleId INT PRIMARY KEY IDENTITY(1,1),
+    RoleName VARCHAR(50) NOT NULL UNIQUE
+);
+CREATE TABLE UserInfo (
+    UserId INT PRIMARY KEY IDENTITY(1,1),
+    UserName VARCHAR(100) NOT NULL,
+    RoleId INT NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Password VARCHAR(10) NOT NULL,
+    Phone VARCHAR(15) NOT NULL,
+    FOREIGN KEY (RoleId) REFERENCES Roles(RoleId)
+);
+CREATE TABLE Project (
+    ProjId INT PRIMARY KEY IDENTITY(1,1),
+    Title VARCHAR(100) NOT NULL UNIQUE,
+    Description TEXT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NULL
+);
+
+CREATE TABLE ProjectMember (
+    MemberId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL,
+    ProjId INT NOT NULL,
+    UNIQUE(UserId, ProjId),
+    FOREIGN KEY (UserId) REFERENCES UserInfo(UserId),
+    FOREIGN KEY (ProjId) REFERENCES Project(ProjId)
+);
+
+CREATE TABLE TaskTypeMaster (
+    TaskTypeId INT PRIMARY KEY IDENTITY(1,1),
+    TaskTypeName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Task (
+    TaskId INT PRIMARY KEY IDENTITY(1,1),
+    TaskTitle VARCHAR(100) NOT NULL,
+    Description TEXT NULL,
+    AssignedTo INT NOT NULL,
+    TaskTypeId INT NOT NULL,
+    StartDate DATE NULL,
+    EndDate DATE NULL,
+    TaskStatusId INT NOT NULL,
+    FOREIGN KEY (AssignedTo) REFERENCES ProjectMember(MemberId),
+    FOREIGN KEY (TaskTypeId) REFERENCES TaskTypeMaster(TaskTypeId),
+   
+);
+CREATE TABLE Comment (
+    CommentId INT PRIMARY KEY IDENTITY(1,1),
+    Title VARCHAR(100) NOT NULL,
+    TaskDescription TEXT NULL,
+    ParentTaskId INT NOT NULL,
+    CommentBy INT NOT NULL,
+    CommentDate DATE NOT NULL,
+    FOREIGN KEY (ParentTaskId) REFERENCES Task(TaskId),
+    FOREIGN KEY (CommentBy) REFERENCES ProjectMember(MemberId)
+);
+
+ INSERT INTO roles(roleid,rolename)values(1,'ADMIN');
+  INSERT INTO roles(roleid,rolename)values(2,'PROJECT MANAGER');
+   INSERT INTO roles(roleid,rolename)values(3,'QA');
+    INSERT INTO roles(roleid,rolename)values(4,'DEVELOPER');
+ 
+ SELECT * FROM roles;
+
+INSERT INTO USERINFO VALUES(101,'MANU',1,'MANU@GMAIL.COM',123456,'778526459');
+INSERT INTO USERINFO VALUES(102,'ANU',2,'ANU@GMAIL.COM',128957,'7745854585'),
+(103,'RAJU',2,'RAJU@GMAIL.COM',145897,'7785978554'),
+(104,'ABCD',3,'ABCD@GMAIL.COM',1785957,'74528482585'),
+(105,'VANI',4,'VANI@GMAIL.COM',1859264,'7895895264');
+
+
+SELECT * FROM USERINFO;
+
+INSERT INTO PROJECTS VALUES(201,'ABCDF','RTGDF','25APR2025','5MAY2025');
+
+INSERT INTO ProjectMember (UserId, ProjId) VALUES
+(101, 201), 
+(103, 203), 
+(102, 204),
+(105, 202),
+
+
+select *from ProjectMember
+
+INSERT INTO TaskTypeMaster (TaskTypeName) VALUES
+('OPEN'),
+('INPROGRESS'),
+('RESOLVED'),
+('CLOSED');
+
+select *from TaskTypeMaster
+
+INSERT INTO Task (TaskTitle, Description, AssignedTo, TaskType, StartDate, EndDate, TaskStatusId) VALUES
+('Login Issue', 'Login fails with error', 3, 'Bug', '2025-04-05', NULL, 1),
+('Add Notification Feature', 'Implement notification alerts', 5, 'New Feature', '2024-05-08', NULL, 1);
+
+select *from Task
+
+INSERT INTO Comment (Title, ParentTaskId, TaskDescription, CommentBy, CommentDate) VALUES
+('comment1', 1, 'Checking the login ', 3, '2025-05-09'),
+('comment2', 2, 'Setting up notification', 5, '2025-07-12'),
+('comment3', 1, 'needs more logs', 4, '2025-11-11');
+
+select *from Comment
