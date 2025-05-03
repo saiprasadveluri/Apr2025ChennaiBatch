@@ -1,0 +1,246 @@
+Entities
+
+User entity
+
+Attribute---cataegory----testdata
+
+UserId---SingleValued
+UserName---SingleValued
+Role---multivalued---admin,PM,QA or dev
+Phone---SingleValued
+Email---SingleValued
+Passoword---SingleValued
+
+
+Project
+
+Attribute---cataegory----testdata
+
+PrjId---SingleValued
+title---SingleValued
+Description---SingleValued
+StartDate---SingleValued
+EndDate---SingleValued
+PM---SingleValued
+Assigned to---multivalued
+
+Task
+
+Attribute---cataegory----testdata
+
+taskid---SingleValued
+tasktitle---SingleValued
+Description---SingleValued
+Taskstatus---multivalued---open,inprogress,resolved,closed
+Assignto---SingleValued
+tasktype---  ----bug/feature
+Startdate---SingleValued
+enddate---SingleValued
+
+
+Comment
+
+Attribute---cataegory----testdata
+
+Commentid---SingleValued
+title---SingleValued
+Description---SingleValued
+CommentDate---SingleValued
+CommentBy---SingleValued
+ParentTaskId---SingleValued
+
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+Relations
+
+user->Role  :  1 to 1
+User->Project : M to N
+User->task : 1 to M
+Task->Comment : 1 to M
+
+
+
+------------------------------------------------------------------------------------------------
+
+TABLES
+
+Roles
+
+Roleid:pk,not null
+Rolename:not null,check,unique
+
+
+USERINFO
+
+userId: pk,not null,auto increment
+username: not null
+role: fk with role table
+email:not null,unique
+password:not null,max length 10
+phone:not null
+
+Project
+
+PrjId: pk,not null, auto increment
+title: not null unique
+Description: null
+StartDate: not null
+EndDate:null
+PM: fk with user
+Assigned to:fk with user
+
+projectMember[Bridge table]
+
+memeberid: pk,not null,auto increment
+userid: not null,fk with user             |---
+projid: not null, fk with project         |---Combination is unique
+
+tasktypemaster
+tasktypeid:pk,not null,auto increment
+tasktypeName:not null---open,inprogress,resolved,closed
+
+task
+
+taskid:pk,not null,auto increment
+taskTitle:not null,fk with user
+Description:null
+Assigned to:not null,fk with projectmember
+tasktype:not null
+startDate:null
+EndDate:null
+Task Status:not null,fk with tasktypemaster
+
+
+Comment:
+
+commentId:pk,not null,auto increment
+title:not null
+ParentTaskId: fk with task,not null
+TaskDescription:null
+CommentBy:fk with tasktypeMaster,not null
+CommentDate:not null
+
+
+Store procedures for creating table and insering values
+
+create proc addnewuser
+@name nvarchar(50),
+@email nvarchar(50),
+@password nvarchar(30),
+@mobilenumber nvarchar(50),
+@role bigint,---->getting roleid from roleinfo table
+as
+insert into UserInfos ([Name],Email,[Password],Mobilenumber,[Role])------>[] for keywords , coloumns in the table
+values (@name ,@email,@password,@mobilenumber,@phone)----passed parameter
+begin
+ 
+end
+
+-----------------------------
+
+CREATE PROC GetAllUsers
+AS
+SELECT * FROM UserInfos
+
+-----------------------------
+
+create proc DeleteUser
+@userId BIGINT
+AS
+DELETE [dbo].[UserInfos]
+WHERE UserId=@userId
+
+-----------------------------
+
+create  proc GetUserByEmail
+@Email nvarchar(50)
+as
+SELECT * FROM UserInfos
+WHERE  Email=@Email
+
+----------------------------
+
+CREATE PROC ValidateUser
+@Email nvarchar(50)
+@Password nvarchar(30)
+AS
+SELECT * FROM UserInfos
+WHERE Email=@Email AND [Password]=@Password
+
+---------------------------
+
+ALTER PROC getallusers
+as
+SELECT U.* FROM UserInfos U 
+JOIN UserRoles R On U.[Role]=R.RoleId
+
+------------------------------
+
+alter proc getalluser
+as
+select u.*,r.rolename ,userrolename from userinfo u join userrole r on u.[role]=r.roleid
+------------------------------------------------------------------------------------
+create proc getpms
+as
+select * from userinfo where [role]=4
+ 
+exec getpms
+-------------------------------------------------------------------------------------
+create procs addproject 
+@title nvarchar(60)
+@decription nvarchar(500)
+@startdate date,
+@enddate date,
+@pm bigint
+as
+begin
+declare @new_projctid as bigint=0
+begin transaction
+begin try
+  if exists(select * from userinfo where userid=@pm and role=4------>checking where the the person 
+                                                                    inserting it is in the pm role or not
+    throw 'user is not in the pm role
+    insert into project (title ,description, startdate, enddate)
+    values(@title,@decription,@startdate,@enddate)
+ 
+    set @new_projectid=scope_identity()
+    print @new_projectid
+ 
+    insert into projectmanager(projectid,userid)
+    values(@new_projectid.@pm)
+    commit transaction
+end try
+begin catch
+   roolback transaction
+end catch
+end
+-------------------------------------------------------------------------------------
+---execution 
+exec addproject 'taskmanager console ui','console api','2-5-2025','29-05-2025',null,2
+-------------------------------------------------------------------------------------------
+create proc getuserrole
+@rolename nvarchar(50)
+as 
+begin
+select * from userinfo u join userrole ur on u.[role]=ur.roleid 
+where ur.rolename=@rolename
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
