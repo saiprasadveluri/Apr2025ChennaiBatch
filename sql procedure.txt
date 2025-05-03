@@ -1,0 +1,168 @@
+Creating a taskmanager database
+-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.
+create proc getallroles --->stored procedure
+as
+begin
+ select * from userroles
+end
+
+exec getallroles----> execution
+----------------------------------------------------------------------------------------
+create proc addnewuser
+@name nvarchar(50),
+@email nvarchar(50),
+@password nvarchar(30),
+@mobilenumber nvarchar(50),
+@role bigint,---->getting roleid from roleinfo table
+as
+begin
+insert into userinfo ([name],email,[password],mobilenumber,[role])------>[] for keywords , coloumns in the table
+values (@name ,@email,@password,@mobilenumber,@phone)----passed parameter
+end
+
+exec addnewuser 'shri','shrini@gmail.com','1234456',4,'23456'---->passing parameters to the procdure
+-----------------------------------------------------------------------------------------
+create proc gettallusers
+as
+select * from userinfo
+
+exec [dbo].[getallusers]
+---------------------------------------------------------------------------------------------
+create proc deleteuser
+@userid bigint
+as
+delete[dbo].[userinfo] where userid=@userid
+
+create proc getuserbyemail
+@email nvarchar(50)
+as
+select * from userinfo 
+where email=@email  and [password]=@password --------> we are not giving begin and end since
+                                                     storred procedure contains only one statement
+
+create proc validateuser
+@email nvarchar(50)
+@password nvarchar(50)
+as
+select * from userinfo 
+where email=@email  and [password]=@password
+
+alter proc getalluser
+as
+select u.*,r.rolename ,userrolename from userinfo u join userrole r on u.[role]=r.roleid
+------------------------------------------------------------------------------------
+create proc getpms
+as
+select * from userinfo where [role]=4
+
+exec getpms
+-------------------------------------------------------------------------------------
+create procs addproject 
+@title nvarchar(60)
+@decription nvarchar(500)
+@startdate date,
+@enddate date,
+@pm bigint
+as
+begin
+declare @new_projctid as bigint=0
+begin transaction
+ begin try
+  if exists(select * from userinfo where userid=@pm and role=4------>checking where the the person 
+                                                                    inserting it is in the pm role or not
+    throw 'user is not in the pm role
+    insert into project (title ,description, startdate, enddate)
+    values(@title,@decription,@startdate,@enddate)
+
+    set @new_projectid=scope_identity()
+    print @new_projectid
+
+    insert into projectmanager(projectid,userid)
+    values(@new_projectid.@pm)
+    commit transaction
+ end try
+ begin catch
+   roolback transaction
+ end catch
+end
+ ---execution 
+ exec addproject 'taskmanager console ui','console api','2-5-2025','29-05-2025',null,2
+-------------------------------------------------------------------------------------------
+create proc getuserrole
+@rolename nvarchar(50)
+as 
+begin
+select * from userinfo u join userrole ur on u.[role]=ur.roleid 
+where ur.rolename=@rolename
+end
+
+--execution
+exec getuserrole 'qa'
+--------------------------------------------------------------------------------------------
+create proc getprojectmembers
+@projectid bigint
+as 
+begin
+ select ui.* from projectmembers pm 
+ join  projects pr on pm.projectid=pr.projectid
+ join userinfi u on pm .userid=u.userid--->ui.* all attributes from the user table
+ join userrole ur on ui.role=ur.roleid
+ where pm.projectid=@projectid
+end 
+
+exec getprojectmember 001
+----------------------------------------------------------------------------------------------
+alter proc addprojectmember------creating
+@projectid bigint,
+@userid bigint
+as
+begin
+ if not exists(select * from userinfo where userid=@userid and[role]=4)
+ insert into projectmember (projectid,userid)
+ values (@projectid,@userid)
+end
+
+exec addprojectmember 1,4
+exec getprojectmembers 1
+---------------------------------------------------------------------------------------------
+create proc removeprojectmember
+@memberid
+as
+begin
+ if not exisit(select * from projectmember pm 
+ join userinfo ui on pm.userid=ui.userid
+ where ui.role=4) 
+  delete projectmember where memberid=@memberid
+ else
+  throw 50002,'member is in pm role',1
+end
+
+exec removeprojectmember 3
+----------------------------------------------------------------------------------------------
+create proc getpmproject-------->getting all the project created by the 
+                                  project memebers to asiign task specifically
+@userid bigint
+as
+begin
+  select * from projects p
+  join projectmember pmem on p.projectid=pmem.projectid
+  where pmem.userid=@userid
+end
+-----------
+create proc addtask
+@tasktitle nvarchar(60)
+@decription nvarchar(500)
+@assignedto nvarchar(50)------>pm
+@tasktype nvarchar(50)
+@startdate date,
+@enddate date,
+@taskstatus bigint
+@projectid bigint
+as 
+begin 
+--declare new_taskid bigint=0
+begin transaction 
+begin try 
+  insert into task ([tasktitle],[description],[assignedto],[tasktype],[startdate],[enddate],[projectid])
+  values(@tasktitle,@description,@assignedto,@tasktype,@startdate,@enddate)
+----------------------------------------------------------------------------------------------------
