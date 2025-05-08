@@ -1,0 +1,7 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\obj\Debug\VisitorManagementOOPS.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\obj\Debug\VisitorManagementOOPS.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\bin\Debug\VisitorManagementOOPS.exe.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\bin\Debug\VisitorManagementOOPS.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\bin\Debug\VisitorManagementOOPS.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\obj\Debug\VisitorManagementOOPS.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\VisitorManagementOOPS\VisitorManagementOOPS\obj\Debug\VisitorManagementOOPS.pdb
