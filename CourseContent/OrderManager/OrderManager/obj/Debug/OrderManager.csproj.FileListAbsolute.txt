@@ -1,0 +1,7 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\bin\Debug\OrderManager.exe.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\bin\Debug\OrderManager.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\bin\Debug\OrderManager.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\obj\Debug\OrderManager.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\obj\Debug\OrderManager.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\obj\Debug\OrderManager.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\OrderManager\OrderManager\obj\Debug\OrderManager.pdb
