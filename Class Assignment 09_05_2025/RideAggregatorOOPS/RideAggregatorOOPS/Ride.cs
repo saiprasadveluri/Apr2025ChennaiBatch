@@ -6,28 +6,27 @@ using System.Threading.Tasks;
 
 namespace RideAggregatorOOPS
 {
-    internal class Ride
+    internal abstract class Ride
     {
         private Customer RideCustomer {  get; set; }//'Has a' Relation
         private Driver RideDriver { get; set; }//'Has a' relations
-        //Other Props
-        public string PickupLocation {  get; set; }
-        public string DropLocation {  get; set; }
+        protected int TravelDist { get; set; }//Accessable from Derived class NOT from Main
+        
         public string StartRide()
         {
-            return string.Format($"Ride Started from {PickupLocation}");
+            return string.Format($"Ride Started...");
         }
-        public string CompleteRide()
-        {
-            return string.Format($"Ride Ended at {DropLocation}");
-        }
-        public string GenerateBill()
-        {
+        public abstract string CompleteRide();//Abstract Method.
+        /*{
+            return string.Format($"Ride Ended");
+        }*/
+        public abstract string GenerateBill();//Abstract Method
+        /*{
             String strOut = String.Empty;
             string driverDetails = GetDriverDetails();//Delegation Model
             string customerDetails = GetCusomerDetails();  //Delegation Model         
-            return String.Format($"Bill Genrated...{driverDetails}....{customerDetails}");
-        }
+            return String.Format($"Bill Genrated...From RIDE: {driverDetails}....{customerDetails}");
+        }*/
         //Private Functions
         private string GetDriverDetails()
         {
@@ -39,12 +38,16 @@ namespace RideAggregatorOOPS
             return RideCustomer.GetCustomerInfo();//Delegation Model
         }
         //Constructor
-        public Ride(Driver driver,Customer customer,string pickup,string drop)
+        public Ride(Driver driver,Customer customer,int kmsTraveled)//,string pickup,string drop)
         {
             RideDriver = driver;
             RideCustomer = customer;
-            PickupLocation = pickup;
-            DropLocation = drop;
+            TravelDist = kmsTraveled;            
         }
+
+        //public virtual string CancelRide()
+        //{
+        //    return "Cancel Ride";
+        //}
     }
 }
