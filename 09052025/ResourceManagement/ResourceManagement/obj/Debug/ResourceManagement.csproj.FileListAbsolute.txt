@@ -1,0 +1,7 @@
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\bin\Debug\ResourceManagement.exe.config
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\bin\Debug\ResourceManagement.exe
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\bin\Debug\ResourceManagement.pdb
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\obj\Debug\ResourceManagement.csproj.AssemblyReference.cache
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\obj\Debug\ResourceManagement.csproj.CoreCompileInputs.cache
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\obj\Debug\ResourceManagement.exe
+C:\Users\sona.shamshuddin\source\repos\ResourceManagement\ResourceManagement\obj\Debug\ResourceManagement.pdb
