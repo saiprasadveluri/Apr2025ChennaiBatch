@@ -1,0 +1,7 @@
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\bin\Debug\Outstanding Resource.exe.config
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\bin\Debug\Outstanding Resource.exe
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\bin\Debug\Outstanding Resource.pdb
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\obj\Debug\Outstanding Resource.csproj.AssemblyReference.cache
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\obj\Debug\Outstanding Resource.csproj.CoreCompileInputs.cache
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\obj\Debug\Outstanding Resource.exe
+C:\Users\harivarsha.v\Desktop\249\08.05.2025\Outstanding Resource\Outstanding Resource\obj\Debug\Outstanding Resource.pdb
