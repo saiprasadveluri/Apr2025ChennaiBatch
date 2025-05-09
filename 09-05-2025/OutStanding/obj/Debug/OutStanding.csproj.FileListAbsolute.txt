@@ -1,0 +1,7 @@
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\bin\Debug\OutStanding.exe.config
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\bin\Debug\OutStanding.exe
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\bin\Debug\OutStanding.pdb
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\obj\Debug\OutStanding.csproj.AssemblyReference.cache
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\obj\Debug\OutStanding.csproj.CoreCompileInputs.cache
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\obj\Debug\OutStanding.exe
+C:\Users\hariraja.x\Documents\C#\OutStanding\OutStanding\obj\Debug\OutStanding.pdb
