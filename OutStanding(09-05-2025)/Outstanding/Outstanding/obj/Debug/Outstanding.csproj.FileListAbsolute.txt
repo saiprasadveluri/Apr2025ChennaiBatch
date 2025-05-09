@@ -1,0 +1,7 @@
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\bin\Debug\Outstanding.exe.config
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\bin\Debug\Outstanding.exe
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\bin\Debug\Outstanding.pdb
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\obj\Debug\Outstanding.csproj.AssemblyReference.cache
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\obj\Debug\Outstanding.csproj.CoreCompileInputs.cache
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\obj\Debug\Outstanding.exe
+C:\Users\nallavolu.sowmika\Documents\C#\project1\OutStanding\Outstanding\Outstanding\obj\Debug\Outstanding.pdb
