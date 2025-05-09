@@ -1,0 +1,7 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\bin\Debug\ResourceManager.exe.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\bin\Debug\ResourceManager.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\bin\Debug\ResourceManager.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\obj\Debug\ResourceManager.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\obj\Debug\ResourceManager.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\obj\Debug\ResourceManager.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ResourceManager\ResourceManager\obj\Debug\ResourceManager.pdb
