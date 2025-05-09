@@ -1,0 +1,7 @@
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\obj\Debug\RideAggregator.csproj.AssemblyReference.cache
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\obj\Debug\RideAggregator.csproj.CoreCompileInputs.cache
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\bin\Debug\RideAggregator.exe.config
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\bin\Debug\RideAggregator.exe
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\bin\Debug\RideAggregator.pdb
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\obj\Debug\RideAggregator.exe
+C:\Users\mittapally.sravani\source\repos\RideAggregator\RideAggregator\obj\Debug\RideAggregator.pdb
