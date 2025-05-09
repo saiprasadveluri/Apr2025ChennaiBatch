@@ -1,0 +1,7 @@
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\bin\Debug\Outstanding.exe.config
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\bin\Debug\Outstanding.exe
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\bin\Debug\Outstanding.pdb
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\obj\Debug\Outstanding.csproj.AssemblyReference.cache
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\obj\Debug\Outstanding.csproj.CoreCompileInputs.cache
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\obj\Debug\Outstanding.exe
+C:\Users\sagarika.katkam\Documents\C#NEW\Outstanding\Outstanding\Outstanding\obj\Debug\Outstanding.pdb
