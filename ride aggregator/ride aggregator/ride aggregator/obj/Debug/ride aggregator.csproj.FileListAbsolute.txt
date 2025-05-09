@@ -1,0 +1,7 @@
+C:\c#\ride aggregator\ride aggregator\ride aggregator\bin\Debug\ride aggregator.exe.config
+C:\c#\ride aggregator\ride aggregator\ride aggregator\bin\Debug\ride aggregator.exe
+C:\c#\ride aggregator\ride aggregator\ride aggregator\bin\Debug\ride aggregator.pdb
+C:\c#\ride aggregator\ride aggregator\ride aggregator\obj\Debug\ride aggregator.csproj.AssemblyReference.cache
+C:\c#\ride aggregator\ride aggregator\ride aggregator\obj\Debug\ride aggregator.csproj.CoreCompileInputs.cache
+C:\c#\ride aggregator\ride aggregator\ride aggregator\obj\Debug\ride aggregator.exe
+C:\c#\ride aggregator\ride aggregator\ride aggregator\obj\Debug\ride aggregator.pdb

@@ -1,0 +1,7 @@
+C:\c#\Outstanding\outstanding\outstanding\bin\Debug\outstanding.exe.config
+C:\c#\Outstanding\outstanding\outstanding\bin\Debug\outstanding.exe
+C:\c#\Outstanding\outstanding\outstanding\bin\Debug\outstanding.pdb
+C:\c#\Outstanding\outstanding\outstanding\obj\Debug\outstanding.csproj.AssemblyReference.cache
+C:\c#\Outstanding\outstanding\outstanding\obj\Debug\outstanding.csproj.CoreCompileInputs.cache
+C:\c#\Outstanding\outstanding\outstanding\obj\Debug\outstanding.exe
+C:\c#\Outstanding\outstanding\outstanding\obj\Debug\outstanding.pdb

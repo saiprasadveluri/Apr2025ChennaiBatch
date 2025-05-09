@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ride aggregator", "ride aggregator\ride aggregator.csproj", "{ACBB6A5A-20E8-4F4B-B8C5-0C8D49E9F111}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACBB6A5A-20E8-4F4B-B8C5-0C8D49E9F111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBB6A5A-20E8-4F4B-B8C5-0C8D49E9F111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBB6A5A-20E8-4F4B-B8C5-0C8D49E9F111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBB6A5A-20E8-4F4B-B8C5-0C8D49E9F111}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D39E42B-38BF-4CD4-9A74-FC570839B4E5}
+	EndGlobalSection
+EndGlobal
