@@ -1,0 +1,7 @@
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\bin\Debug\TaskManager.exe.config
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\bin\Debug\TaskManager.exe
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\bin\Debug\TaskManager.pdb
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\obj\Debug\TaskManager.csproj.AssemblyReference.cache
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\obj\Debug\TaskManager.exe
+C:\Users\Charpitha Reddy\OneDrive\Desktop\C#\TaskManager\obj\Debug\TaskManager.pdb
