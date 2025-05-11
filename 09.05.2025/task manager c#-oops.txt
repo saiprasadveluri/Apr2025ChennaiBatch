@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+
+class User
+{
+    public string UserName;
+    public string Email;
+    public string Password;
+    public string Role;
+}
+
+class Comment
+{
+    public string Author;
+    public string Message;
+    public DateTime CreatedAt = DateTime.Now;
+}
+
+class Task
+{
+    public string Title;
+    public string Description;
+    public string StartDate;
+    public string EndDate;
+    public int EstimatedHours;
+    public string Priority;
+    public string Status;
+    public string Type;
+    public string AssignedTo;
+    public List<Comment> Comments = new List<Comment>();
+}
+
+class Project
+{
+    public string Title;
+    public string Description;
+    public string ProjectManager;
+    public List<string> TeamMembers = new List<string>();
+    public List<Task> Tasks = new List<Task>();
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create Users
+        User admin = new User { UserName = "Admin", Email = "admin@example.com", Password = "admin123", Role = "SiteAdmin" };
+        User pm = new User { UserName = "Alice", Email = "alice@company.com", Password = "pass123", Role = "ProjectManager" };
+        User dev = new User { UserName = "Bob", Email = "bob@company.com", Password = "pass123", Role = "Developer" };
+
+        // Create a Project
+        Project project = new Project
+        {
+            Title = "Website Redesign",
+            Description = "Revamp the UI/UX of the site",
+            ProjectManager = pm.UserName
+        };
+        project.TeamMembers.Add(dev.UserName);
+
+        // Create a Task
+        Task task = new Task
+        {
+            Title = "Fix Login Bug",
+            Description = "Crash on invalid credentials",
+            StartDate = "2025-05-11",
+            EndDate = "2025-05-13",
+            EstimatedHours = 4,
+            Priority = "High",
+            Status = "Open",
+            Type = "Bug",
+            AssignedTo = dev.UserName
+        };
+
+        // Add Comment
+        Comment comment = new Comment { Author = dev.UserName, Message = "Working on the bug." };
+        task.Comments.Add(comment);
+
+        // Add Task to Project
+        project.Tasks.Add(task);
+
+        // Display Project Info
+        Console.WriteLine("Project: " + project.Title);
+        Console.WriteLine("Managed by: " + project.ProjectManager);
+        Console.WriteLine("Team Members: " + string.Join(", ", project.TeamMembers));
+        Console.WriteLine("Tasks:");
+
+        foreach (var t in project.Tasks)
+        {
+            Console.WriteLine($"\n  Task: {t.Title}");
+            Console.WriteLine($"  Type: {t.Type}, Assigned To: {t.AssignedTo}, Status: {t.Status}");
+            Console.WriteLine("  Comments:");
+            foreach (var c in t.Comments)
+            {
+                Console.WriteLine($"    {c.Author} said: {c.Message} at {c.CreatedAt}");
+            }
+        }
+    }
+}
