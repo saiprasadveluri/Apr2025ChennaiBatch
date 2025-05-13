@@ -55,4 +55,102 @@ namespace TaskManager
             return new List<Task>(tasks);
         }
     }
+
+    public class User
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+
+        public User(string name, string email)
+        {
+            Name = name;
+            Email = email;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} ({Email})";
+        }
+    }
+
+    public class Task
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+        public Task(string title, string description)
+        {
+            Title = title;
+            Description = description;
+        }
+
+        public override string ToString()
+        {
+            return $"{Title}: {Description}";
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Enter Project Title: ");
+            string projectTitle = Console.ReadLine();
+
+            Console.Write("Enter Project Description: ");
+            string projectDescription = Console.ReadLine();
+
+            Console.Write("Enter Project Manager Name: ");
+            string managerName = Console.ReadLine();
+
+            Console.Write("Enter Project Manager Email: ");
+            string managerEmail = Console.ReadLine();
+
+            User manager = new User(managerName, managerEmail);
+            Project project = new Project(projectTitle, projectDescription, manager);
+
+            Console.WriteLine("\nNow, let's add team members...");
+            while (true)
+            {
+                Console.Write("Enter Team Member Name (or type 'done' to finish): ");
+                string memberName = Console.ReadLine();
+                if (memberName.ToLower() == "done") break;
+
+                Console.Write("Enter Team Member Email: ");
+                string memberEmail = Console.ReadLine();
+
+                project.AddTeamMember(new User(memberName, memberEmail));
+            }
+
+            Console.WriteLine("\nNow, let's add tasks...");
+            while (true)
+            {
+                Console.Write("Enter Task Title (or type 'done' to finish): ");
+                string taskTitle = Console.ReadLine();
+                if (taskTitle.ToLower() == "done") break;
+
+                Console.Write("Enter Task Description: ");
+                string taskDescription = Console.ReadLine();
+
+                project.AddTask(new Task(taskTitle, taskDescription));
+            }
+
+          
+            Console.WriteLine($"\nProject: {project.Title}");
+            Console.WriteLine($"Manager: {project.ProjectManager}");
+            Console.WriteLine("\nTeam Members:");
+            foreach (var member in project.GetTeamMembers())
+            {
+                Console.WriteLine(member);
+            }
+
+            Console.WriteLine("\nTasks:");
+            foreach (var task in project.GetTasks())
+            {
+                Console.WriteLine(task);
+            }
+
+            Console.WriteLine("\nTask Manager Setup Complete! 🚀");
+        }
+    }
 }
