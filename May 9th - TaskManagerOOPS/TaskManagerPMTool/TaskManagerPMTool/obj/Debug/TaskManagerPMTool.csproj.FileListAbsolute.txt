@@ -1,0 +1,7 @@
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\bin\Debug\TaskManagerPMTool.exe.config
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\bin\Debug\TaskManagerPMTool.exe
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\bin\Debug\TaskManagerPMTool.pdb
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\obj\Debug\TaskManagerPMTool.csproj.AssemblyReference.cache
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\obj\Debug\TaskManagerPMTool.csproj.CoreCompileInputs.cache
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\obj\Debug\TaskManagerPMTool.exe
+C:\Users\revalla.kumar\source\repos\TaskManagerPMTool\TaskManagerPMTool\obj\Debug\TaskManagerPMTool.pdb
