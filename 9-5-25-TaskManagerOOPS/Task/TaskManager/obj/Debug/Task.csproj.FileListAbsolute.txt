@@ -1,0 +1,7 @@
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\bin\Debug\Task.exe.config
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\bin\Debug\Task.exe
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\bin\Debug\Task.pdb
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\obj\Debug\Task.csproj.AssemblyReference.cache
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\obj\Debug\Task.csproj.CoreCompileInputs.cache
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\obj\Debug\Task.exe
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\Task\Task\obj\Debug\Task.pdb
