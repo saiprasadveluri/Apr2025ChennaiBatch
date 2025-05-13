@@ -1,0 +1,7 @@
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\obj\Debug\TaskManager.csproj.AssemblyReference.cache
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\bin\Debug\TaskManager.exe.config
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\bin\Debug\TaskManager.exe
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\bin\Debug\TaskManager.pdb
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\obj\Debug\TaskManager.exe
+C:\Users\athivarapu.reddy\source\repos\TaskManager\TaskManager\obj\Debug\TaskManager.pdb
