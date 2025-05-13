@@ -11,8 +11,8 @@ namespace TaskManager
         static void Main(string[] args)
         {
 
-            var userService = new UserManagerService();
-            var projectService = new ProjectService();
+            var userService = new Userlist();
+            var projectService = new Projectlist();
             var taskService = new TaskService();
 
             
