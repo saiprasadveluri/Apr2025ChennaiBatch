@@ -1,0 +1,7 @@
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\bin\Debug\TASKMANAGER.exe.config
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\bin\Debug\TASKMANAGER.exe
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\bin\Debug\TASKMANAGER.pdb
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\obj\Debug\TASKMANAGER.csproj.AssemblyReference.cache
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\obj\Debug\TASKMANAGER.csproj.CoreCompileInputs.cache
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\obj\Debug\TASKMANAGER.exe
+C:\Users\gandlapenta.rajeev\source\repos\TASKMANAGER\TASKMANAGER\obj\Debug\TASKMANAGER.pdb
