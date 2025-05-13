@@ -150,7 +150,7 @@ namespace TaskManager
                 Console.WriteLine(task);
             }
 
-            Console.WriteLine("\nTask Manager Setup Complete! 🚀");
+            Console.WriteLine("\nTask Manager Setup Complete! ");
         }
     }
 }
