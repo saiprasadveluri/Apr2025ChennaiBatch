@@ -1,0 +1,7 @@
+C:\Users\damerla.krishna\TaskManager\TaskManager\bin\Debug\TaskManager.exe.config
+C:\Users\damerla.krishna\TaskManager\TaskManager\bin\Debug\TaskManager.exe
+C:\Users\damerla.krishna\TaskManager\TaskManager\bin\Debug\TaskManager.pdb
+C:\Users\damerla.krishna\TaskManager\TaskManager\obj\Debug\TaskManager.csproj.AssemblyReference.cache
+C:\Users\damerla.krishna\TaskManager\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\damerla.krishna\TaskManager\TaskManager\obj\Debug\TaskManager.exe
+C:\Users\damerla.krishna\TaskManager\TaskManager\obj\Debug\TaskManager.pdb
