@@ -1,0 +1,2 @@
+C:\Users\nagaram.trinay\source\repos\taskmanager\taskmanager\obj\Debug\taskmanager.csproj.AssemblyReference.cache
+C:\Users\nagaram.trinay\source\repos\taskmanager\taskmanager\obj\Debug\taskmanager.csproj.CoreCompileInputs.cache
