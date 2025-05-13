@@ -1,28 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TaskManager
 {
-    internal class User
+    internal class User:Project
     {
-        string userName { get; set; }
-        string email { get; set; }
-        string password { get; set; }
-        string role { get; set; }
+        public string userName { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string role { get; set; }
 
-        public User(string uname, string Email, string pswd, string Role)
+        public User(string title, string description, User manager, string uName, string Email, string pswd, string Role)
+        : base(title, description, manager)
         {
-            userName = uname;
+            userName = uName;
             email = Email;
             password = pswd;
             role = Role;
         }
-        public void showDetails()
+        public override string ShowDetails()
         {
-            Console.WriteLine($
+            return string.Format($"{userName}-{email}--{role}");
         }
 
     }
