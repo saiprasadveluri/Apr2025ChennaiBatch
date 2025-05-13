@@ -1,0 +1,7 @@
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\bin\Debug\TaskManagerProject.exe.config
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\bin\Debug\TaskManagerProject.exe
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\bin\Debug\TaskManagerProject.pdb
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\obj\Debug\TaskManagerProject.csproj.AssemblyReference.cache
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\obj\Debug\TaskManagerProject.csproj.CoreCompileInputs.cache
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\obj\Debug\TaskManagerProject.exe
+C:\Users\shakthi.m\source\repos\TaskManagerProject\TaskManagerProject\obj\Debug\TaskManagerProject.pdb
