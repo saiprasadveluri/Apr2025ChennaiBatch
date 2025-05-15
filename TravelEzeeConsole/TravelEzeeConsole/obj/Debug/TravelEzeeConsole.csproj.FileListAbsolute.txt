@@ -1,0 +1,7 @@
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\TravelEzeeConsole.exe.config
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\TravelEzeeConsole.exe
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\TravelEzeeConsole.pdb
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.csproj.AssemblyReference.cache
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.csproj.CoreCompileInputs.cache
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.exe
+C:\Users\gandlapenta.rajeev\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.pdb
