@@ -1,0 +1,2 @@
+1,kurnool
+2,Banglore
