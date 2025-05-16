@@ -1,0 +1,7 @@
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\TravelEzeeConsole.exe.config
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\TravelEzeeConsole.exe
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\TravelEzeeConsole.pdb
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.csproj.AssemblyReference.cache
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.csproj.CoreCompileInputs.cache
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.exe
+C:\Users\Delln\OneDrive\Desktop\dotnet\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\TravelEzeeConsole.pdb
