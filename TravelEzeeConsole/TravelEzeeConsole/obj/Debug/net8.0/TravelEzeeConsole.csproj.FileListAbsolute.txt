@@ -1,0 +1,14 @@
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.AssemblyInfoInputs.cache
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.AssemblyInfo.cs
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.csproj.CoreCompileInputs.cache
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\net8.0\TravelEzeeConsole.exe
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\net8.0\TravelEzeeConsole.deps.json
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\net8.0\TravelEzeeConsole.runtimeconfig.json
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\net8.0\TravelEzeeConsole.dll
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\bin\Debug\net8.0\TravelEzeeConsole.pdb
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.dll
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\refint\TravelEzeeConsole.dll
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.pdb
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\TravelEzeeConsole.genruntimeconfig.cache
+C:\Users\mitta\source\repos\TravelEzeeConsole\TravelEzeeConsole\obj\Debug\net8.0\ref\TravelEzeeConsole.dll
