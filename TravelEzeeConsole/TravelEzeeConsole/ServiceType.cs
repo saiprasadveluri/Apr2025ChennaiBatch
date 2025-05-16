@@ -12,5 +12,10 @@ namespace TravelEzeeConsole
         public string ServiceTypename { get; set; }
         public int MaxSeatCap {  get; set; }
         public double ChargePerKm {  get; set; }
+
+        public override string ToString()
+        {
+            return $"Id : {ServiceTypeid} - ServiceTypename: {ServiceTypename} Capacity: {MaxSeatCap} ChargePerKm: {ChargePerKm}";
+        }
     }
 }
