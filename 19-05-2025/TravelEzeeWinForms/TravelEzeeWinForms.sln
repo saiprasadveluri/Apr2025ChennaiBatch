@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelEzeeWinForms", "TravelEzeeWinForms\TravelEzeeWinForms.csproj", "{7319B7A2-6120-4B9B-AD7A-CDD1EA983FBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7319B7A2-6120-4B9B-AD7A-CDD1EA983FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7319B7A2-6120-4B9B-AD7A-CDD1EA983FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7319B7A2-6120-4B9B-AD7A-CDD1EA983FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7319B7A2-6120-4B9B-AD7A-CDD1EA983FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AE7387B-8B98-48A2-8DBD-6715B8DF77AC}
+	EndGlobalSection
+EndGlobal
