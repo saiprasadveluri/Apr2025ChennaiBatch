@@ -1,0 +1,7 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\bin\Debug\MessageProcess1.exe.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\bin\Debug\MessageProcess1.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\bin\Debug\MessageProcess1.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\obj\Debug\MessageProcess1.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\obj\Debug\MessageProcess1.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\obj\Debug\MessageProcess1.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\MessageProcess1\MessageProcess1\obj\Debug\MessageProcess1.pdb
