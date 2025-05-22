@@ -1,0 +1,13 @@
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\bin\Debug\FoodDelAggregateApp.exe.config
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\bin\Debug\FoodDelAggregateApp.exe
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\bin\Debug\FoodDelAggregateApp.pdb
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.csproj.AssemblyReference.cache
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.Form1.resources
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.Properties.Resources.resources
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.csproj.GenerateResource.cache
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.csproj.CoreCompileInputs.cache
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.exe
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.pdb
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.AdminDashboard.resources
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.NewLocation.resources
+C:\Users\akkarapaku.swetha\.net(05-05-2025)\FoodDelAggregateApp\FoodDelAggregateApp\obj\Debug\FoodDelAggregateApp.NewRestaurant.resources
