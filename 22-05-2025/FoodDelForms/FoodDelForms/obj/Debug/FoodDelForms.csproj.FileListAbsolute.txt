@@ -1,0 +1,13 @@
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\bin\Debug\FoodDelForms.exe.config
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\bin\Debug\FoodDelForms.exe
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\bin\Debug\FoodDelForms.pdb
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.csproj.AssemblyReference.cache
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.Form1.resources
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.Properties.Resources.resources
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.csproj.GenerateResource.cache
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.csproj.CoreCompileInputs.cache
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.exe
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.pdb
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.AdminDashboard.resources
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.NewLocation.resources
+C:\Users\thavishala.c\Desktop\C#\22-05-2025\FoodDelForms\FoodDelForms\obj\Debug\FoodDelForms.NewRestaurant.resources
