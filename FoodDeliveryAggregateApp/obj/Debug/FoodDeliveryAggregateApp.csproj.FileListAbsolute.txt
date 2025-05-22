@@ -1,0 +1,13 @@
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe.config
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.pdb
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.AssemblyReference.cache
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Form1.resources
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Properties.Resources.resources
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.GenerateResource.cache
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.CoreCompileInputs.cache
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.exe
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.pdb
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AdminDashboard.resources
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddLocation.resources
+C:\Users\mittapally.sravani\source\repos\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddRestaurant.resources
