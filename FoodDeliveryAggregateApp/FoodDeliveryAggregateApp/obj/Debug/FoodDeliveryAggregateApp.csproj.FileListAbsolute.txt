@@ -1,0 +1,14 @@
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe.config
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.pdb
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.AssemblyReference.cache
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Form1.resources
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Properties.Resources.resources
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.GenerateResource.cache
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.CoreCompileInputs.cache
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.exe
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.pdb
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AdminDashboard.resources
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddLocations.resources
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddRestaurant.resources
+C:\c#\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.NewRestaurant.resources
