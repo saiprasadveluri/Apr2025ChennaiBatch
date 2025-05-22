@@ -1,0 +1,14 @@
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\bin\Debug\FoodDeliveryWindowForms.exe.config
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\bin\Debug\FoodDeliveryWindowForms.exe
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\bin\Debug\FoodDeliveryWindowForms.pdb
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.csproj.AssemblyReference.cache
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.Form1.resources
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.Properties.Resources.resources
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.csproj.GenerateResource.cache
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.csproj.CoreCompileInputs.cache
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.exe
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.pdb
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.AddLocations.resources
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.AddRestaurant.resources
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.AdminDashboard.resources
+C:\Users\sagarika.katkam\Documents\C#NEW\FoodDeliveryWindowForms\FoodDeliveryWindowForms\FoodDeliveryWindowForms\obj\Debug\FoodDeliveryWindowForms.NewRestaurant.resources
