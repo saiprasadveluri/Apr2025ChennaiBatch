@@ -1,0 +1,13 @@
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\bin\Debug\FoodDEliveryAggregateAppWForms.exe.config
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\bin\Debug\FoodDEliveryAggregateAppWForms.exe
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\bin\Debug\FoodDEliveryAggregateAppWForms.pdb
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.csproj.AssemblyReference.cache
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.Form1.resources
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.LoginPage.resources
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.Properties.Resources.resources
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.csproj.GenerateResource.cache
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.csproj.CoreCompileInputs.cache
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.exe
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.pdb
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.AdminPage.resources
+C:\Users\revalla.kumar\source\repos\FoodDEliveryAggregateAppWForms\FoodDEliveryAggregateAppWForms\obj\Debug\FoodDEliveryAggregateAppWForms.UserPage.resources
