@@ -1,0 +1,13 @@
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe.config
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.pdb
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.AssemblyReference.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Form1.resources
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Properties.Resources.resources
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.GenerateResource.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.CoreCompileInputs.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.exe
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.pdb
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddLocation.resources
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddRestaurant.resources
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AdminDashboard.resources
