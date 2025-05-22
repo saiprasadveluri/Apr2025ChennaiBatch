@@ -1,0 +1,10 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\bin\Debug\TPLWinApp.exe.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\bin\Debug\TPLWinApp.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\bin\Debug\TPLWinApp.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.Form1.resources
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.Properties.Resources.resources
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.csproj.GenerateResource.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\TPLWinApp\TPLWinApp\obj\Debug\TPLWinApp.pdb
