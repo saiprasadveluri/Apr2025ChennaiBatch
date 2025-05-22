@@ -1,0 +1,16 @@
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\bin\Debug\Food_Delivery_.exe.config
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\bin\Debug\Food_Delivery_.exe
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\bin\Debug\Food_Delivery_.pdb
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.csproj.AssemblyReference.cache
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.Form1.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.Properties.Resources.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.csproj.GenerateResource.cache
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.csproj.CoreCompileInputs.cache
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.exe
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.pdb
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.Restaurants.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.Registration.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.UserData.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.MenuItems.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.AddRestaurant.resources
+C:\Users\sona.shamshuddin\source\repos\Food_Delivery_\Food_Delivery_\obj\Debug\Food_Delivery_.MenuList.resources
