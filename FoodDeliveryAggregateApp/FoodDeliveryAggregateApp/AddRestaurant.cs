@@ -8,30 +8,37 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace FoodDeliveryAggregateApp
 {
     public partial class AddRestaurant : Form
     {
-        private Dataprovider _dataprovider;
-        public AddRestaurant(Dataprovider dataprovider)
+        private Dataprovider dataprovider;
+        public AddRestaurant(Dataprovider dataProvider)
         {
+            dataprovider = dataProvider;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(ResId.Text) || string.IsNullOrEmpty(ResName.Text))
+            if (string.IsNullOrEmpty(ResId.Text) || string.IsNullOrEmpty(ResName.Text)
+                
+                || string.IsNullOrEmpty(Loc.Text) || string.IsNullOrEmpty(Minorder.Text))
             {
                 MessageBox.Show("Enter Details");
             }
             else
             {
-                Location loc = new Location();
-                loc.Id = int.Parse(ResId.Text);
-                loc.Name = ResName.Text;
-                _dataprovider.NewRestaurant(Res);
-                MessageBox.Show("Location Added Successfully");
+                Restuarant res = new Restuarant();
+
+                res.Id = int.Parse(ResId.Text);
+                res.RestName = ResName.Text;
+                res.Location = Loc.Text;
+                res.MinimumOrderValue = double.Parse(Minorder.Text);
+                dataprovider.NewRestaurant(res);
+                MessageBox.Show("res added succesfully");
                 DialogResult = DialogResult.OK;
                 this.Close();
             }

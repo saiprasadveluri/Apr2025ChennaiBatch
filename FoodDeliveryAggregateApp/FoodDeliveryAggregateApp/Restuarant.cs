@@ -10,7 +10,7 @@ namespace FoodDeliveryAggregateApp
     {
         public int Id { get; set; }
         public string RestName { get; set; }
-        public int Location {  get; set; }
+        public string Location {  get; set; }
         public double MinimumOrderValue {  get; set; }
 
     }

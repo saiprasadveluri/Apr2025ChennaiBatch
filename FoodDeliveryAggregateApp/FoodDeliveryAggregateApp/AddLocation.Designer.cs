@@ -88,6 +88,7 @@
             this.Controls.Add(this.LocId);
             this.Controls.Add(this.Location);
             this.Name = "AddLocation";
+           // this.Load += new System.EventHandler(this.AddLocation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

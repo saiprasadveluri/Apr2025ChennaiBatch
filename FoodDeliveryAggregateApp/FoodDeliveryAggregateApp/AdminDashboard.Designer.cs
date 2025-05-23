@@ -66,7 +66,7 @@
             // addOrderToolStripMenuItem
             // 
             this.addOrderToolStripMenuItem.Name = "addOrderToolStripMenuItem";
-            this.addOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addOrderToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.addOrderToolStripMenuItem.Text = "Add Order";
             // 
             // addLocationToolStripMenuItem
@@ -93,7 +93,6 @@
             this.gridrestaurant.Name = "gridrestaurant";
             this.gridrestaurant.Size = new System.Drawing.Size(322, 81);
             this.gridrestaurant.TabIndex = 0;
-           // this.gridrestaurant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridrestaurant_CellContentClick);
             // 
             // Locatongrp
             // 
@@ -124,6 +123,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
+         //   this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
