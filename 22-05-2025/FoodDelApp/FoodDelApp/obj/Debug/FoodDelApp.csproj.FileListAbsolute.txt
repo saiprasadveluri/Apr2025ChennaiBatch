@@ -1,0 +1,11 @@
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.csproj.AssemblyReference.cache
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.Form1.resources
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.OwnerDashboard.resources
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.Properties.Resources.resources
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.csproj.GenerateResource.cache
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.csproj.CoreCompileInputs.cache
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\bin\Debug\FoodDelApp.exe.config
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\bin\Debug\FoodDelApp.exe
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\bin\Debug\FoodDelApp.pdb
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.exe
+C:\Users\rishi.ranjan\Desktop\C#\FoodDelApp\FoodDelApp\obj\Debug\FoodDelApp.pdb
